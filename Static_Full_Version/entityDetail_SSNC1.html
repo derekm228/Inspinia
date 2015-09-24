@@ -10,10 +10,9 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-
+    <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -374,7 +373,7 @@
                 </div>
             </div>
         <div class="row">
-            <div class="col-lg-9">
+            <div class="col-lg-8">
                 <div class="wrapper wrapper-content animated fadeInUp">
                     <div class="ibox">
                         <div class="ibox-content">
@@ -388,14 +387,16 @@
                                 </div>
                             </div>
                             <div class="row">
-                               
-                                <div class="col-lg-7" id="cluster_info">
-                                    <dl>
-                                        <dt>Type:</dt> <dd>Corporate</dd>
-                                        <dt>Links:</dt> <dd><a>Investor Relations</a></dd><dd><a>Employment</a></dd><dd><a>Home Page</a></dd>
+                                <div class="col-lg-6">
+                                    <dl class="dl-horizontal">
+                                        <dt >Type:</dt> <dd>Corporate</dd>
+                                        <dt>Aiases:</dt> <dd>Advent, Advent Software, Stephanie D</dd>
+                                        <dt>Links:</dt> <dd><a href="www.baidu.com">Home Page</a></dd> <dd><a href="www.baidu.com">Employement</a></dd>
                                         <dt>Fax:</dt> <dd>(860) 298-4900</dd>
                                         <dt>Employees:</dt> <dd>319</dd>
                                         <dt>Email:</dt> <dd>solution@ssinc.com</dd>
+                                        <dt>Phone:</dt> <dd></dd>
+                                        <dt>Address:</dt> <dd></dd>
                                         <dt>Officers:</dt>
                                         <dd class="project-people">
                                         <a href=""><img alt="image" class="img-circle" src="img/profile/Derek.png"></a>
@@ -405,6 +406,12 @@
                                         </dd>
                                     </dl>
                                 </div>
+                                <div class="col-lg-6">
+                                    <dl class="dl-horizontal">
+                                        <dt>Adhoc1:</dt> <dd>$32.00</dd>
+                                        <dt>Adhoc2:</dt> <dd>Boston</dd>
+                                    </dl>
+                                </div>
                             </div>
                             <div class="row m-t-sm">
                                 <div class="col-lg-12">
@@ -412,7 +419,7 @@
                                 <div class="panel-heading">
                                     <div class="panel-options">
                                         <ul class="nav nav-tabs">
-                                            <li class="active"><a href="#tab-1" data-toggle="tab">Recent 20 Notes</a></li>
+                                            <li class="active"><a href="#tab-1" data-toggle="tab">Recent 10 Notes</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -660,11 +667,27 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3">
-                <div class="wrapper wrapper-content project-manager">
-                    <h4>Market Data</h4>
-                    <img src="img/price/SSNC_Price.png" class="img-thumbnail">
-                </div>
+            <div class="col-lg-4">
+              <div class="wrapper wrapper-content animated fadeInUp">
+                <div class="ibox">
+                    <div class="ibox-content">
+                    <div>
+                        <ul>
+                            <li class="jstree-open">Entities
+                                <ul>
+                                    <li>is in industry
+                                        <ul>
+                                            <li data-jstree='{"type":"css"}'>Software & Programing</li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+              </div>
+              </div>
             </div>
         </div>
         <div class="footer">
@@ -718,5 +741,4 @@
         }
     </script>
 </body>
-
 </html>
