@@ -180,34 +180,80 @@
 
         </nav>
         </div>
-            <div class="row white-bg">
-                <div class="col-lg-12 list-group-item" style="padding-top:0px;padding-bottom:0px; padding-left:0px">
-                    <div class="col-lg-3" style="padding-top:1px;padding-bottom:0px; padding-left:8px;">
-                        <input type="text" placeholder="Type an entity..." value="ADVS" name="finder" id="finder" style="border:none;font-size:34px; width:60%">
-                        <button class="btn btn-primary btn-circle" type="button" style="margin-bottom:12px">1°</button>
-                        <button class="btn btn-primary btn-circle" type="button" style="margin-bottom:12px">All</button>
-                    </div>
-                    <div class="col-lg-3" style="padding-top:10px;padding-bottom:-10px">
-                        <input type="text" placeholder="Type an entity..." value="Filters" name="finder" id="finder" style="border:none;font-size:26px; width:100%">
-                    </div>
-                    <div class="col-lg-3" style="padding-top:10px;padding-bottom:-10px">
-                        <input type="text" placeholder="Type an entity..." value="Quickfind" name="finder" id="finder" style="border:none;font-size:26px; width:100%">
-                    </div>
-                </div>
-            </div>
             <div class="fh-breadcrumb">
+
                 <div class="fh-column">
                     <div class="full-height-scroll">
                         <div class="ibox float-e-margins">
-                            <div class="ibox-content" style="padding:5px 5px 5px 5px ">
-                                <div id="using_json"></div>
+                            <div class="ibox-title">
+                                <div class="ibox-tools">
+                                    <div>
+                                        <label class="pull-left"><input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> <input type="text" placeholder="Type an entity..." name="finder" id="finder" style="font-size:14px"></label>
+                                        <label class="pull-left"> <input type="radio" checked="" value="option2" id="optionsRadios2" name="optionsRadios"> All Entities </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ibox-content" style="padding:2px 2px 0 2px">
+                                <div class="panel-body" style="padding: 2px 2px 0 2px">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title">
+                                                    <a data-toggle="collapse" href="#collapseOne">Relationship Tree</a>
+                                                </h5>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    <div class="full-height-scroll">
+                                                        <div class="ibox float-e-margins">
+                                                            <div class="ibox-content" style="padding:5px 5px 5px 5px ">
+                                                                <div id="using_json"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" href="#collapseTwo">Filters</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="form-group"><label class="control-label">Note Type</label>
+                                                        <div>
+                                                            <select class="form-control m-b" name="account">
+                                                                <option>Thesis</option>
+                                                                <option>Note Type</option>
+                                                                <option>TamaleNote</option>
+                                                                <option>EMail</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" href="#collapseThree">Keyword Search</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    <div class="input-group"><input type="text" class="form-control"> <span class="input-group-btn"> <button type="button" class="btn  btn-primary btn-rounded btn-outline"><i class="fa fa-search"></i>
+                                        </button> </span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
 
                 <div class="fh-column">
                     <div class="full-height-scroll border-left">
@@ -735,9 +781,13 @@
 
 
             </div>
+            <div class="footer">
+                <div class="pull-right">10GB of <strong>250GB</strong> Free.</div>
+                <div><strong>Copyright</strong> Example Company &copy; 2014-2015</div>
+            </div>
 
         </div>
-        </div>
+    </div>
 
 
 
