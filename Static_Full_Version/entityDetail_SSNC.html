@@ -668,26 +668,16 @@
                 </div>
             </div>
             <div class="col-lg-4">
-              <div class="wrapper wrapper-content animated fadeInUp">
-                <div class="ibox">
-                    <div class="ibox-content">
-                    <div>
-                        <ul>
-                            <li class="jstree-open">Entities
-                                <ul>
-                                    <li>is in industry
-                                        <ul>
-                                            <li data-jstree='{"type":"css"}'>Software & Prming</li>
-                                        </ul>
-                                    </li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
+                <div class="wrapper wrapper-content animated fadeInUp">
+                    <div class="full-height-scroll">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content" style="padding:5px 5px 5px 5px">
+                                <h2>Relationships</h2>
+                                <div id="using_json"></div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-              </div>
-              </div>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -740,6 +730,83 @@
             }
         }
     </script>
+
+    <!-- Tree View JS & CSS-->
+    <script src="js/plugins/jsTree/jstree.min.js"></script>
+
+    <style>
+        .jstree-open > .jstree-anchor > .fa-folder:before {
+            content: "\f07c";
+        }
+
+        .jstree-default .jstree-icon.none {
+            width: 0;
+        }
+    </style>
+
+    <script>
+    $(document).ready(function(){
+        $('#using_json').jstree({ 'core' : {
+            'checkbox' : { 'keep_selected_style' : false },
+            'themes' : [{'dots' : false},
+                        {'icons' : false}],
+            'data' : [{
+                'text': 'SSNC',
+                'state': {
+                    'opened': true
+                },
+                'children': [{
+                    'text': 'Entities',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{
+                        'text': 'Competes With',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [{'text': 'ADVS', 'icon': 'none'},
+                                     {'text': 'Backstop', 'icon': 'none'},
+                                     {'text': 'Code Red', 'icon': 'none'},
+                                     {'text': 'InvestCloud', 'icon': 'none'}]
+                    },
+                    {
+                        'text': 'Location',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [{'text': 'Boston', 'icon': 'none'},
+                                     {'text': 'New York City', 'icon': 'none'},
+                                     {'text': 'San Francisco', 'icon': 'none'},
+                                     {'text': 'Beijing', 'icon': 'none'},
+                                     {'text': 'Hong Kong', 'icon': 'none'}]
+                    }]
+                },
+                {
+                    'text': 'Contacts',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{
+                        'text': 'CEO',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [{'text': 'John Doe', 'icon': 'none'}]
+                    },
+                    {
+                        'text': 'CFO',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [{'text': 'Jane Doe', 'icon': 'none'}]
+                    }]
+                }]
+            }]
+        }
+        })});
+    </script>
+
 </body>
 
 </html>

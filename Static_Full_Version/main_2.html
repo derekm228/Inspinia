@@ -42,7 +42,7 @@
                         </ul>
                     </div>
                     <div class="logo-element">
-                        IN+
+                        <img alt="image" src="favicon.ico">
                     </div>
                 </li>
                 <li>
@@ -817,6 +817,8 @@
     $(document).ready(function(){
         $('#using_json').jstree({ 'core' : {
             'checkbox' : { 'keep_selected_style' : false },
+            'themes' : [{'dots':false},
+                        {'icons':false}],
             'data' : [{
                 'text': 'ADVS',
                 'children': [{
@@ -851,7 +853,6 @@
             }]
         },
         'plugins' : [ 'checkbox', 'search']})});
-
     </script>
 
 
