@@ -3955,7 +3955,7 @@ a.close-canvas-menu:hover {
   height: 100%;
 }
 .fh-breadcrumb {
-  height: calc(100% - 196px);
+  height: calc(86%);
   margin: 0 -15px;
   position: relative;
 }
