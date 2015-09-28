@@ -43,10 +43,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
+                    <a href="main_3.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
                 </li>
                 <li>
-                    <a href="layouts.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
+                    <a href="entityList.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
                 </li>
                 <li>
                     <a href="layouts.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
@@ -59,17 +59,33 @@
         <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom">
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
+        <div class="navbar-header" style="width:50%">
             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-            <form role="search" class="navbar-form-custom" action="search_results.html">
+            <form role="search" class="navbar-form-custom search" action="search_results.html" style="width:60%">
                 <div class="form-group">
-                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                    <input type="search" placeholder="Search..." class="form-control" name="top-search" id="top-search" autocomplete="off">
+                    <ul class="search-ac">
+                        <li><a href="entityDetail_SSNC.html">SSNC<span> (SSC Technologies)</span></a></li>
+                        <li><a href="entityDetail_SSNC.html">ADVS<span> (Advent Software, Inc)</span></a></li>
+                        <li><a style="text-align:right" href="entitylist.html">see more entities...</a></li>
+                        <li><a href="profile_DamonWang.html">Damon Wang<span></span></a></li>
+                        <li><a href="profile_DamonWang.html">Derek Miller<span></span></a></li>
+                        <li><a style="text-align:right" href="entitylist.html">see more users...</a></li>
+                        <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                        <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                        <li><a style="text-align:right" href="main_3.html">see more content...</a></li>
+                    </ul>
                 </div>
             </form>
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
                     <span class="m-r-sm text-muted welcome-message">Tamale RMS</span>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#newNote">
+                        <i class="fa fa-pencil"></i>
+                    </a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -604,23 +620,142 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
         <div class="footer">
             <div class="pull-right">
-                10GB of <strong>250GB</strong> Free.
-            </div>
-            <div>
-                <strong>Copyright</strong> Example Company &copy; 2014-2015
+                <strong>Copyright</strong> Advent Software &copy; 2014-2015
             </div>
         </div>
+    </div>
+</div>
 
+<div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:800px" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">New Note</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#newNote-tab-1"> Basic info</a></li>
+                        <li class=""><a data-toggle="tab" href="#newNote-tab-2"> Custom Metadata</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="newNote-tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <fieldset class="form-horizontal">
+                                    <div class="form-group"><label class="col-sm-2 control-label">Note Type:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control m-b" name="noteType">
+                                                <option>Tamale Note</option>
+                                                <option>Report</option>
+                                                <option>Call</option>
+                                                <option>Clip</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Entities:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Source:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Date:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input date"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Sentiment:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control m-b" name="noteType">
+                                                <option>Neutral</option>
+                                                <option>Positive</option>
+                                                <option>Negative</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Subjec:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input subject"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
+                                        <div class="col-sm-10">
+                                            <div class="ibox-content" style="border-style: solid;border-width:1px;">
+
+                                                <div class="summernote">
+                                                    <h3>Lorem Ipsum is simply</h3>
+                                                    dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                    <br/>
+                                                    <br/>
+                                                    <ul>
+                                                        <li>Remaining essentially unchanged</li>
+                                                        <li>Make a type specimen book</li>
+                                                        <li>Unknown printer</li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div id="newNote-tab-2" class="tab-pane">
+                            <div class="panel-body">
+
+                                <fieldset class="form-horizontal">
+                                    <div class="form-group"><label class="col-sm-2 control-label">ID:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Model:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Location:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" >
+                                                <option>option 1</option>
+                                                <option>option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Quantity:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Minimum quantity:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Sort order:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Status:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" >
+                                                <option>option 1</option>
+                                                <option>option 2</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
         </div>
-        </div>
+    </div>
+</div>
 
 
 

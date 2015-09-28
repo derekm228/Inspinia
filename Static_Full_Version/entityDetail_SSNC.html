@@ -16,6 +16,8 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
     <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
 </head>
 
 <body>
@@ -61,17 +63,33 @@
         <div id="page-wrapper" class="gray-bg">
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top  " role="navigation" style="margin-bottom: 0">
-                    <div class="navbar-header">
+                    <div class="navbar-header" style="width:50%">
                         <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                        <form role="search" class="navbar-form-custom search" action="search_results.html" style="width:60%">
                             <div class="form-group">
-                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                                <input type="search" placeholder="Search..." class="form-control" name="top-search" id="top-search" autocomplete="off">
+                                <ul class="search-ac">
+                                    <li><a href="entityDetail_SSNC.html">SSNC<span> (SSC Technologies)</span></a></li>
+                                    <li><a href="entityDetail_SSNC.html">ADVS<span> (Advent Software, Inc)</span></a></li>
+                                    <li><a style="text-align:right" href="entitylist.html">see more entities...</a></li>
+                                    <li><a href="profile_DamonWang.html">Damon Wang<span></span></a></li>
+                                    <li><a href="profile_DamonWang.html">Derek Miller<span></span></a></li>
+                                    <li><a style="text-align:right" href="entitylist.html">see more users...</a></li>
+                                    <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                                    <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                                    <li><a style="text-align:right" href="main_3.html">see more content...</a></li>
+                                </ul>
                             </div>
                         </form>
                     </div>
                     <ul class="nav navbar-top-links navbar-right">
                         <li>
                             <span class="m-r-sm text-muted welcome-message">Tamale RMS</span>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#newNote">
+                                <i class="fa fa-pencil"></i>
+                            </a>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -188,64 +206,75 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="m-b-md">
-
-                                            <button type="button" class="pull-right btn btn-primary btn-xs" data-toggle="modal" data-target="#newNote">Add Note</button>
                                             <h2><i class="fa fa-lock" style="font-size: 13px;color:orange"></i> SSNC (SS&C Technologies Inc.)
-                                                <button class="btn btn-info btn-xs" type="button"><i class="fa fa-paste"></i> Edit</button>
+                                                <button type="button" style="margin:5px" class="pull-right btn btn-primary btn-xs" data-toggle="modal" data-target="#newNote">
+                                                    <i class="fa fa-pencil"></i> Add Note
+                                                </button>
+                                                <button type="button" style="margin:5px" class="pull-right btn btn-info btn-xs">
+                                                    <i class="fa fa-paste"></i> Edit Details
+                                                </button>
                                             </h2>
 
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
                                         <table class="table small m-b-xs">
                                             <tbody>
                                                 <tr>
                                                     <td><strong>Type: </strong> Corporate</td>
+                                                    <td><strong>Alias: </strong> Advent, Advent Software</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><strong>Alias: </strong> Advent, Advent Software, Stephanie D</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Links: <a href="www.baidu.com">Home Page</a> <a href="www.baidu.com">Employement</a></td>
-                                                </tr>
-                                                <tr>
+                                                    <td><strong>Links: <a href="http://www.baidu.com" target="_blank">Advent.com</a> <a href="http://www.baidu.com" target="_blank">Employment</a></td>
                                                     <td><strong>Fax:</strong> (860) 298-4900</td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Employees:</strong> 319</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Email:</strong> solution@ssinc.com</td>
+                                                    <td><strong>Email:</strong> <a href="mailto:solution@ssinc.com">solution@ssinc.com</td>
                                                 </tr>
                                                 <tr>
                                                     <td><strong>Phone:</strong> (860) 298-4900</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><strong>Address:</strong> </td>
-                                                </tr>
-                                                <tr>
                                                     <td><strong>Officers: </strong>
-
                                                         <a href=""><img alt="image" class="img-circle" src="img/profile/Derek.png"></a>
                                                         <a href=""><img alt="image" class="img-circle" src="img/profile/Matt.png"></a>
                                                         <a href=""><img alt="image" class="img-circle" src="img/profile/Damon.png"></a>
                                                         <a href=""><img alt="image" class="img-circle" src="img/profile/Alan.png"></a>
-
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-12">
+                                        <table class="table small m-b-xs">
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Address:</strong> 600 Townsend Street, San Francisco, CA 94103
+                                                        <div class="google-map" id="map1"></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="col-lg-12">
                                         <table class="table small m-b-xs">
                                             <tbody>
                                                 <tr>
                                                     <td><strong>Adhoc1: </strong> $41</td>
+                                                    <td><strong>Adhoc2: </strong> Boston</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><strong>Adhoc2: </strong> Boston</td>
+                                                    <td><strong>Adhoc3: </strong> $41</td>
+                                                    <td><strong>Adhoc4: </strong> Boston</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Adhoc5: </strong> $41</td>
+                                                    <td><strong>Adhoc6: </strong> Boston</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Adhoc7: </strong> $41</td>
+                                                    <td><strong>Adhoc8: </strong> Boston</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -322,17 +351,14 @@
             </div>
             <div class="footer">
                 <div class="pull-right">
-                    10GB of <strong>250GB</strong> Free.
-                </div>
-                <div>
-                    <strong>Copyright</strong> Example Company &copy; 2014-2015
+                    <strong>Copyright</strong> Advent Software &copy; 2014-2015
                 </div>
             </div>
 
         </div>
     </div>
     <div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
-    <div style="width:1200px" class="modal-dialog modal-lg">
+        <div style="width:800px" class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -593,6 +619,28 @@
 
 
 </script>
+
+    <script type="text/javascript">
+        // When the window has finished loading google map
+        google.maps.event.addDomListener(window, 'load', initMap);
+
+        function initMap() {
+          var myLatLng = {lat: 37.771646, lng: -122.402638};
+
+          var map = new google.maps.Map(document.getElementById('map1'), {
+            zoom: 15,
+            center: myLatLng
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Advent Software'
+          });
+
+        };
+
+    </script>
 
 </body>
 

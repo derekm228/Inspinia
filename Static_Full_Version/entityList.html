@@ -15,6 +15,8 @@
 	<link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
+
 </head>
 
 <body>
@@ -42,15 +44,15 @@
 							<img alt="image" src="favicon.ico">
 						</div>
 					</li>
-					<li>
-						<a href="main_3.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
-					</li>
-					<li>
-						<a href="entityList.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
-					</li>
-					<li>
-						<a href="layouts.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
-					</li>
+                    <li>
+                        <a href="main_3.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
+                    </li>
+                    <li>
+                        <a href="entityList.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
+                    </li>
+                    <li>
+                        <a href="layouts.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
+                    </li>
 				</ul>
 
 			</div>
@@ -59,18 +61,34 @@
 		<div id="page-wrapper" class="gray-bg">
 			<div class="row border-bottom">
 				<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-					<div class="navbar-header">
-						<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-						<form role="search" class="navbar-form-custom" action="search_results.html">
-							<div class="form-group">
-								<input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
-							</div>
-						</form>
-					</div>
+					<div class="navbar-header" style="width:50%">
+			            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+			            <form role="search" class="navbar-form-custom search" action="search_results.html" style="width:60%">
+			                <div class="form-group">
+			                    <input type="search" placeholder="Search..." class="form-control" name="top-search" id="top-search" autocomplete="off">
+			                    <ul class="search-ac">
+			                        <li><a href="entityDetail_SSNC.html">SSNC<span> (SSC Technologies)</span></a></li>
+			                        <li><a href="entityDetail_SSNC.html">ADVS<span> (Advent Software, Inc)</span></a></li>
+			                        <li><a style="text-align:right" href="entitylist.html">see more entities...</a></li>
+			                        <li><a href="profile_DamonWang.html">Damon Wang<span></span></a></li>
+			                        <li><a href="profile_DamonWang.html">Derek Miller<span></span></a></li>
+			                        <li><a style="text-align:right" href="entitylist.html">see more users...</a></li>
+			                        <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+			                        <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+			                        <li><a style="text-align:right" href="main_3.html">see more content...</a></li>
+			                    </ul>
+			                </div>
+			            </form>
+			        </div>
 					<ul class="nav navbar-top-links navbar-right">
 						<li>
-							<span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+							<span class="m-r-sm text-muted welcome-message">Tamale RMS</span>
 						</li>
+                        <li>
+                            <a data-toggle="modal" data-target="#newNote">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                        </li>
 						<li class="dropdown">
 							<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
 								<i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
@@ -389,67 +407,79 @@
 															<div class="col-lg-12">
 																<div class="m-b-md">
 
-																	<button type="button" class="pull-right btn btn-primary btn-xs">Add Note</button>
-																	<h2><i class="fa fa-lock" style="font-size: 13px;color:orange"></i> SSNC (SS&C Technologies Inc.)
-																		<button class="btn btn-info btn-xs" type="button"><i class="fa fa-paste"></i> Edit</button>
-																	</h2>
+																	<h2><i class="fa fa-lock" style="font-size: 13px;color:orange"></i> <a href="entityDetail_SSNC.html">SSNC (SS&C Technologies Inc.)</a>
+						                                                <button type="button" style="margin:5px" class="pull-right btn btn-primary btn-xs" data-toggle="modal" data-target="#newNote">
+						                                                    <i class="fa fa-pencil"></i>
+						                                                </button>
+						                                                <button type="button" style="margin:5px" class="pull-right btn btn-info btn-xs">
+						                                                    <i class="fa fa-paste"></i>
+						                                                </button>
+						                                            </h2>
 
 																</div>
 															</div>
 														</div>
 														<div class="row">
-															<div class="col-lg-6">
+															<div class="col-lg-12">
 																<table class="table small m-b-xs">
 																	<tbody>
-																		<tr>
-																			<td><strong>Type: </strong> Corporate</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Alias: </strong> Advent, Advent Software, Stephanie D</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Links: <a href="www.baidu.com">Home Page</a> <a href="www.baidu.com">Employement</a></td>
-																		</tr>
-																		<tr>
-																			<td><strong>Fax:</strong> (860) 298-4900</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Employees:</strong> 319</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Email:</strong> solution@ssinc.com</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Phone:</strong> (860) 298-4900</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Address:</strong> </td>
-																		</tr>
-																		<tr>
-																			<td><strong>Officers: </strong>
-
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Derek.png"></a>
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Matt.png"></a>
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Damon.png"></a>
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Alan.png"></a>
-
-																			</td>
-																		</tr>
-																	</tbody>
+						                                                <tr>
+						                                                    <td><strong>Type: </strong> Corporate</td>
+						                                                    <td><strong>Alias: </strong> Advent, Advent Software</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Links: <a href="http://www.ssctech.com" target="_blank">SS&C</a> <a href="https://www.ssctech.com" target="_blank">Employment</a></td>
+						                                                    <td><strong>Fax:</strong> (860) 298-4900</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Employees:</strong> 319</td>
+						                                                    <td><strong>Email:</strong> <a href="mailto:solution@ssinc.com">solution@ssinc.com</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Phone:</strong> (508) 665-5200</td>
+						                                                    <td><strong>Officers: </strong>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Derek.png"></a>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Matt.png"></a>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Damon.png"></a>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Alan.png"></a>
+						                                                    </td>
+						                                                </tr>
+						                                            </tbody>
 																</table>
 															</div>
-															<div class="col-lg-6">
-																<table class="table small m-b-xs">
-																	<tbody>
-																		<tr>
-																			<td><strong>Adhoc1: </strong> $41</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Adhoc2: </strong> Boston</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
+															<div class="col-lg-12">
+						                                        <table class="table small m-b-xs">
+						                                            <tbody>
+						                                                <tr>
+						                                                    <td><strong>Address:</strong> 1881 Worcester Rd #202, Framingham, MA 01701
+						                                                        <div class="google-map" id="map2"></div>
+						                                                    </td>
+						                                                </tr>
+						                                            </tbody>
+						                                        </table>
+						                                    </div>
+						                                    <div class="col-lg-12">
+						                                        <table class="table small m-b-xs">
+						                                            <tbody>
+						                                                <tr>
+						                                                    <td><strong>Adhoc1: </strong> $41</td>
+						                                                    <td><strong>Adhoc2: </strong> Boston</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Adhoc3: </strong> $41</td>
+						                                                    <td><strong>Adhoc4: </strong> Boston</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Adhoc5: </strong> $41</td>
+						                                                    <td><strong>Adhoc6: </strong> Boston</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Adhoc7: </strong> $41</td>
+						                                                    <td><strong>Adhoc8: </strong> Boston</td>
+						                                                </tr>
+						                                            </tbody>
+						                                        </table>
+						                                    </div>
 														</div>
 													</div>
 												</div>
@@ -511,67 +541,80 @@
 														<div class="row">
 															<div class="col-lg-12">
 																<div class="m-b-md">
-																	<button type="button" class="pull-right btn btn-primary btn-xs">Add Note</button>
-																	<h2><i class="fa fa-lock" style="font-size: 13px;color:orange"></i> ADVS (Advent Software Inc.)
-																		<button class="btn btn-info btn-xs" type="button"><i class="fa fa-paste"></i> Edit</button>
-																	</h2>
+
+																	<h2><i class="fa fa-lock" style="font-size: 13px;color:orange"></i> <a href="entityDetail_SSNC.html">ADVS (Advent Software, Inc.)</a>
+						                                                <button type="button" style="margin:5px" class="pull-right btn btn-primary btn-xs" data-toggle="modal" data-target="#newNote">
+						                                                    <i class="fa fa-pencil"></i>
+						                                                </button>
+						                                                <button type="button" style="margin:5px" class="pull-right btn btn-info btn-xs">
+						                                                    <i class="fa fa-paste"></i>
+						                                                </button>
+						                                            </h2>
 
 																</div>
 															</div>
 														</div>
 														<div class="row">
-															<div class="col-lg-6">
+															<div class="col-lg-12">
 																<table class="table small m-b-xs">
 																	<tbody>
-																		<tr>
-																			<td><strong>Type: </strong> Corporate</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Alias: </strong> Advent, Advent Software, Stephanie D</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Links: <a href="www.baidu.com">Home Page</a> <a href="www.baidu.com">Employement</a></td>
-																		</tr>
-																		<tr>
-																			<td><strong>Fax:</strong> (860) 298-4900</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Employees:</strong> 319</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Email:</strong> solution@ssinc.com</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Phone:</strong> (860) 298-4900</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Address:</strong> </td>
-																		</tr>
-																		<tr>
-																			<td><strong>Officers: </strong>
-
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Derek.png"></a>
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Matt.png"></a>
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Damon.png"></a>
-																				<a href=""><img alt="image" class="img-circle" src="img/profile/Alan.png"></a>
-
-																			</td>
-																		</tr>
-																	</tbody>
+						                                                <tr>
+						                                                    <td><strong>Type: </strong> Corporate</td>
+						                                                    <td><strong>Alias: </strong> Advent, Advent Software</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Links: <a href="http://www.baidu.com" target="_blank">Advent.com</a> <a href="http://www.baidu.com" target="_blank">Employment</a></td>
+						                                                    <td><strong>Fax:</strong> (860) 298-4900</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Employees:</strong> 1200</td>
+						                                                    <td><strong>Email:</strong> <a href="mailto:mterrill@advent.com">mterrill@advent.com</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Phone:</strong> (860) 298-4900</td>
+						                                                    <td><strong>Officers: </strong>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Derek.png"></a>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Matt.png"></a>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Damon.png"></a>
+						                                                        <a href=""><img alt="image" class="img-circle" src="img/profile/Alan.png"></a>
+						                                                    </td>
+						                                                </tr>
+						                                            </tbody>
 																</table>
 															</div>
-															<div class="col-lg-6">
-																<table class="table small m-b-xs">
-																	<tbody>
-																		<tr>
-																			<td><strong>Adhoc1: </strong> $41</td>
-																		</tr>
-																		<tr>
-																			<td><strong>Adhoc2: </strong> Boston</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
+															<div class="col-lg-12">
+						                                        <table class="table small m-b-xs">
+						                                            <tbody>
+						                                                <tr>
+						                                                    <td><strong>Address:</strong> 600 Townsend Street, San Francisco, CA 94103
+						                                                        <div class="google-map" id="map1"></div>
+						                                                    </td>
+						                                                </tr>
+						                                            </tbody>
+						                                        </table>
+						                                    </div>
+						                                    <div class="col-lg-12">
+						                                        <table class="table small m-b-xs">
+						                                            <tbody>
+						                                                <tr>
+						                                                    <td><strong>Adhoc1: </strong> $41</td>
+						                                                    <td><strong>Adhoc2: </strong> Boston</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Adhoc3: </strong> $41</td>
+						                                                    <td><strong>Adhoc4: </strong> Boston</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Adhoc5: </strong> $41</td>
+						                                                    <td><strong>Adhoc6: </strong> Boston</td>
+						                                                </tr>
+						                                                <tr>
+						                                                    <td><strong>Adhoc7: </strong> $41</td>
+						                                                    <td><strong>Adhoc8: </strong> Boston</td>
+						                                                </tr>
+						                                            </tbody>
+						                                        </table>
+						                                    </div>
 														</div>
 													</div>
 												</div>
@@ -616,8 +659,6 @@
 													</div>
 												</div>
 											</div>
-
-
 										</div>
 									</div>
 									<div id="contact-3" class="tab-pane">
@@ -1172,16 +1213,138 @@
 			</div>
 			<div class="footer">
 				<div class="pull-right">
-					10GB of <strong>250GB</strong> Free.
-				</div>
-				<div>
-					<strong>Copyright</strong> Example Company &copy; 2014-2015
+					<strong>Copyright</strong> Advent Software &copy; 2014-2015
 				</div>
 			</div>
 
 		</div>
 	</div>
 
+	<div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:800px" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">New Note</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#newNote-tab-1"> Basic info</a></li>
+                            <li class=""><a data-toggle="tab" href="#newNote-tab-2"> Custom Metadata</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="newNote-tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Note Type:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Tamale Note</option>
+                                                    <option>Report</option>
+                                                    <option>Call</option>
+                                                    <option>Clip</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Entities:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Source:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Date:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input date"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Sentiment:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Neutral</option>
+                                                    <option>Positive</option>
+                                                    <option>Negative</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Subjec:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input subject"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
+                                            <div class="col-sm-10">
+                                                <div class="ibox-content" style="border-style: solid;border-width:1px;">
+
+                                                    <div class="summernote">
+                                                        <h3>Lorem Ipsum is simply</h3>
+                                                        dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                        <br/>
+                                                        <br/>
+                                                        <ul>
+                                                            <li>Remaining essentially unchanged</li>
+                                                            <li>Make a type specimen book</li>
+                                                            <li>Unknown printer</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newNote-tab-2" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">ID:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Model:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Location:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" >
+                                                    <option>option 1</option>
+                                                    <option>option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Quantity:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Minimum quantity:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Sort order:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Status:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" >
+                                                    <option>option 1</option>
+                                                    <option>option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 	<!-- Mainly scripts -->
@@ -1205,6 +1368,45 @@
 			width: 0;
 		}
 	</style>
+
+    <script type="text/javascript">
+        // When the window has finished loading google map
+        google.maps.event.addDomListener(window, 'load', initMap1);
+        google.maps.event.addDomListener(window, 'load', initMap2);
+
+        function initMap1() {
+          var myLatLng = {lat: 37.771646, lng: -122.402638};
+
+          var map = new google.maps.Map(document.getElementById('map1'), {
+            zoom: 15,
+            center: myLatLng
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Advent Software'
+          });
+
+        };
+
+        function initMap2() {
+          var myLatLng = {lat: 42.297738, lng: -71.485591};
+
+          var map = new google.maps.Map(document.getElementById('map2'), {
+            zoom: 15,
+            center: myLatLng
+          });
+
+          var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'SSC Technologies'
+          });
+
+        };
+
+    </script>
 
 	<script>
 		$(document).ready(function(){

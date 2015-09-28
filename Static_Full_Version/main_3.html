@@ -15,6 +15,8 @@
     <link href="css/plugins/codemirror/ambiance.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
@@ -46,10 +48,10 @@
                     </div>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
+                    <a href="main_3.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
                 </li>
                 <li>
-                    <a href="layouts.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
+                    <a href="entityList.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
                 </li>
                 <li>
                     <a href="layouts.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
@@ -59,20 +61,36 @@
         </div>
     </nav>
 
-        <div id="page-wrapper" class="gray-bg">
+        <div id="page-wrapper" class="white-bg">
         <div class="row border-bottom">
         <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
+        <div class="navbar-header" style="width:50%">
             <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-            <form role="search" class="navbar-form-custom" action="search_results.html">
+            <form role="search" class="navbar-form-custom search" action="search_results.html" style="width:60%">
                 <div class="form-group">
-                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                    <input type="search" placeholder="Search..." class="form-control" name="top-search" id="top-search" autocomplete="off">
+                    <ul class="search-ac">
+                        <li><a href="entityDetail_SSNC.html">SSNC<span> (SSC Technologies)</span></a></li>
+                        <li><a href="entityDetail_SSNC.html">ADVS<span> (Advent Software, Inc)</span></a></li>
+                        <li><a style="text-align:right" href="entitylist.html">see more entities...</a></li>
+                        <li><a href="profile_DamonWang.html">Damon Wang<span></span></a></li>
+                        <li><a href="profile_DamonWang.html">Derek Miller<span></span></a></li>
+                        <li><a style="text-align:right" href="entitylist.html">see more users...</a></li>
+                        <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                        <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                        <li><a style="text-align:right" href="main_3.html">see more content...</a></li>
+                    </ul>
                 </div>
             </form>
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
                     <span class="m-r-sm text-muted welcome-message">Tamale RMS</span>
+                </li>
+                <li>
+                    <a data-toggle="modal" data-target="#newNote">
+                        <i class="fa fa-pencil"></i>
+                    </a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
@@ -245,8 +263,8 @@
                         <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px">
                             <h5 class="panel-title" style="margin-top:0px">
                                 <button type="button" class="pull-right btn btn-sm btn-primary btn-outline"><i class="fa fa-sort-amount-asc"></i></button>
-                                <select name="account" class="form-control" style="width:80%; margin-right:0px">
-                                    <option>Display Date</option>
+                                <select name="account" id="sort-types" class="form-control" style="width:80%; margin-right:0px">
+                                    <option selected>Display Date</option>
                                     <option>Submitted Date</option>
                                     <option>Last Modified</option>
                                 </select>
@@ -259,272 +277,337 @@
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
                             <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.24.2015</small>
-                                        <strong>ADVS, DELL, ...</strong>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
                                     </div>
                                     <div>
-                                        <small class="pull-right text-muted"> Derek Miller</small>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
-                                        <small class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself...</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
-                            <li class="list-group-item active">
-                                <a data-toggle="tab" href="#tab-2">
-                                    <small class="pull-right text-muted"> 11.10.2015</small>
-                                    <strong>Paul Morgan</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            There are many variations of passages of Lorem Ipsum.
-                                            <br/>
-                                        </p>
-                                        <p class="m-b-none">
-
-                                            <span class="label pull-right label-primary">SPECIAL</span>
-                                            <i class="fa fa-map-marker"></i> California 10F/32
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a data-toggle="tab" href="#tab-3">
-                                    <small class="pull-right text-muted"> 08.04.2015</small>
-                                    <strong>Michael Jackson</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            Look even slightly believable. If you are going to use a passage of.
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> Berlin 120R/15
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a data-toggle="tab" href="#tab-4">
-                                    <small class="pull-right text-muted"> 16.02.2015</small>
-                                    <strong>Mark Smith</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            It was popularised in the 1960s with the release of Letraset sheets
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> San Francisko 12/100
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
-                                    <small class="pull-right text-muted"> 21.04.2015</small>
-                                    <strong>Monica Novak</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            Printer took a galley of type and scrambled.
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> New York 15/43
-                                        </p>
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
-                            <li class="list-group-item">
-                                <a data-toggle="tab" href="#tab-2">
-                                    <small class="pull-right text-muted"> 03.12.2015</small>
-                                    <strong>Jack Smith</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            Also the leap into electronic typesetting, remaining.
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> Sant Fe 10/106
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a data-toggle="tab" href="#tab-3">
-                                    <small class="pull-right text-muted"> 08.04.2015</small>
-                                    <strong>Michael Jackson</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            Look even slightly believable. If you are going to use a passage of.
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> Berlin 120R/15
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
-                                <a data-toggle="tab" href="#tab-4">
-                                    <small class="pull-right text-muted"> 16.02.2015</small>
-                                    <strong>Mark Smith</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            It was popularised in the 1960s with the release of Letraset sheets
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> San Francisko 12/100
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" style="padding:10px">
                                 <a data-toggle="tab" href="#tab-1">
-                                    <small class="pull-right text-muted"> 21.04.2015</small>
-                                    <strong>Monica Novak</strong>
-                                    <div class="small m-t-xs">
-                                        <p class="m-b-xs">
-                                            Printer took a galley of type and scrambled.
-                                        </p>
-                                        <p class="m-b-none">
-                                            <i class="fa fa-map-marker"></i> New York 15/43
-                                        </p>
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
                                     </div>
                                 </a>
                             </li>
-
-
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <div style="width:100%; padding:10px">
+                                <button class="btn btn-primary btn-block" onclick="" style="margin: 0 auto; width:60%;"><i class="fa fa-arrow-down"></i> Show More</button>
+                            </div>
                         </ul>
-
                     </div>
                 </div>
 
@@ -534,62 +617,82 @@
                         <div class="element-detail-box">
 
                             <div class="tab-content">
-                                <div id="tab-1" class="tab-pane">
 
+                                <div id="tab-1" class="tab-pane active">
                                     <div class="pull-right">
                                         <div class="tooltip-demo">
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="left" title="Plug this message"><i class="fa fa-plug"></i> Plug it</button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as important"><i class="fa fa-exclamation"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Move to trash"><i class="fa fa-trash-o"></i> </button>
+                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="left" title="Add Comment"><i class="fa fa-plus"></i></button>
+                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="Edit Note"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="Like"><i class="fa fa-thumbs-up"></i></button>
+                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="fa fa-trash-o"></i> </button>
 
                                         </div>
                                     </div>
+                                    <div>
+                                        <strong>AAPL, MSFT, GOOG</strong>
+                                    </div>
                                     <div class="small text-muted">
-                                        <i class="fa fa-clock-o"></i> Friday, 12 April 2014, 12:32 am
+                                        <i class="fa fa-clock-o"></i> Monday, 28 Sep 2015, 10:32 am
+                                    </div>
+                                    <div class="small text-muted">
+                                        <i class="fa fa-user"></i> Vinh Hong
+                                    </div>
+                                    <div class="small text-muted">
+                                        <i style="color:green">
+                                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                        </i>
                                     </div>
 
                                     <h1>
-                                        Their separate existence is a myth
+                                        AAPL Recommendation
                                     </h1>
 
+                                    <div>
+                                        <br>
+                                        <table class="small m-b-xs">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>Target Price:</strong></td>
+                                                    <td>$150</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>Current Price:</strong></td>
+                                                    <td>$115.05</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>Recommendation Type:</strong></td>
+                                                    <td>Buy</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>Trigger Price</strong></td>
+                                                    <td>$120.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>EPS</strong></td>
+                                                    <td>26.9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>Implied PE:</strong></td>
+                                                    <td>15.1x</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <br>
+
+                                    <p><u>Company Description</u></p>
                                     <p>
-                                        The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
+                                        Apple Inc. (Apple) designs, manufactures and markets mobile communication and media devices, personal computers, and portable digital music players, and a variety of related software, services, peripherals, networking solutions, and third-party digital content and applications. The Company's products and services include iPhone, iPad, Mac, iPod, Apple TV, a portfolio of consumer and professional software applications, the iOS and OS X operating systems, iCloud, and a variety of accessory, service and support offerings. The Company also delivers digital content and applications through the iTunes Store, App StoreSM, iBookstoreSM, and Mac App Store. The Company distributes its products worldwide through its retail stores, online stores, and direct sales force, as well as through third-party cellular network carriers, wholesalers, retailers, and value-added resellers. In February 2012, the Company acquired app-search engine Chomp.
                                     </p>
+                                    <p><u>Recommendation</u></p>
                                     <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.
-                                    </p>
-                                    <p>
-                                        The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
+                                        "We rate APPLE INC (AAPL) a BUY. This is based on the convergence of positive investment measures, which should help this stock outperform the majority of stocks that we rate. The company's strengths can be seen in multiple areas, such as its solid stock price performance, impressive record of earnings per share growth, compelling growth in net income, revenue growth and notable return on equity. Although no company is perfect, currently we do not see any significant weaknesses which are likely to detract from the generally positive outlook."
                                     </p>
 
-                                    <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
-                                    </p>
-                                    <p>
-                                        The new common language will be more simple and regular than the existing European languages. It will be as simpl.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-                                    <p>
-                                        The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
-                                    </p>
-                                    <p>
-                                        It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is. The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words.
-                                    </p>
-
-                                    <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-                                    <p class="small">
-                                        <strong>Best regards, Anthony Smith </strong>
                                     </p>
 
                                     <div class="m-t-lg">
+                                        <h2>Attachments:</h2>
                                         <p>
                                             <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
                                             <a href="#">Download all</a>
@@ -607,9 +710,9 @@
                                                             <i class="fa fa-file"></i>
                                                         </div>
                                                         <div class="file-name">
-                                                            Document_2014.doc
+                                                            Analysis_2015.doc
                                                             <br>
-                                                            <small>Added: Jan 11, 2014</small>
+                                                            <small>Added: Sep 28, 2015</small>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -624,9 +727,9 @@
                                                             <i class="fa fa-line-chart"></i>
                                                         </div>
                                                         <div class="file-name">
-                                                            Seels_2015.xls
+                                                            Numbers_2015.xls
                                                             <br>
-                                                            <small>Added: May 13, 2015</small>
+                                                            <small>Added: Sep 28, 2015</small>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -636,277 +739,102 @@
                                         </div>
                                     </div>
 
-                                </div>
-
-                                <div id="tab-2" class="tab-pane active">
-                                    <div class="pull-right">
-                                        <div class="tooltip-demo">
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="left" title="Plug this message"><i class="fa fa-plug"></i> Plug it</button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as important"><i class="fa fa-exclamation"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Move to trash"><i class="fa fa-trash-o"></i> </button>
-
+                                    <div class="article row">
+                                        <div class="col-lg-12">
+                                            <h2>Comments:</h2>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Derek.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            Derek Miller
+                                                        </a>
+                                                        <small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Damon.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile_DamonWang.html">
+                                                            Damon Wang
+                                                        </a>
+                                                        <small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Alan.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            Alan Yang
+                                                        </a>
+                                                        <small class="text-muted">Today 12:01 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Any update on those numbers?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Matt.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            Matt Terrill
+                                                        </a>
+                                                        <small class="text-muted">Today 2:21 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+                                                    </p>
+                                                    <br>
+                                                    <img src="img/aapl_forecast.png" style="width: 608px;">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="small text-muted">
-                                        <i class="fa fa-clock-o"></i> Monday, 21 May 2014, 10:32 am
-                                    </div>
-
-                                    <h1>
-                                        The European languages - same family.
-                                    </h1>
-
-                                    <p>
-                                        One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.
-                                    </p>
-                                    <p>
-                                        The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
-                                    </p>
-
-                                    <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-                                    <p>
-                                        The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
-                                    </p>
-
-                                    <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-                                    <p class="small">
-                                        <strong>Best regards, Anthony Smith </strong>
-                                    </p>
-
-                                    <div class="m-t-lg">
-                                        <p>
-                                            <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
-                                            <a href="#">Download all</a>
-                                            |
-                                            <a href="#">View all images</a>
-                                        </p>
-
-                                        <div class="attachment">
-                                            <div class="file-box">
-                                                <div class="file">
-                                                    <a href="#">
-                                                        <span class="corner"></span>
-
-                                                        <div class="icon">
-                                                            <i class="fa fa-file"></i>
-                                                        </div>
-                                                        <div class="file-name">
-                                                            Document_2014.doc
-                                                            <br>
-                                                            <small>Added: Jan 11, 2014</small>
-                                                        </div>
-                                                    </a>
+                                    <br>
+                                    <div class="row" style="padding-bottom:10px">
+                                        <div class="col-lg-12">
+                                            <div class="ibox float-e-margins" style="border:1px solid #e7eaec; margin-bottom:10px;">
+                                                <div class="ibox-content no-padding">
+                                                    <div class="summernote">
+                                                        Enter a comment...
+                                                    </div>
                                                 </div>
-
                                             </div>
-                                            <div class="file-box">
-                                                <div class="file">
-                                                    <a href="#">
-                                                        <span class="corner"></span>
-
-                                                        <div class="icon">
-                                                            <i class="fa fa-line-chart"></i>
-                                                        </div>
-                                                        <div class="file-name">
-                                                            Seels_2015.xls
-                                                            <br>
-                                                            <small>Added: May 13, 2015</small>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div id="tab-3" class="tab-pane">
-                                    <div class="pull-right">
-                                        <div class="tooltip-demo">
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="left" title="Plug this message"><i class="fa fa-plug"></i> Plug it</button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as important"><i class="fa fa-exclamation"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Move to trash"><i class="fa fa-trash-o"></i> </button>
-
-                                        </div>
-                                    </div>
-                                    <div class="small text-muted">
-                                        <i class="fa fa-clock-o"></i> Tuesday, 15 May 2014, 10:32 am
-                                    </div>
-
-                                    <h1>
-                                        To take a trivial example
-                                    </h1>
-
-                                    <p>
-                                        But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain.
-                                    </p>
-                                    <p>
-                                        The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
-                                    </p>
-
-                                    <p>
-                                        he wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-
-                                    <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
-                                    </p>
-                                    <p>
-                                        To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce.
-                                    </p>
-                                    <p class="small">
-                                        <strong>Best regards, Anthony Smith </strong>
-                                    </p>
-
-                                    <div class="m-t-lg">
-                                        <p>
-                                            <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
-                                            <a href="#">Download all</a>
-                                            |
-                                            <a href="#">View all images</a>
-                                        </p>
-
-                                        <div class="attachment">
-                                            <div class="file-box">
-                                                <div class="file">
-                                                    <a href="#">
-                                                        <span class="corner"></span>
-
-                                                        <div class="icon">
-                                                            <i class="fa fa-file"></i>
-                                                        </div>
-                                                        <div class="file-name">
-                                                            Document_2014.doc
-                                                            <br>
-                                                            <small>Added: Jan 11, 2014</small>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                            <div class="file-box">
-                                                <div class="file">
-                                                    <a href="#">
-                                                        <span class="corner"></span>
-
-                                                        <div class="icon">
-                                                            <i class="fa fa-line-chart"></i>
-                                                        </div>
-                                                        <div class="file-name">
-                                                            Seels_2015.xls
-                                                            <br>
-                                                            <small>Added: May 13, 2015</small>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="tab-4" class="tab-pane">
-                                    <div class="pull-right">
-                                        <div class="tooltip-demo">
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="left" title="Plug this message"><i class="fa fa-plug"></i> Plug it</button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="Mark as read"><i class="fa fa-eye"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as important"><i class="fa fa-exclamation"></i> </button>
-                                            <button class="btn btn-white btn-xs" data-toggle="tooltip" data-placement="top" title="" data-original-title="Move to trash"><i class="fa fa-trash-o"></i> </button>
-
-                                        </div>
-                                    </div>
-                                    <div class="small text-muted">
-                                        <i class="fa fa-clock-o"></i> Thursday, 27 april 2014, 10:32 am
-                                    </div>
-
-                                    <h1>
-                                        Gregor Samsa woke from troubled dreams.
-                                    </h1>
-
-                                    <p>
-                                        His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-                                    <p>
-                                        Travelling day in and day out. Doing business like this takes much more effort than doing your own business at home, and on top of that there's the curse of travelling, worries about making train connections, bad and irregular food, contact with different people all the time so that you can never get to know anyone or become friendly with them.
-                                    </p>
-
-                                    <p>
-                                        The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.
-                                    </p>
-                                    <p>
-                                        To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.
-                                    </p>
-                                    <p class="small">
-                                        <strong>Best regards, Anthony Smith </strong>
-                                    </p>
-
-                                    <div class="m-t-lg">
-                                        <p>
-                                            <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
-                                            <a href="#">Download all</a>
-                                            |
-                                            <a href="#">View all images</a>
-                                        </p>
-
-                                        <div class="attachment">
-                                            <div class="file-box">
-                                                <div class="file">
-                                                    <a href="#">
-                                                        <span class="corner"></span>
-
-                                                        <div class="icon">
-                                                            <i class="fa fa-file"></i>
-                                                        </div>
-                                                        <div class="file-name">
-                                                            Document_2014.doc
-                                                            <br>
-                                                            <small>Added: Jan 11, 2014</small>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                            <div class="file-box">
-                                                <div class="file">
-                                                    <a href="#">
-                                                        <span class="corner"></span>
-
-                                                        <div class="icon">
-                                                            <i class="fa fa-line-chart"></i>
-                                                        </div>
-                                                        <div class="file-name">
-                                                            Seels_2015.xls
-                                                            <br>
-                                                            <small>Added: May 13, 2015</small>
-                                                        </div>
-                                                    </a>
-                                                </div>
-
-                                            </div>
-                                            <div class="clearfix"></div>
+                                            <button class="btn btn-sm btn-primary m-t-n-xs pull-right" type="submit">
+                                                <strong>Add Comment</strong>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
@@ -923,6 +851,132 @@
         </div>
     </div>
 
+    <!--New Note Dialog-->
+    <div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:800px" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">New Note</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#newNote-tab-1"> Basic info</a></li>
+                            <li class=""><a data-toggle="tab" href="#newNote-tab-2"> Custom Metadata</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="newNote-tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Note Type:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Tamale Note</option>
+                                                    <option>Report</option>
+                                                    <option>Call</option>
+                                                    <option>Clip</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Entities:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Source:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Date:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input date"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Sentiment:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Neutral</option>
+                                                    <option>Positive</option>
+                                                    <option>Negative</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Subjec:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input subject"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
+                                            <div class="col-sm-10">
+                                                <div class="ibox-content" style="border-style: solid;border-width:1px;">
+
+                                                    <div class="summernote">
+                                                        <h3>Lorem Ipsum is simply</h3>
+                                                        dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                        <br/>
+                                                        <br/>
+                                                        <ul>
+                                                            <li>Remaining essentially unchanged</li>
+                                                            <li>Make a type specimen book</li>
+                                                            <li>Unknown printer</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newNote-tab-2" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">ID:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Model:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Location:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" >
+                                                    <option>option 1</option>
+                                                    <option>option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Quantity:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Minimum quantity:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Sort order:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Status:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" >
+                                                    <option>option 1</option>
+                                                    <option>option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Mainly scripts -->
@@ -934,6 +988,24 @@
     <!-- Theme javascript -->
     <script src="js/inspinia.js"></script>
     <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- SUMMERNOTE -->
+    <script src="js/plugins/summernote/summernote.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote();
+
+       });
+        var edit = function() {
+            $('.click2edit').summernote({focus: true});
+        };
+        var save = function() {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        };
+    </script>
 
     <!-- Tree View JS & CSS-->
     <script src="js/plugins/jsTree/jstree.min.js"></script>
