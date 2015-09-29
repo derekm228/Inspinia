@@ -286,6 +286,7 @@
                                     </div>
                                     <div>
                                         <small class="text-muted">AAPL Recommendation</small>
+                                        <i class=""></i>
                                     </div>
                                 </a>
                             </li>
@@ -301,6 +302,7 @@
                                     </div>
                                     <div>
                                         <small class="text-muted">AAPL Recommendation</small>
+                                        <i class=""></i>
                                     </div>
                                 </a>
                             </li>
@@ -1084,7 +1086,15 @@
                 }]
             }]
         },
-        'plugins' : [ 'checkbox', 'search']})});
+        'plugins' : [ 'checkbox', 'search']})},
+
+        $(".list-group-item").hover(function(){
+        $('i', this).toggleClass('pull-right fa fa-trash-o');
+    })
+
+);
+
+
     </script>
 
 
