@@ -19,6 +19,9 @@
     <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
 </head>
 
 <body class="full-height-layout mini-navbar">
@@ -48,7 +51,11 @@
                         </div>
                     </li>
                     <li>
-                        <a href="main_3.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
+                        <a href="main_3.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="main_3.html">Research</a></li>
+                            <li><a href="main_3.html">My SSNC Notes</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="entityList.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
@@ -745,7 +752,9 @@
         </div>
         <div class="footer" style="background-color:#f5f5f5">
             <div class="pull-left">Showing <strong>50</strong> of <strong>1454</strong> results</div>
-            <div class="pull-right"><strong>Copyright</strong> Advent Software &copy; 2014-2015</div>
+            <div class="pull-right">
+                <button class="btn btn-sm pull-right demo1" style="padding-top:0px; padding-bottom:0px; background-color:#f5f5f5"><i class="fa fa-save"></i> Save Screen</button>
+            </div>
         </div>
 
     </div>
@@ -882,7 +891,7 @@
 <div class="modal inmodal fade" id="viewPDF" tabindex="-1" role="dialog" aria-hidden="true">
     <div style="width:60%;height:90%" class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-body" style="padding:0">
+            <div class="modal-body" style="padding:0; height:700px">
                 <iframe src = "/ViewerJS/#../TamaleNextGen/Static_Full_Version/docs/Quarterly_Earnings_Slides_Q115.pdf" width='100%' height='700' allowfullscreen webkitallowfullscreen></iframe>
             </div>
         </div>
@@ -903,6 +912,9 @@
 <!-- SUMMERNOTE -->
 <script src="js/plugins/summernote/summernote.min.js"></script>
 
+<!-- Sweet alert -->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
 <script>
     $(document).ready(function(){
 
@@ -916,94 +928,104 @@
             var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
             $('.click2edit').destroy();
         };
-    </script>
+</script>
 
-    <!-- Tree View JS & CSS-->
-    <script src="js/plugins/jsTree/jstree.min.js"></script>
+<!-- Tree View JS & CSS-->
+<script src="js/plugins/jsTree/jstree.min.js"></script>
 
-    <style>
-        .jstree-open > .jstree-anchor > .fa-folder:before {
-            content: "\f07c";
-        }
+<style>
+    .jstree-open > .jstree-anchor > .fa-folder:before {
+        content: "\f07c";
+    }
 
-        .jstree-default .jstree-icon.none {
-            width: 0;
-        }
+    .jstree-default .jstree-icon.none {
+        width: 0;
+    }
 
-    </style>
+</style>
 
-    <script>
-        $(document).ready(function(){
-            $('#using_json').jstree({ 'core' : {
-                'checkbox' : { 'keep_selected_style' : false },
-                'themes' : [{'dots' : false},
-                {'icons' : false}],
-                'data' : [{
+<script>
+    $(document).ready(function(){
+        $('#using_json').jstree({ 'core' : {
+            'checkbox' : { 'keep_selected_style' : false },
+            'themes' : [{'dots' : false},
+            {'icons' : false}],
+            'data' : [{
 
-                    'text': 'Entities',
+                'text': 'Entities',
+                'state': {
+                    'opened': true
+                },
+                'children': [{
+                    'text': 'Competes With',
                     'state': {
                         'opened': true
                     },
-                    'children': [{
-                        'text': 'Competes With',
-                        'state': {
-                            'opened': true
-                        },
-                        'children': [{'text': 'ADVS', 'icon': 'none'},
-                        {'text': 'Backstop', 'icon': 'none'},
-                        {'text': 'Code Red', 'icon': 'none'},
-                        {'text': 'InvestCloud', 'icon': 'none'}]
-                    },
-                    {
-                        'text': 'Location',
-                        'state': {
-                            'opened': true
-                        },
-                        'children': [{'text': 'Boston', 'icon': 'none'},
-                        {'text': 'New York City', 'icon': 'none'},
-                        {'text': 'San Francisco', 'icon': 'none'},
-                        {'text': 'Beijing', 'icon': 'none'},
-                        {'text': 'Manila', 'icon': 'none'},
-                        {'text': 'New Rochelle', 'icon': 'none'},
-                        {'text': 'Connecticut', 'icon': 'none'},
-                        {'text': 'Abu Dhabi', 'icon': 'none'},
-                        {'text': 'London', 'icon': 'none'}]
-                    }]
+                    'children': [{'text': 'ADVS', 'icon': 'none'},
+                    {'text': 'Backstop', 'icon': 'none'},
+                    {'text': 'Code Red', 'icon': 'none'},
+                    {'text': 'InvestCloud', 'icon': 'none'}]
                 },
                 {
-                    'text': 'Contacts',
+                    'text': 'Location',
                     'state': {
                         'opened': true
                     },
-                    'children': [{
-                        'text': 'CEO',
-                        'state': {
-                            'opened': true
-                        },
-                        'children': [{'text': 'John Doe', 'icon': 'none'}]
-                    },
-                    {
-                        'text': 'CFO',
-                        'state': {
-                            'opened': true
-                        },
-                        'children': [{'text': 'Jane Doe', 'icon': 'none'}]
-                    }]
+                    'children': [{'text': 'Boston', 'icon': 'none'},
+                    {'text': 'New York City', 'icon': 'none'},
+                    {'text': 'San Francisco', 'icon': 'none'},
+                    {'text': 'Beijing', 'icon': 'none'},
+                    {'text': 'Manila', 'icon': 'none'},
+                    {'text': 'New Rochelle', 'icon': 'none'},
+                    {'text': 'Connecticut', 'icon': 'none'},
+                    {'text': 'Abu Dhabi', 'icon': 'none'},
+                    {'text': 'London', 'icon': 'none'}]
                 }]
-
             },
-            'plugins' : [ 'checkbox']})},
+            {
+                'text': 'Contacts',
+                'state': {
+                    'opened': true
+                },
+                'children': [{
+                    'text': 'CEO',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{'text': 'John Doe', 'icon': 'none'}]
+                },
+                {
+                    'text': 'CFO',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{'text': 'Jane Doe', 'icon': 'none'}]
+                }]
+            }]
 
-            $(".list-group-item").hover(function(){
-                $('i', this).toggleClass('pull-right fa fa-trash-o');
-            })
+        },
+        'plugins' : [ 'checkbox']})},
 
-);
+        $(".list-group-item").hover(function(){
+            $('i', this).toggleClass('pull-right fa fa-trash-o');
+        })
+    );
 
-function deleteNote(subject){
+    function deleteNote(subject){
         alert("Do you want to delete? " + subject);
-} 
-        
+    }
+       
+</script>
+
+<script>
+    $(document).ready(function(){
+        $('.demo1').click(function(){
+            swal({
+                title: "Save Screen",
+                text: "Give this screen a title and it will be saved as a separate screen under the Research tab."
+            });
+        });
+    });
 </script>
 
 <style>
