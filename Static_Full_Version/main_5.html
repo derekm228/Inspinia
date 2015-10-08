@@ -880,18 +880,10 @@
 
 <!--ViewerJS for PDF-->
 <div class="modal inmodal fade" id="viewPDF" tabindex="-1" role="dialog" aria-hidden="true">
-    <div style="width:800px" class="modal-dialog modal-lg">
+    <div style="width:60%;height:90%" class="modal-dialog modal-lg">
         <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Analysis_2015.pdf</h4>
-            </div>
-            <div class="modal-body">
-                <iframe src = "/ViewerJS/#../TamaleNextGen/Static_Full_Version/docs/Quarterly_Earnings_Slides_Q115.pdf" width='100%' height='800' allowfullscreen webkitallowfullscreen></iframe>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                <a role="button" class="btn btn-primary" href="docs/Quarterly_Earnings_Slides_Q115.pdf" download>Download</a>
+            <div class="modal-body" style="padding:0">
+                <iframe src = "/ViewerJS/#../TamaleNextGen/Static_Full_Version/docs/Quarterly_Earnings_Slides_Q115.pdf" width='100%' height='700' allowfullscreen webkitallowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -1005,8 +997,6 @@
             $(".list-group-item").hover(function(){
                 $('i', this).toggleClass('pull-right fa fa-trash-o');
             })
-
-
 
 );
 
