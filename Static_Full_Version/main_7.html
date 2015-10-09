@@ -17,6 +17,7 @@
     <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
     <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
     <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+    <link href="css/plugins/bootSideMenu/BootSideMenu.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <!-- Sweet Alert -->
@@ -102,6 +103,11 @@
                             <span class="m-r-sm text-muted welcome-message">Tamale RMS</span>
                         </li>
                         <li>
+                            <a data-toggle="modal" data-target="#newEntity">
+                                <i class="fa fa-bank"></i>
+                            </a>
+                        </li>
+                        <li>
                             <a data-toggle="modal" data-target="#newNote">
                                 <i class="fa fa-pencil"></i>
                             </a>
@@ -116,18 +122,21 @@
                 </nav>
             </div>
             <div class="fh-breadcrumb" style="background-color:white">
-                <div class="fh-column" style="height:89%">
+                <div class="fh-column" id="leftPanel" style="height:89%">
 
-                    <div class="tabs-container full-height-scroll" style="padding-top:5px">
+                    <div class="tabs-container full-height-scroll">
+                        
                         <ul class="nav nav-tabs">
                             <li class="active">
                                 <a data-toggle="tab" href="#nav-tab-1" aria-expanded="true"><i class="fa fa-sitemap"></i>
                                     <button type="button" class="btn btn-xs btn-primary btn-outline" style="margin-left:3px">All</button>
                                 </a>
                             </li>
-                            <li class=""><a data-toggle="tab" href="#nav-tab-2" aria-expanded="false"><i class="fa fa-filter"></i></a></li>
-                            <li class=""><a data-toggle="tab" href="#nav-tab-3" aria-expanded="false"><i class="fa fa-search"></i></a></li>
+                            <li class=""><a data-toggle="tab" href="#nav-tab-2" aria-expanded="false" style="padding-left:20px"><i class="fa fa-filter" style="margin-right:0px"></i></a></li>
+                            <li class=""><a data-toggle="tab" href="#nav-tab-3" aria-expanded="false" style="padding-left:20px"><i class="fa fa-search" style="margin-right:0px"></i></a></li>
+                            <button class="btn-lg btn-link btn-outline" style="border:none; padding:0; outline:none; margin-left:13px"><i class="fa fa-angle-double-left"></i></button>
                         </ul>
+
                         <div class="tab-content">
                             <div id="nav-tab-1" class="tab-pane active">
                                 <div class="panel-body" style="padding:0; border:none">
@@ -188,19 +197,18 @@
 
                     <div class="full-height-scroll border-left" style="border-left:1px solid #e7eaec">
                         <ul class="list-group elements-list">
-                            <li class="list-group-item" style="padding:10px; border-left: 5px solid #1ab394" >
+                            <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
                                 <a data-toggle="tab" href="#tab-1">
                                     <div>
-                                        <small class="pull-right text-muted"> 09.28.2015</small>
-                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                        <strong>AAPL, MSFT, GOOG, SSNC</strong>
                                     </div>
                                     <div>
                                         <small class="pull-right text-muted">Vinh Hong</small>
                                         <small class="text-muted"><em>TamaleNote</em></small>
                                     </div>
                                     <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
                                         <small class="text-muted">AAPL Recommendation</small>
-                                        <i class="" onClick="deleteNote(this.parentNode.firstChild.nextElementSibling.innerText)"></i>
                                     </div>
                                 </a>
                             </li>
@@ -931,6 +939,121 @@
         </div>
     </div>
 </div>
+<!-- END OF NEW NOTE DIALOG-->
+
+<!-- NEW ENTITY DIALOG -->
+<div class="modal inmodal fade" id="newEntity" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:800px" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">New Entity</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#newEntity-tab-1"> Overview</a></li>
+                        <li class=""><a data-toggle="tab" href="#newEntity-tab-2"> Privacy</a></li>
+                        <li class=""><a data-toggle="tab" href="#newEntity-tab-3"> Corporate Details</a></li>
+                    </ul>
+                    
+                        <div class="tab-content">
+                            <div id="newEntity-tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Entity Type:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Corporate</option>
+                                                    <option>Index</option>
+                                                    <option>Industry</option>
+                                                    <option>Task</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Name:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Shortname:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Adhoc1:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Adhoc2:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Aliases:</label>
+                                            <div class="col-sm-10"><input type="text" id="myTokenfield" class="form-control token-example-field" value="" /></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Links:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" />
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newEntity-tab-2" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Private:</label>
+                                            <div class="col-sm-10">
+                                                <form id="demoform" action="#" method="post">
+                                                    <select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
+                                                        <option value="option1">Derek Miller</option>
+                                                        <option value="option2">Tamale BA Team</option>
+                                                        <option value="option3" selected="selected">Damon Wang</option>
+                                                        <option value="option4">Matt Terrill</option>
+                                                    </select>
+                                                    <br>
+                                                    <button type="submit" class="btn btn-default btn-block">Submit data</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newEntity-tab-3" class="tab-pane">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Address:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Phone:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Fax:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Employees:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Email:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Officers:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF NEW ENTITY DIALOG -->
 
 <!--ViewerJS for PDF-->
 <div class="modal inmodal fade" id="viewPDF" tabindex="-1" role="dialog" aria-hidden="true">
@@ -959,6 +1082,9 @@
 
 <!-- Sweet alert -->
 <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+<!-- BootSideMenu -->
+<script src="js/plugins/bootSideMenu/js/BootSideMenu.js"></script>
 
 <script>
     $(document).ready(function(){
@@ -1128,6 +1254,10 @@
     function deleteNote(subject){
         alert("Do you want to delete? " + subject);
     }
+
+    function openThread(){
+        window.open("aaplRecommendation.html",'_blank');
+    }
        
 </script>
 
@@ -1142,6 +1272,14 @@
             });
         });
     });
+</script>
+
+
+<!--.......SCRIPT TO SLIDE THE REL/FILTER/SEARCH MENU........-->
+<!--<script>
+    $(document).ready(function(){
+        $('#leftPanel').BootSideMenu({side:"left", autoClose:false});
+  });
 </script>
 
 
