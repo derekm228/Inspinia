@@ -17,7 +17,6 @@
     <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
     <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
 </head>
 
 <body>
@@ -224,7 +223,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
-                                        <table class="table small m-b-xs">
+                                        <table class="table m-b-xs">
                                             <tbody>
                                                 <tr>
                                                     <td><strong>Firm Sub Profile: </strong></td>
@@ -300,8 +299,8 @@
                                                                 </a>
                                                                 <div class="media-body ">
                                                                     <small class="pull-right">2h ago</small>
-                                                                    <strong>Matt Terrill</strong> comment on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">SS&C Technologies to Acquire Advent Software</a></strong><br>
-                                                                    <small class="text-muted">Today 2:00pm - 2015.09.24</small>
+                                                                    <strong>Matt Terrill</strong> deposit a sidenote <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">SS&C Technologies to Acquire Advent Software</a></strong><br>
+                                                                    <small class="text-muted">Monday, 28 Sep 2015, 10:32</small>
                                                                     <div class="well">
                                                                         It's a great news!
                                                                     </div>
@@ -314,9 +313,48 @@
                                                                 <div class="media-body ">
                                                                     <small class="pull-right">3h ago</small>
                                                                     <strong>Derek Miller</strong> deposit a note on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">SS&C Technologies to Acquire Advent Software</a></strong>. <br>
-                                                                    <small class="text-muted">Today 1:00 pm - 2015.09.24</small>
+                                                                    <small class="text-muted">Monday, 28 Sep 2015, 9:32</small>
                                                                     <div class="well">
                                                                         SSNC buy Advent as $42 per stock.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="feed-element">
+                                                                <a href="#" class="pull-left">
+                                                                    <img alt="image" class="img-circle" src="img/profile/Damon.png">
+                                                                </a>
+                                                                <div class="media-body ">
+                                                                    <small class="pull-right">4d ago</small>
+                                                                    <strong>Damon Wang</strong> deposit a note on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">Should we track editing on notes?</a></strong>. <br>
+                                                                    <small class="text-muted">Monday, 24 Sep 2015, 9:32</small>
+                                                                    <div class="well">
+                                                                        There is a table in db named ts_entry_version, we may need to developer new api for it.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="feed-element">
+                                                                <a href="#" class="pull-left">
+                                                                    <img alt="image" class="img-circle" src="img/profile/Damon.png">
+                                                                </a>
+                                                                <div class="media-body ">
+                                                                    <small class="pull-right">1m ago</small>
+                                                                    <strong>Damon Wang</strong> deposit a note on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">Tamale 15.2 has GA candidate now!</a></strong>. <br>
+                                                                    <small class="text-muted">Monday, 28 Aug 2015, 9:32</small>
+                                                                    <div class="well">
+                                                                        With DEV's effort for 15.2, we just have 15.2 candidiate, after QA testing, we will announce GA.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="feed-element">
+                                                                <a href="#" class="pull-left">
+                                                                    <img alt="image" class="img-circle" src="img/profile/Derek.png">
+                                                                </a>
+                                                                <div class="media-body ">
+                                                                    <small class="pull-right">1y ago</small>
+                                                                    <strong>Derek Miller</strong> deposit a note on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">I'm a very long long long long long long long long long long long long long long long subject100????</a></strong>. <br>
+                                                                    <small class="text-muted">Monday, 28 Sep 2014, 9:32</small>
+                                                                    <div class="well">
+                                                                        I'm a very long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long notebody256??. I'm a very long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long notebody256??. I'm a very long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long notebody256??. I'm a very long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long notebody256??.
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -339,6 +377,7 @@
                         <div class="full-height-scroll">
                             <div class="ibox float-e-margins">
                                 <div class="ibox-content" style="padding:5px 5px 5px 5px">
+                                   <button type="button" class="pull-right btn btn-primary btn-xs">Show Short Names</button>
                                     <h2>Relationships</h2>
                                     <div id="using_json"></div>
                                 </div>
@@ -617,28 +656,6 @@
 
 
 </script>
-
-    <script type="text/javascript">
-        // When the window has finished loading google map
-        google.maps.event.addDomListener(window, 'load', initMap);
-
-        function initMap() {
-          var myLatLng = {lat: 37.771646, lng: -122.402638};
-
-          var map = new google.maps.Map(document.getElementById('map1'), {
-            zoom: 15,
-            center: myLatLng
-          });
-
-          var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Advent Software'
-          });
-
-        };
-
-    </script>
 
 </body>
 
