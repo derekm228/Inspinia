@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamale RMS</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/plugins/codemirror/codemirror.css" rel="stylesheet">
+    <link href="css/plugins/codemirror/ambiance.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+    <link href="css/plugins/bootSideMenu/BootSideMenu.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
+    <!-- Dropzone -->
+    <link href="css/plugins/dropzone/basic.css" rel="stylesheet">
+    <link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
+
+</head>
+
+<body class="full-height-layout mini-navbar">
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile/Derek.png" />
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Derek Miller</strong>
+                            </span> <span class="text-muted text-xs block">Portfolio Manager <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            <img alt="image" src="favicon.ico" width="20px" height="20px">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="main_3.html"><i class="fa fa-globe"></i><span class="nav-label">Research</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="main_3.html">Research</a></li>
+                            <li><a href="main_3.html">My SSNC Notes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="entityList.html"><i class="fa fa-university"></i><span class="nav-label">Entities</span></a>
+                    </li>
+                    <li>
+                        <a href="contactList.html"><i class="fa fa-users"></i><span class="nav-label">Users</span></a>
+                    </li>
+                    <li>
+                        <a href="CDD_screen_2.html"><i class="fa fa-gear"></i><span class="nav-label">Configuration</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="white-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header" style="width:50%">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom search" action="search_results.html" style="width:60%">
+                            <div class="form-group">
+                                <input type="search" placeholder="Search..." class="form-control" name="top-search" id="top-search" autocomplete="off">
+                                <ul class="search-ac">
+                                    <li><a href="entityDetail_SSNC.html">SSNC<span> (SSC Technologies)</span></a></li>
+                                    <li><a href="entityDetail_SSNC.html">ADVS<span> (Advent Software, Inc)</span></a></li>
+                                    <li><a style="text-align:right" href="entityList.html">see more entities...</a></li>
+                                    <li><a href="profile_DamonWang.html">Damon Wang<span></span></a></li>
+                                    <li><a href="profile_DamonWang.html">Derek Miller<span></span></a></li>
+                                    <li><a style="text-align:right" href="contactList.html">see more contacts...</a></li>
+                                    <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                                    <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                                    <li><a style="text-align:right" href="main_3.html">see more content...</a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Tamale RMS</span>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#newEntity">
+                                <i class="fa fa-bank"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#newNote">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="fh-breadcrumb" style="background-color:white">
+                <div class="fh-column" id="leftPanel" style="height:89%">
+
+                    <div class="tabs-container full-height-scroll">
+                        
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a data-toggle="tab" href="#nav-tab-1" aria-expanded="true"><i class="fa fa-sitemap"></i>
+                                    <button type="button" class="btn btn-xs btn-primary btn-outline" style="margin-left:3px">All</button>
+                                </a>
+                            </li>
+                            <li class=""><a data-toggle="tab" href="#nav-tab-2" aria-expanded="false" style="padding-left:20px"><i class="fa fa-filter" style="margin-right:0px"></i></a></li>
+                            <li class=""><a data-toggle="tab" href="#nav-tab-3" aria-expanded="false" style="padding-left:20px"><i class="fa fa-search" style="margin-right:0px"></i></a></li>
+                            <button class="btn-lg btn-link btn-outline" style="border:none; padding:0; outline:none; margin-left:13px"><i class="fa fa-angle-double-left"></i></button>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="nav-tab-1" class="tab-pane active">
+                                <div class="panel-body" style="padding:0; border:none">
+                                    <div class="ibox float-e-margins">
+                                        <div class="ibox-content" style="border:none">
+                                            <input type="text" placeholder="Type an entity..." name="finder" value="SSNC" id="finder" 
+                                                style="background-color:white; font-size: 16px; width:103%; margin-left:5px; margin-bottom:10px; height:35px">
+                                            <div id="using_json"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="nav-tab-2" class="tab-pane">
+                                <div class="panel-body" style="padding:10px 10px 10px 10px; border:none">
+                                    <div class="form-group"><label class="control-label">Note Type</label>
+                                        <div>
+                                            <select class="form-control m-b" name="account">
+                                                <option>Thesis</option>
+                                                <option>Note Type</option>
+                                                <option>TamaleNote</option>
+                                                <option>EMail</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="nav-tab-3" class="tab-pane">
+                                <div class="panel-body" style="padding:10px 10px 10px 10px; border:none">
+                                    <div class="input-group">
+                                        <label class="control-label">Keyword Search</label>
+                                        <div>
+                                            <input type="text" class="form-control" style="width:80%"><span class="input-group-btn">
+                                            <button type="button" class="btn  btn-primary btn-rounded btn-outline">
+                                                <i class="fa fa-search"></i>
+                                            </button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fh-column" style="border-left:1px solid #e7eaec; height:89%">
+
+                    <div class="panel panel-default" style="background-color:white; margin-top:5px; margin-left:4px; margin-right:4px; margin-bottom: 3px; border:none;">
+                        <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:44px">
+                            <h5 class="panel-title" style="margin-top:0px">
+                                <button type="button" class="pull-right btn btn-sm btn-primary btn-outline"><i class="fa fa-sort-amount-asc"></i></button>
+                                <select name="account" id="sort-types" class="form-control" style="width:80%; margin-right:0px; margin-top:-7px; margin-left:-3px">
+                                    <option selected>Display Date</option>
+                                    <option>Submitted Date</option>
+                                    <option>Last Modified</option>
+                                </select>
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="full-height-scroll border-left" style="border-left:1px solid #e7eaec">
+                        <ul class="list-group elements-list">
+                            <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <strong>AAPL, MSFT, GOOG, SSNC</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px; border-left: 5px solid #ed5565">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                        <i class="" onClick="deleteNote(this.parentNode.firstChild.nextElementSibling.innerText)"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="list-group-item" style="padding:10px">
+                                <a data-toggle="tab" href="#tab-1">
+                                    <div>
+                                        <small class="pull-right text-muted"> 09.28.2015</small>
+                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                                    </div>
+                                    <div>
+                                        <small class="pull-right text-muted">Vinh Hong</small>
+                                        <small class="text-muted"><em>TamaleNote</em></small>
+                                    </div>
+                                    <div>
+                                        <small class="text-muted">AAPL Recommendation</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <div style="width:100%; padding:10px">
+                                <button class="btn btn-primary btn-block" onclick="" style="margin: 0 auto; width:60%;"><i class="fa fa-arrow-down"></i> Show More</button>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="full-height">
+                    <div class="full-height-scroll white-bg border-left">
+
+                        <div class="element-detail-box">
+
+                            <div class="tab-content">
+
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="pull-right">
+                                        <div class="tooltip-demo">
+                                            <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Add Sidenote"><i class="fa fa-plus"></i></button>
+                                            <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Edit Note"><i class="fa fa-pencil-square-o"></i></button>
+                                            <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i> </button>
+                                            <a role="button" class="btn btn-white btn-s" data-toggle="tooltip" data-placement="top" title="" data-original-title="View in New Tab" 
+                                                href="ThreadView_SSNCBuyAdvent.html"
+                                                target="_blank">
+                                                <i class="fa fa-expand"></i>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <strong>Derek Private 2</strong>
+                                    </div>
+                                    <div class="small text-muted">
+                                        <i class="fa fa-clock-o"></i> Thursday, 22 Oct 2015, 11:48 am
+                                    </div>
+                                    <div class="small text-muted">
+                                        <i class="fa fa-user"></i> Derek Miller
+                                    </div>
+                                    <div class="small text-muted">
+                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                    </div>
+
+                                    <h1>
+                                        JIRA May, Sarah mentioned you on TAM-9409 (JIRA)
+                                    </h1>
+
+                                    <div>
+
+                                        <br>
+                                        <table class="small m-b-xs">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-right:10px"><strong>Notification:</strong></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <br>
+
+                                    <form>
+   <input name="numAdhocDefIDs" type="hidden" value="">
+   <input name="dateAdhocDefIDs" type="hidden" value="">
+   <!-- END: subject end -->
+   <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;"><br></span></p>
+   <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#C0C0C0;background-color:transparent;font-family:Times New Roman;font-size:12pt;font-weight:normal;font-style:normal;">___________________________________________________________________</span></p>
+   <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:bold;font-style:normal;">Subject: JIRA May, Sarah mentioned you on TAM-9409 (JIRA) </span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;"><br></span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:bold;font-style:normal;">From:</span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;"> May, Sarah (JIRA)<br></span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:bold;font-style:normal;">Sent:</span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;"> Thursday, October 22, 2015 11:47 AM<br></span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:bold;font-style:normal;">To:</span><span style="color:#000000;background-color:transparent;font-family:Verdana;font-size:10pt;font-weight:normal;font-style:normal;"> Miller, Derek<br></span></p>
+   <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;background-color:#F5F5F5;"> 
+    <tbody><tr> 
+     <td style="padding:7.5pt 15pt 7.5pt 15pt;background-color:#F5F5F5;border-top:none;border-right:none;border-bottom:none;border-left:none;">
+      <table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"> 
+       <tbody><tr> 
+        <td valign="top" width="32" style="width:24pt;padding:0pt 6pt 0pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC4SURBVFhH7ZKBCsMgDET76X6af+aStCmZNJ4K07HlwVUjpzm0B1E26/xsIgJEgHaAlFKZ0bW9BxxghJwzn/XLAcgrUqp6zQ1oU5Vh3RM8NGf+4AbqplW97gkclgSg5REhxOMavQA9sE8OaTMfgEeVrZWrRojHNaIAdmTqOQkhHtf4FQH4z7ai5buBHZl6TkKIp2XUg95kGqAaIZ4eo0UaINh32pvMBRgQQjw9xk8RASJABLgDbNJRXplkYw2Zbl2IAAAAAElFTkSuQmCC" width="32" height="32" alt="" style="border-width:0px;">&nbsp;</span></p></td>
+        <td style="padding:0pt 0pt 0pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:15pt;"><a name="EMAIL_SMAY"><span style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"></span></a><a href="https://jiraprod.advent.com/secure/ViewProfile.jspa?name=smay" style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;text-decoration:none;"><span>May, Sarah</span></a><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"> </span><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:bold;font-style:normal;">mentioned you</span><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"> on </span><span style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"><a href="https://jiraprod.advent.com/browse/TAM-9409" style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;text-decoration:none;"><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbdEVYdGppcmEtc3lzdGVtLWltYWdlLXR5cGUAaWNvbroqOUUAAAC7SURBVDhP3ZNBDoMgEEU9Sy8IYcuKNZcxMZ6DBSSw6RXYGxZTvg111JQ2dVeTb3Dm/zdGYSCiS1pv8zzfrLVZSklKqY+CF5kXAAVjDHnvcykl19r9neCBF5n6/ASA6pzrBrlSShmZem0APnmapiyEIC7UWh/eEwCNJkzgEKxR454uoKkBjnXo3wGXPyIPc0jrL8ty/o3HCT3FGPeAtpVDCN2tjMkIa633W7m+3nqYQP1G8I7juB2m30XDA/uBKLhEscokAAAAAElFTkSuQmCC" width="16" height="16" alt="" style="border-width:0px;"></span><span>TAM-9409</span></a></span><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"> </span></p></td>
+       </tr> 
+      </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+    </tr> 
+    <tr> 
+     <td style="padding:0pt 15pt 0pt 15pt;background-color:#F5F5F5;border-top:none;border-right:none;border-bottom:none;border-left:none;">
+      <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;"> 
+       <tbody><tr style="height:7.5pt;"> 
+        <td style="padding:0pt 11.25pt 0pt 12pt;background-color:#FFFFFF;border-top:1pt #CCCCCC solid;border-right:1pt #CCCCCC solid;border-bottom:none;border-left:1pt #CCCCCC solid;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1;"><span style="color:#FFFFFF;background-color:#FFFFFF;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;">&nbsp; </span></p></td>
+       </tr> 
+       <tr> 
+        <td style="padding:0pt 11.25pt 0pt 12pt;background-color:#FFFFFF;border-top:none;border-right:1pt #CCCCCC solid;border-bottom:none;border-left:1pt #CCCCCC solid;">
+         <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;"> 
+          <tbody><tr> 
+           <td valign="top" style="padding:0pt 3.75pt 0pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:22.5pt;"><span style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:15pt;font-weight:normal;font-style:normal;"><a href="https://jiraprod.advent.com/browse/TAM-9409" style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:15pt;font-weight:normal;font-style:normal;text-decoration:none;"><span>Re: make added space and a horizontal line appear only if commentary added</span></a></span><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:15pt;font-weight:normal;font-style:normal;"> </span></p></td>
+          </tr> 
+         </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+       </tr> 
+       <tr> 
+        <td style="padding:0pt 11.25pt 0pt 12pt;background-color:#FFFFFF;border-top:none;border-right:1pt #CCCCCC solid;border-bottom:none;border-left:1pt #CCCCCC solid;">
+         <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;"> 
+          <tbody><tr> 
+           <td style="padding:0pt 0pt 7.5pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:8pt 0pt 0pt 0pt;"><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;">Hey </span><span style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"><a href="https://jiraprod.advent.com/secure/ViewProfile.jspa?name=dmiller" style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;text-decoration:none;"><span>Miller, Derek</span></a></span><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;">, this would be a cool/smart thing to incorporate into the DD for NextGen from the get-go.</span></p></td>
+          </tr> 
+         </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+       </tr> 
+       <tr> 
+        <td style="padding:0pt 11.25pt 0pt 12pt;background-color:#FFFFFF;border-top:none;border-right:1pt #CCCCCC solid;border-bottom:none;border-left:1pt #CCCCCC solid;">
+         <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-collapse:collapse;"> 
+          <tbody><tr> 
+           <td style="padding:7.5pt 0pt 7.5pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;">
+            <table border="0" cellspacing="1" cellpadding="0"> 
+             <tbody><tr> 
+              <td style="padding:0pt 0pt 0pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:15pt;"><span style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"><a href="https://jiraprod.advent.com/browse/TAM-9409#add-comment" target="_blank" title="Add Comment" style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;text-decoration:none;"><span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbdEVYdGppcmEtc3lzdGVtLWltYWdlLXR5cGUAaWNvbroqOUUAAAE9SURBVDhPpVK7ioNAFJ1vyS/sP20tQYIEIYKISxqxSGFhqSB2ioXuFwTsBLsUgiI28wMWd+e4GMZN3DWscGAO95x7vQ9GRP/CgiRJ8uZ5XmlZFt/v9yTDMAxCDBrZc38gqKoq2bZNaZrypmn4OI4T+r7neZ7z8/lM0EC7SHC5XG4IVFXFBb/9hrIs+eFwIHgEZ8z3/U9d1wkVf4rXgEKaplEQBB7DoyiKzeYZwswxF6YoykvVZ9R1PQ2anU4nyrLs5QRRFHF4pxng0bbt5iQYJFqHl4nqO+z9eDwSAs8MMq7X6/TrYqXQfq9R7H2H3WIbwzDck+AG8GHqcRxz0zSno3q4gxkIQtx1HXdd9+ESsfvVSwQgFIKpP7Qlqr7L8WdYECSA2XGcG9qSY2tYENyE3N8WLEgYhh8y/xvEvgBWISVC5iSJqwAAAABJRU5ErkJggg==" width="16" height="16" alt="" style="border-width:0px;"></span><span>&nbsp;</span></a></span></p></td>
+              <td style="padding:0pt 0pt 0pt 3.75pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:15pt;"><span style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"><a href="https://jiraprod.advent.com/browse/TAM-9409#add-comment" target="_blank" title="Add Comment" style="color:#3B73AF;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;text-decoration:none;"><span>Add Comment</span></a></span><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"> </span></p></td>
+             </tr> 
+            </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+          </tr> 
+         </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+       </tr> 
+       <tr style="height:3.75pt;"> 
+        <td style="padding:0pt 11.25pt 0pt 12pt;background-color:#FFFFFF;border-top:none;border-right:1pt #CCCCCC solid;border-bottom:1pt #CCCCCC solid;border-left:1pt #CCCCCC solid;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1;"><span style="color:#FFFFFF;background-color:#FFFFFF;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;">&nbsp; </span></p></td>
+       </tr> 
+      </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+    </tr> 
+    <tr> 
+     <td style="padding:9pt 15pt 9pt 15pt;background-color:#F5F5F5;border-top:none;border-right:none;border-bottom:none;border-left:none;">
+      <table border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;"> 
+       <tbody><tr> 
+        <td width="100%" style="width:100%;padding:0pt 0pt 0pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:13.5pt;"><span style="color:#999999;background-color:transparent;font-family:Arial;font-size:9pt;font-weight:normal;font-style:normal;">This message was sent by Atlassian JIRA (v6.4.1#64016-sha1:5d75814) </span></p></td>
+        <td valign="top" style="padding:0pt 0pt 0pt 15pt;border-top:none;border-right:none;border-bottom:none;border-left:none;">
+         <table border="0" cellspacing="1" cellpadding="0"> 
+          <tbody><tr> 
+           <td style="padding:2.25pt 0pt 0pt 0pt;border-top:none;border-right:none;border-bottom:none;border-left:none;"><p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#333333;background-color:transparent;font-family:Arial;font-size:10.5pt;font-weight:normal;font-style:normal;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKkAAAAkCAYAAADy+xopAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAbdEVYdGppcmEtc3lzdGVtLWltYWdlLXR5cGUAbG9nbzswio0AAAdZSURBVHhe7ZktcyVHDEWDFoUtWhS0KCwoKMgoKCwoaP+u85ucOa53qxTtVUszfh/22wdO2Z6W1N3q2+qe8U//Pj//c+K3jU8bPLsV9M84NCZn8+COeHl5acHw741vJxDG7xs/b3wX8ILQH/3Sv8by14azfXBHOFFmMKR6PW1IHOLPja8bl6quCPPXDcSY+0awt67qD66AE2UmOvyyEatqBCEhHGyOVln88CeOEybQ/5cN5//gDnGizDhH3QmdiCJUWkB0+GR4LhvnH0GcVG03ngd3jBNlxjpucNQimqqyngsq6kOcPzBOlBnrmPi8QVU8l2CJQzziuv4e/EA4UWas4wLulVQ+HeXdtQBB6kqA39H77IM7xYkyYx1P8JIDru1cXKOPo3Dl4etDvGfzt7P9qLj5XfWrihNlxjqeUDWkWv6xgZjeOgFVYuKpCvPT2UZ449d4HJcQetXnvXx9eBfzc6LMWMcT1R00CwLhMbFMPtrZqS7e5KM9ona+giuF81vBGFf3YtpdXzx39h+NdzE/J8qMdTzhPvAD4o121SemLJxK9Agw2jkmn8S6Ks/mcvdoZwsPkV4BJ8qMdTzBsewmAfFuVlXIiQ10RzXtzi/TfcqqxuBs4SHSK+BEmbGOJ6hMVQXjuY5z7HKVjNWWIzW2RXJVdnRHvaDyO3/xEOn/Yd3IGadL5KpfYJwoM9YxsKqA3CV1xOYF1V2P9upfoED82J+juiY4nL94iPQd4kSZsY6BVTWFeJ/kuEVQ8dit7rUwqaKrKuxYXR0uLVKeO/b+08LFgEkcbJwvOPs9XCS2hLj9nmN+mooUujth9eLTHdOTyfFPAOdbPc9j2Sty0F2a8bl2jZsNTH+TSs9Gx7Y6ShnnakNH4gkG/M4GXBUTwVi1kRmL84mbgbirkzDC+N2aks9op6859L+Kz9i+TkUKneDobI89Iov2FU4AqsDcn3IbE4v+ldBWaC6dSI/EZnxRBMDfE4FFJFJ+TkUkppsQXHtHfoEln9lmz5i/xGArJsnQ4DqBaid1sNOcvwSed6iIR/4RIU1FCq69I89/Uokz8nUC6ND4J/NzhWBCPDGOjDHypEATEGq34zsh064q0FGJUEmsjvJYpauFWLFHpHsroOjmsEInCRwRuCr5ZH5dwamIa/BWkX5ToClHjibhjroVTvDEiDar6wCwIUgSVFVB7UKLNFlExeU+Jn82l36vRETbqg/icSLQrngIhr7kC86XvOGDL6ebxqJxyncyP8aAn/oVistzF4PnioGdsxmjQHs4ItS9Aq2OehYq2lU73fVVJSvbickidrBJXAzN4619OF/m6Wwz55gfdMVkJVJtqM+nN3z78qhAe9kj1L0Cheqoz5fy6suDezG7hUjBxVClqfrI86xwvrFarjjX/KpCofYq76/96DPTSaTWVoGOMBHqEYGC3VEb+T5bVap45IuPJFJgDmw2NmJ1j3d+QN7JIWKPLzGRc82vy+uy/dIiBZLwXdAAia4SXFEJj6PB2Vf3orw4lxIp49UdDWEwnoiLwXP5unYHFSv3XW3mDLnL1XmPSNkozI8x5PlV92753lyk0AlVCzKliscVgHYq8yRJsheXECljnV57IjEnVEtnUxHFVo2xIvY7mR+5rvLboRg3EymJYherSnZCzYJZUVUHXRuqO1AmV95zi7R6uZsQxQLV2CriKUGV2yMkrcVEpEcFCopxE5HGxUEIEuoq0VQb2XW4ykSyVu0VcTHPLdLpZnFkkQL5QUCTI9xtesTKmDphqe9uftVL6RSN6yYizYsTK9YqwfjFOI4qMfKlmrr2ing0nlukLHZuYwMxVvoS2QacSDPkwvUBxHU+gjxV14ipSFdjj/OrxqixVHFe2y8h0uqI0ycfqsFqJ8fK5sgbQLBgtFNBXHsFm0axl8kydIvo2tynL2c3Ealw/szF2WZcPqcidQXHvbx2eb26SFeXfNmsjokuudVRrnYdicTJVL7ddaTaOEdESh8xBn07uyhSqp7u2w7nr34Yu8bjuIZIq8Ki9irvr+2XEGlVJWPFguoIcJMUVdJy7AqXVNCRXyWLOTFeQOgSbbeIbo740w9U4wEJBfJzUAzyFdsFbfjGPrDFl0Ky6l99d/MjhmtXfMS5OjU1vyrOa/u5RVod9aCJiVU1VWXLVFXavSQ4qi8MEvlqTBFdLbpFrCrIhE4oHRpjdXqs0JWkm1/3xaaDGHBVkVaLTKKcvbMFJSFT7cruHiuqo1Xjo32yqCQK+24Rq/YJEukRIZCn1Xw7dLXo5jfNVwUx4KoirTpTwjM8d/bxjVtUb+2r64GjOuKU+IkoqJDYdosIk2rqFlo5q3JaQSyJrMrZipj7yfwm+aqErBhXFSlJIbkZJzrgubN3lZFnCCzbVrErqPY5BsQ+WQQnZpLNc4kAHxcrX1e4juRTQLEYP/Z5bnFejJkjmOfVgrNZWcDcN2PlOfGrk4jnbKYoPnDjgrw++Lm7MbbMnTiMIcbQlQLcmtDva3sSqdHY89N/45L+cxKdJ6cAAAAASUVORK5CYII=" width="169" height="36" alt="" style="border-width:0px;"></span></p></td>
+          </tr> 
+         </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+       </tr> 
+      </tbody></table> <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p></td>
+    </tr> 
+   </tbody></table> 
+   <p style="text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1.429;"><span style="color:#000000;background-color:transparent;font-family:Times New Roman;font-size:10pt;font-weight:normal;font-style:normal;">&nbsp;</span></p>  
+  </form>
+
+                                </p>
+
+                                <div class="m-t-lg">
+                                    <h2>Attachments:</h2>
+                                    <p>
+                                        <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
+                                        <a href="#">Download all</a>
+                                    </p>
+
+                                    <div class="attachment">
+                                        <div class="file-box">
+                                            <div class="file">
+                                                <a href="#" data-toggle="modal" data-target="#viewPDF">
+                                                    <span class="corner"></span>
+
+                                                    <div class="icon">
+                                                        <i class="fa fa-file-pdf-o"></i>
+                                                    </div>
+                                                    <div class="file-name">
+                                                        Analysis_2015.pdf
+                                                        <br>
+                                                        <small>Added: Sep 28, 2015</small>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="file-box">
+                                            <div class="file">
+                                                <a href="#">
+                                                    <span class="corner"></span>
+
+                                                    <div class="icon">
+                                                        <i class="fa fa-file-excel-o"></i>
+                                                    </div>
+                                                    <div class="file-name">
+                                                        Numbers_2015.xls
+                                                        <br>
+                                                        <small>Added: Sep 28, 2015</small>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+
+                                <div class="article row">
+                                    <div class="col-lg-12">
+                                        <h2>Sidenotes:
+                                            <button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+                                                <strong>Add Sidenote</strong>
+                                            </button>
+                                        </h2>
+                                        <div class="social-feed-box">
+                                            <div class="social-avatar">
+                                                <a href="" class="pull-left">
+                                                    <img alt="image" src="img/profile/Derek.png">
+                                                </a>
+                                                <div class="media-body">
+                                                    <a href="#">
+                                                        Derek Miller
+                                                    </a>
+                                                    <small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
+                                                </div>
+                                            </div>
+                                            <div class="social-body">
+                                                <p>
+                                                    Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="social-feed-box">
+                                            <div class="social-avatar">
+                                                <a href="" class="pull-left">
+                                                    <img alt="image" src="img/profile/Damon.png">
+                                                </a>
+                                                <div class="media-body">
+                                                    <a href="profile_DamonWang.html">
+                                                        Damon Wang
+                                                    </a>
+                                                    <small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
+                                                </div>
+                                            </div>
+                                            <div class="social-body">
+                                                <p>
+                                                    I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="social-feed-box">
+                                            <div class="social-avatar">
+                                                <a href="" class="pull-left">
+                                                    <img alt="image" src="img/profile/Alan.png">
+                                                </a>
+                                                <div class="media-body">
+                                                    <a href="#">
+                                                        Alan Yang
+                                                    </a>
+                                                    <small class="text-muted">Today 12:01 pm - 09.27.2015</small>
+                                                </div>
+                                            </div>
+                                            <div class="social-body">
+                                                <p>
+                                                    Any update on those numbers?
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="social-feed-box">
+                                            <div class="social-avatar">
+                                                <a href="" class="pull-left">
+                                                    <img alt="image" src="img/profile/Matt.png">
+                                                </a>
+                                                <div class="media-body">
+                                                    <a href="#">
+                                                        Matt Terrill
+                                                    </a>
+                                                    <small class="text-muted">Today 2:21 pm - 09.27.2015</small>
+                                                </div>
+                                            </div>
+                                            <div class="social-body">
+                                                <p>
+                                                    I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+                                                </p>
+                                                <br>
+                                                <img src="img/aapl_forecast.png" style="width: 608px;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row" style="padding-bottom:10px">
+                                    <div class="col-lg-12">
+                                        <button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
+                                            <strong>Add Sidenote</strong>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="footer" style="background-color:#f5f5f5">
+            <div class="pull-left">Showing <strong>50</strong> of <strong>1454</strong> results</div>
+            <div class="pull-right">
+                <button class="btn btn-sm pull-right demo1" style="padding-top:0px; padding-bottom:0px; background-color:#f5f5f5"><i class="fa fa-save"></i> Save Screen</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--New Note Dialog-->
+<div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:800px" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="tabs-container">
+                    <div class="tab-content">
+                        <div id="newNote-tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <fieldset class="form-horizontal">
+                                    <div class="form-group"><label class="col-sm-2 control-label">Note Type:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control m-b" name="noteType">
+                                                <option>Tamale Note</option>
+                                                <option>Report</option>
+                                                <option>Call</option>
+                                                <option>Clip</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Entities:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Source:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Date:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input date"></div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Sentiment:</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control m-b" name="noteType">
+                                                <option>Neutral</option>
+                                                <option>Positive</option>
+                                                <option>Negative</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label class="col-sm-2 control-label">Subject:</label>
+                                        <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input subject"></div>
+                                    </div>
+
+
+                                    <!-- ATTACHMENT DROP ZONE -->
+                                    <!-- Standard Form -->
+                                    <h4>Select files from your computer</h4>
+                                    <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                                <input type="file" name="files[]" id="js-upload-files" multiple>
+                                            </div>
+                                            <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+                                        </div>
+                                    </form>
+
+                                    <!-- Drop Zone -->
+                                    <h4>Or drag and drop files below</h4>
+                                    <div class="upload-drop-zone" id="drop-zone">
+                                        Just drag and drop files here
+                                    </div>
+
+                                    <!-- Progress Bar -->
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Upload Finished -->
+                                    <div class="js-upload-finished">
+                                        <h3>Processed files</h3>
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+                                            <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a>
+                                        </div>
+                                    </div>
+                                    <!-- END OF ATTACHMENT ZONE -->
+
+
+                                    <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
+                                        <div class="col-sm-10">
+                                            <div class="ibox-content" style="border-style: solid;border-width:1px;">
+
+                                                <div class="summernote">
+                                                    <h3>Lorem Ipsum is simply</h3>
+                                                    dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
+                                                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                    <br/>
+                                                    <br/>
+                                                    <ul>
+                                                        <li>Remaining essentially unchanged</li>
+                                                        <li>Make a type specimen book</li>
+                                                        <li>Unknown printer</li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF NEW NOTE DIALOG-->
+
+<!-- NEW ENTITY DIALOG -->
+<div class="modal inmodal fade" id="newEntity" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:800px" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">New Entity</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tabs-container">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#newEntity-tab-1"> Overview</a></li>
+                        <li class=""><a data-toggle="tab" href="#newEntity-tab-2"> Privacy</a></li>
+                        <li class=""><a data-toggle="tab" href="#newEntity-tab-3"> Corporate Details</a></li>
+                    </ul>
+                    
+                        <div class="tab-content">
+                            <div id="newEntity-tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Entity Type:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Corporate</option>
+                                                    <option>Index</option>
+                                                    <option>Industry</option>
+                                                    <option>Task</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Name:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Shortname:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Adhoc1:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Adhoc2:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Aliases:</label>
+                                            <div class="col-sm-10"><input type="text" id="myTokenfield" class="form-control token-example-field" value="" /></div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">Links:</label>
+                                            <div class="col-sm-5">
+                                                <input type="text" />
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <input type="text" />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newEntity-tab-2" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Private:</label>
+                                            <div class="col-sm-10">
+                                                <form id="demoform" action="#" method="post">
+                                                    <select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
+                                                        <option value="option1">Derek Miller</option>
+                                                        <option value="option2">Tamale BA Team</option>
+                                                        <option value="option3" selected="selected">Damon Wang</option>
+                                                        <option value="option4">Matt Terrill</option>
+                                                    </select>
+                                                    <br>
+                                                    <button type="submit" class="btn btn-default btn-block">Submit data</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newEntity-tab-3" class="tab-pane">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Address:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Phone:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Fax:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Employees:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Email:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Officers:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF NEW ENTITY DIALOG -->
+
+<!--ViewerJS for PDF-->
+<div class="modal inmodal fade" id="viewPDF" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:60%;height:90%" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body" style="padding:0; height:700px">
+                <iframe src = "/ViewerJS/#../TamaleNextGen/Static_Full_Version/docs/Quarterly_Earnings_Slides_Q115.pdf" width='100%' height='700' allowfullscreen webkitallowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Theme javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- SUMMERNOTE -->
+<script src="js/plugins/summernote/summernote.min.js"></script>
+
+<!-- Sweet alert -->
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+<!-- BootSideMenu -->
+<script src="js/plugins/bootSideMenu/js/BootSideMenu.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        $('.summernote').summernote();
+
+    });
+    var edit = function() {
+        $('.click2edit').summernote({focus: true});
+    };
+    var save = function() {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        };
+</script>
+
+<!-- Tree View JS & CSS-->
+<script src="js/plugins/jsTree/jstree.min.js"></script>
+
+<style>
+    .jstree-open > .jstree-anchor > .fa-folder:before {
+        content: "\f07c";
+    }
+
+    .jstree-default .jstree-icon.none {
+        width: 0;
+    }
+
+</style>
+
+
+<!-- ATTACHMENT JS AND CSS taken from http://bootsnipp.com/snippets/featured/bootstrap-drag-and-drop-upload -->
+<style>
+    /* layout.css Style */
+    .upload-drop-zone {
+      height: 200px;
+      border-width: 2px;
+      margin-bottom: 20px;
+    }
+
+    /* skin.css Style*/
+    .upload-drop-zone {
+      color: #ccc;
+      border-style: dashed;
+      border-color: #ccc;
+      line-height: 200px;
+      text-align: center
+    }
+    .upload-drop-zone.drop {
+      color: #222;
+      border-color: #222;
+    }
+</style>
+
+<script>
++ function($) {
+    'use strict';
+
+    // UPLOAD CLASS DEFINITION
+    // ======================
+
+    var dropZone = document.getElementById('drop-zone');
+    var uploadForm = document.getElementById('js-upload-form');
+
+    var startUpload = function(files) {
+        console.log(files)
+    }
+
+    uploadForm.addEventListener('submit', function(e) {
+        var uploadFiles = document.getElementById('js-upload-files').files;
+        e.preventDefault()
+
+        startUpload(uploadFiles)
+    })
+
+    dropZone.ondrop = function(e) {
+        e.preventDefault();
+        this.className = 'upload-drop-zone';
+
+        startUpload(e.dataTransfer.files)
+    }
+
+    dropZone.ondragover = function() {
+        this.className = 'upload-drop-zone drop';
+        return false;
+    }
+
+    dropZone.ondragleave = function() {
+        this.className = 'upload-drop-zone';
+        return false;
+    }
+
+}(jQuery);
+
+</script>
+<!--......................END OF ATTACHMENT STUFF.......................-->
+
+
+<!-- JS TREE SCRIPT TO POPULATE THE TREE ON THE LEFT: https://www.jstree.com/ -->
+<script>
+    $(document).ready(function(){
+        $('#using_json').jstree({ 'core' : {
+            'checkbox' : { 'keep_selected_style' : false },
+            'themes' : [{'dots' : false},
+            {'icons' : false}],
+            'data' : [{
+
+                'text': 'Entities',
+                'state': {
+                    'opened': true
+                },
+                'children': [{
+                    'text': 'Competes With',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{'text': 'ADVS', 'icon': 'none'},
+                    {'text': 'Backstop', 'icon': 'none'},
+                    {'text': 'Code Red', 'icon': 'none'},
+                    {'text': 'InvestCloud', 'icon': 'none'}]
+                },
+                {
+                    'text': 'Location',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{'text': 'Boston', 'icon': 'none'},
+                    {'text': 'New York City', 'icon': 'none'},
+                    {'text': 'San Francisco', 'icon': 'none'},
+                    {'text': 'Beijing', 'icon': 'none'},
+                    {'text': 'Manila', 'icon': 'none'},
+                    {'text': 'New Rochelle', 'icon': 'none'},
+                    {'text': 'Connecticut', 'icon': 'none'},
+                    {'text': 'Abu Dhabi', 'icon': 'none'},
+                    {'text': 'London', 'icon': 'none'}]
+                }]
+            },
+            {
+                'text': 'Contacts',
+                'state': {
+                    'opened': true
+                },
+                'children': [{
+                    'text': 'CEO',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{'text': 'John Doe', 'icon': 'none'}]
+                },
+                {
+                    'text': 'CFO',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{'text': 'Jane Doe', 'icon': 'none'}]
+                }]
+            }]
+
+        },
+        'plugins' : [ 'checkbox']})},
+
+        $(".list-group-item").hover(function(){
+            $('i', this).toggleClass('pull-right fa fa-trash-o');
+        })
+    );
+
+    function deleteNote(subject){
+        alert("Do you want to delete? " + subject);
+    }
+
+    function openThread(){
+        window.open("aaplRecommendation.html",'_blank');
+    }
+       
+</script>
+
+
+<!--........SCRIPT TO RUN ALERT THE USER ON THE "SAVE SCREEN" BUTTON (sweetalert.html).........-->
+<script>
+    $(document).ready(function(){
+        $('.demo1').click(function(){
+            swal({
+                title: "Save Screen",
+                text: "Give this screen a title and it will be saved as a separate screen under the Research tab."
+            });
+        });
+    });
+</script>
+
+
+<!--.......SCRIPT TO SLIDE THE REL/FILTER/SEARCH MENU........-->
+<!--<script>
+    $(document).ready(function(){
+        $('#leftPanel').BootSideMenu({side:"left", autoClose:false});
+  });
+</script>
+
+
+<!--....EXTRA STYLING TO MAKE THE JSTREE NARROWER....-->
+<style>
+    #nav-tab-1 .ibox-content {
+        padding-left:5px;
+    }
+
+    .jstree-children .jstree-node {
+        margin-left: 15px;
+    }
+</style>
+
+</body>
+
+</html>
