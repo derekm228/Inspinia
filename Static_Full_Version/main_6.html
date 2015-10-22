@@ -203,7 +203,7 @@
 						</div>
 					</div>
 
-					<div class="full-height-scroll border-left" style="border-left:1px solid #e7eaec">
+					<div class="full-height-scroll border-left" id="myScroll" style="border-left:1px solid #e7eaec">
 						<ul class="list-group elements-list">
 							<li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394">
 								<a data-toggle="tab" href="#tab-1">
@@ -541,9 +541,6 @@
 									</div>
 								</a>
 							</li>
-							<div style="width:100%; padding:10px">
-								<button class="btn btn-primary btn-block" onclick="" style="margin: 0 auto; width:60%;"><i class="fa fa-arrow-down"></i> Show More</button>
-							</div>
 						</ul>
 					</div>
 				</div>
@@ -997,17 +994,15 @@
 								<div class="panel-body">
 									<fieldset class="form-horizontal">
 										<div class="form-group" style="padding-left:40px;padding-right:40px;">
-												
-												<label> <input type="checkbox" class="i-checks"> Private entity </label>
-												
-												<form id="demoform" action="#" method="post">
-													<select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
-														<option value="option1">Derek Miller</option>
-														<option value="option2">Tamale BA Team</option>
-														<option value="option3" selected="selected">Damon Wang</option>
-														<option value="option4">Matt Terrill</option>
-													</select>
-												</form>
+											<label> <input type="checkbox" class="i-checks"> Private entity </label>
+											<form id="demoform" action="#" method="post">
+												<select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
+													<option value="option1">Derek Miller</option>
+													<option value="option2">Tamale BA Team</option>
+													<option value="option3" selected="selected">Damon Wang</option>
+													<option value="option4">Matt Terrill</option>
+												</select>
+											</form>
 										</div>
 									</fieldset>
 								</div>
@@ -1041,8 +1036,8 @@
 									<fieldset class="form-horizontal">
 										<div class="form-group"><label class="col-sm-2 control-label">Aliases:</label>
 											<div class="col-sm-10">
-											<input type="text" id="myTokenfield" class="form-control token-example-field" value="" />
-											<span class="help-block m-b-none">Use 'Tab' or 'Enter' to input multiple values. How to use it in iPad?</span>	
+												<input type="text" id="myTokenfield" class="form-control token-example-field" value="" />
+												<span class="help-block m-b-none">Use 'Tab' or 'Enter' to input multiple values. How to use it in iPad?</span>	
 											</div>
 
 										</div>
@@ -1226,6 +1221,15 @@ function openThread(){
 
 
 <script>
+
+	$('#myScroll').scroll(function() {
+		if($(this).scrollTop() + $(this).innerHeight() >= this.scrollHeight) {
+       		alert('I will call API to load more data..');
+  		}
+
+
+		});
+
 	$('#myTokenfield').tokenfield();
 
 	var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
@@ -1265,15 +1269,15 @@ function openThread(){
     });
 </script>
 
- <script src="js/plugins/iCheck/icheck.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('.i-checks').iCheck({
-                    checkboxClass: 'icheckbox_square-green',
-                    radioClass: 'iradio_square-green',
-                });
-            });
-        </script>
+<script src="js/plugins/iCheck/icheck.min.js"></script>
+<script>
+	$(document).ready(function () {
+		$('.i-checks').iCheck({
+			checkboxClass: 'icheckbox_square-green',
+			radioClass: 'iradio_square-green',
+		});
+	});
+</script>
 
 <style>
 	#nav-tab-1 .ibox-content {
