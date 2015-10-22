@@ -12,7 +12,7 @@
     defaults = {
       bootstrap2Compatible: false,
       filterTextClear: 'show all',
-      filterPlaceHolder: 'Filter',
+      filterPlaceHolder: 'Search Teams or Users',
       moveSelectedLabel: 'Move selected',
       moveAllLabel: 'Move all',
       removeSelectedLabel: 'Remove selected',
@@ -26,9 +26,9 @@
       showFilterInputs: true,                                                             // whether to show filter inputs
       nonSelectedFilter: '',                                                              // string, filter the non selected options
       selectedFilter: '',                                                                 // string, filter the selected options
-      infoText: 'Showing all {0}',                                                        // text when all options are visible / false for no info text
-      infoTextFiltered: '<span class="label label-warning">Filtered</span> {0} from {1}', // when not all of the options are visible due to the filter
-      infoTextEmpty: 'Empty list',                                                        // when there are no options present in the list
+      infoText: 'Users not allowed access',                                                        // text when all options are visible / false for no info text
+      infoTextFiltered: 'Users allowed access', // when not all of the options are visible due to the filter
+      infoTextEmpty: 'User allowed access',                                                        // when there are no options present in the list
       filterOnValues: false                                                               // filter by selector's values, boolean
     },
     // Selections are invisible on android if the containing select is styled with CSS

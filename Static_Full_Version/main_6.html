@@ -31,6 +31,7 @@
 
 	<!--DualListBox-->
 	<link href="css/plugins/duallistbox/duallistbox.css" type="text/css" rel="stylesheet">
+	<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
 
 </head>
 
@@ -924,105 +925,138 @@
 <div class="modal inmodal fade" id="newEntity" tabindex="-1" role="dialog" aria-hidden="true">
 	<div style="width:800px" class="modal-dialog modal-lg">
 		<div class="modal-content">
-			<div class="modal-header">
+			<div class="modal-header" style="padding:10px;10px;10px;10px">
 				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 				<h4 class="modal-title">New Entity</h4>
 			</div>
-			<div class="modal-body">
-				<div class="tabs-container">
-					<ul class="nav nav-tabs">
-						<li class="active"><a data-toggle="tab" href="#newEntity-tab-1"> Overview</a></li>
-						<li class=""><a data-toggle="tab" href="#newEntity-tab-2"> Privacy</a></li>
-						<li class=""><a data-toggle="tab" href="#newEntity-tab-3"> Corporate Details</a></li>
-						<li class=""><a data-toggle="tab" href="#newEntity-tab-4"> Extra Information</a></li>
-					</ul>
-					
-					<div class="tab-content">
-						<div id="newEntity-tab-1" class="tab-pane active">
-							<div class="panel-body">
-								<fieldset class="form-horizontal">
-									<div class="form-group"><label class="col-sm-2 control-label">Entity Type:</label>
-										<div class="col-sm-10">
-											<select class="form-control m-b" name="noteType">
-												<option>Corporate</option>
-												<option>Index</option>
-												<option>Industry</option>
-												<option>Task</option>
-											</select>
-										</div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Name:</label>
-									<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Shortname:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-
-
-								</fieldset>
+			<div class="modal-body" style="background-color:#fff">
+				<div class="row" style="height:50px">
+					<fieldset class="form-horizontal">
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Entity Type:</label>
+							<div class="col-sm-10">
+								<select class="form-control m-b" name="noteType">
+									<option>Corporate</option>
+									<option>Index</option>
+									<option>Industry</option>
+									<option>Task</option>
+								</select>
 							</div>
-						</div>
-						<div id="newEntity-tab-2" class="tab-pane">
-							<div class="panel-body">
 
-								<fieldset class="form-horizontal">
-									<div class="form-group"><label class="col-sm-2 control-label">Private:</label>
-										<div class="col-sm-10">
-											<form id="demoform" action="#" method="post">
-												<select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
-													<option value="option1">Derek Miller</option>
-													<option value="option2">Tamale BA Team</option>
-													<option value="option3" selected="selected">Damon Wang</option>
-													<option value="option4">Matt Terrill</option>
-												</select>
-												<br>
-												<button type="submit" class="btn btn-default btn-block">Submit data</button>
-											</form>
-										</div>
-									</div>
-								</fieldset>
-							</div>
 						</div>
-						<div id="newEntity-tab-3" class="tab-pane">
-							<div class="panel-body">
-								<fieldset class="form-horizontal">
-									<div class="form-group"><label class="col-sm-2 control-label">Address:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Phone:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Fax:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Employees:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Email:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-									<div class="form-group"><label class="col-sm-2 control-label">Officers:</label>
-										<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
-									</div>
-								</fieldset>
+					</fieldset>
+				</div>
+				<div class="row">
+					<div class="tabs-container">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#newEntity-tab-1"> Overview</a></li>
+							<li class=""><a data-toggle="tab" href="#newEntity-tab-2"> Privacy</a></li>
+							<li class=""><a data-toggle="tab" href="#newEntity-tab-3"> Corporate Details</a></li>
+							<li class=""><a data-toggle="tab" href="#newEntity-tab-4"> Extra Information</a></li>
+						</ul>
+
+						<div class="tab-content">
+							<div id="newEntity-tab-1" class="tab-pane active">
+								<div class="panel-body">
+									<fieldset class="form-horizontal">
+										<div class="form-group">
+											<label class="col-sm-2 control-label">Name:</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">Shortname:</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="hr-line-dashed"></div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">Firm Proflie</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">Client Status</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" placeholder="">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">Products</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" placeholder="">
+											</div>
+										</div>
+									</fieldset>
+								</div>
 							</div>
-						</div>
-						<div id="newEntity-tab-4" class="tab-pane">
-							<div class="panel-body">
-								<fieldset class="form-horizontal">
-									<div class="form-group"><label class="col-sm-2 control-label">Aliases:</label>
-										<div class="col-sm-10"><input type="text" id="myTokenfield" class="form-control token-example-field" value="" /></div>
-									</div>
-									<div class="form-group">
-										<label class="col-sm-2 control-label">Links:</label>
-										<div class="col-sm-5">
-											<input type="text" />
+							<div id="newEntity-tab-2" class="tab-pane">
+								<div class="panel-body">
+									<fieldset class="form-horizontal">
+										<div class="form-group" style="padding-left:40px;padding-right:40px;">
+												
+												<label> <input type="checkbox" class="i-checks"> Private entity </label>
+												
+												<form id="demoform" action="#" method="post">
+													<select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
+														<option value="option1">Derek Miller</option>
+														<option value="option2">Tamale BA Team</option>
+														<option value="option3" selected="selected">Damon Wang</option>
+														<option value="option4">Matt Terrill</option>
+													</select>
+												</form>
 										</div>
-										<div class="col-sm-5">
-											<input type="text" />
+									</fieldset>
+								</div>
+							</div>
+							<div id="newEntity-tab-3" class="tab-pane">
+								<div class="panel-body">
+									<fieldset class="form-horizontal">
+										<div class="form-group"><label class="col-sm-2 control-label">Address:</label>
+											<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
 										</div>
-									</div>
-								</fieldset>
+										<div class="form-group"><label class="col-sm-2 control-label">Phone:</label>
+											<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+										</div>
+										<div class="form-group"><label class="col-sm-2 control-label">Fax:</label>
+											<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+										</div>
+										<div class="form-group"><label class="col-sm-2 control-label">Employees:</label>
+											<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+										</div>
+										<div class="form-group"><label class="col-sm-2 control-label">Email:</label>
+											<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+										</div>
+										<div class="form-group"><label class="col-sm-2 control-label">Officers:</label>
+											<div class="col-sm-10"><input type="text" class="form-control" placeholder=""></div>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div id="newEntity-tab-4" class="tab-pane">
+								<div class="panel-body">
+									<fieldset class="form-horizontal">
+										<div class="form-group"><label class="col-sm-2 control-label">Aliases:</label>
+											<div class="col-sm-10">
+											<input type="text" id="myTokenfield" class="form-control token-example-field" value="" />
+											<span class="help-block m-b-none">Use 'Tab' or 'Enter' to input multiple values. How to use it in iPad?</span>	
+											</div>
+
+										</div>
+										<div class="form-group">
+											<label class="col-sm-2 control-label">Links:</label>
+											<div class="col-sm-5">
+												<input type="text" />
+											</div>
+											<div class="col-sm-5">
+												<input type="text" />
+											</div>
+										</div>
+									</fieldset>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1230,6 +1264,16 @@ function openThread(){
 
     });
 </script>
+
+ <script src="js/plugins/iCheck/icheck.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.i-checks').iCheck({
+                    checkboxClass: 'icheckbox_square-green',
+                    radioClass: 'iradio_square-green',
+                });
+            });
+        </script>
 
 <style>
 	#nav-tab-1 .ibox-content {
