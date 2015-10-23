@@ -15,8 +15,6 @@
 	<link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
-
 </head>
 
 <body>
@@ -201,11 +199,10 @@
 						<div class="ibox">
 							<div class="ibox-content">
 								<h2>Entities</h2>
-
 								<div class="input-group">
-									<input type="text" placeholder="Search" class="input form-control">
+									<input type="text" id="searchText" placeholder="Search" class="input form-control">
 									<span class="input-group-btn">
-										<button type="button" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
+										<button type="button" id="searchButton" class="btn btn btn-primary"> <i class="fa fa-search"></i> Search</button>
 									</span>
 								</div>
 								<div class="clients-list">
@@ -222,7 +219,12 @@
 																<th>Entity Type</th>
 															</tr>
 														</thead>
-														<tbody>
+														<tbody id="searchable">
+															<tr id="no-data" style="display:none;">
+																<td colspan="4" style="text-align: center;">
+																	No entities are displayed
+																</td>
+															</tr>
 															<tr>
 																<td width="5px"><i class="fa fa-lock" style="font-size: 13px;color:orange"></i></td>
 																<td><a data-toggle="tab" href="#entity-1">Advent Software Inc.</a></td>
@@ -1442,6 +1444,48 @@ $(document).ready(function(){
 		}]
 	}
 })});
+
+$(document).ready(function () {
+
+	(function ($) {
+
+		$('#searchText').keypress(function(e){
+        	if(e.which == 13){//Enter key pressed
+        		var rex = new RegExp($(this).val(), 'i');
+
+        		$('#searchable tr').hide();
+        		$('#searchable tr').filter(function () {
+        			return rex.test($(this).text());
+        		}).show();
+        		$('#no-data').hide();
+        		if($('#searchable tr:visible').length == 0)
+        		{
+        			$('#no-data').show();
+        		}
+        	}
+        })
+	}(jQuery));
+
+	(function ($) {
+
+		$('#searchButton').click(function(){
+       
+        		var rex = new RegExp($('#searchText').val(), 'i');
+        	
+        		$('#searchable tr').hide();
+        		$('#searchable tr').filter(function () {
+        			return rex.test($(this).text());
+        		}).show();
+        		$('#no-data').hide();
+        		if($('#searchable tr:visible').length == 0)
+        		{
+        			$('#no-data').show();
+        		}
+      
+        })
+	}(jQuery));
+
+})
 </script>
 </body>
 </html>
