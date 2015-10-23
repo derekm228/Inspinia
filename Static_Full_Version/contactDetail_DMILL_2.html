@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tamale RMS</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" width="48px" height="48px" src="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" />
+                        </span>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Derek Miller</strong>
+                            </span> <span class="text-muted text-xs block">Portfolio Manager <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            <img alt="image" src="favicon.ico">
+                        </div>
+                    </li>
+                    <li>
+                        <a href="main_6.html"><i class="fa fa-globe"></i> <span class="nav-label">Research</span></a>
+                    </li>
+                    <li>
+                        <a href="entityList.html"><i class="fa fa-university"></i> <span class="nav-label">Entities</span></a>
+                    </li>
+                    <li>
+                        <a href="contactList.html"><i class="fa fa-users"></i> <span class="nav-label">Contacts</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="white-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header" style="width:50%">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        <form role="search" class="navbar-form-custom search" action="search_results.html" style="width:60%">
+                            <div class="form-group">
+                                <input type="search" placeholder="Search..." class="form-control" name="top-search" id="top-search" autocomplete="off">
+                                <ul class="search-ac">
+                                    <li><a href="entityDetail_SSNC.html">SSNC<span> (SSC Technologies)</span></a></li>
+                                    <li><a href="entityDetail_SSNC.html">ADVS<span> (Advent Software, Inc)</span></a></li>
+                                    <li><a style="text-align:right" href="entitylist.html">see more entities...</a></li>
+                                    <li><a href="profile_DamonWang.html">Damon Wang<span></span></a></li>
+                                    <li><a href="profile_DamonWang.html">Derek Miller<span></span></a></li>
+                                    <li><a style="text-align:right" href="contact.html">see more users...</a></li>
+                                    <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                                    <li><a href="ThreadView_SSNCBuyAdvent.html"><span>SS&C Technologies to Acquire Advent Software</span></a></li>
+                                    <li><a style="text-align:right" href="main_7.html">see more content...</a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a data-toggle="modal" data-target="#newNote">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#newContact">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#newEntity">
+                                <i class="fa fa-bank"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="wrapper wrapper-content animated fadeInUp" style="padding-bottom:0px">
+                        <div class="ibox" style="margin-bottom:0px">
+                            <div class="ibox-content" style="border:none">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="m-b-md">
+                                            <div class="profile-image">
+                                                <img src="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" class="img-circle circle-border m-b-md" alt="profile">
+                                            </div>
+                                            <h2 class="profile-info" style="padding-top:10px">
+                                                Derek Miller
+                                                <h4>Business Analyst</h4>
+                                                <small>Advent Software, Inc.</small>
+                                            </h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="m-b-md">
+                                            <p>
+                                                <button type="button" style="margin:5px" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#newNote">
+                                                    <i class="fa fa-pencil"></i> Add Note
+                                                </button>
+                                                <button type="button" style="margin:5px; background-color:red; border-color: red" class="btn btn-info btn-xs"
+                                                    data-toggle="modal" data-target="#editContact">
+                                                    <i class="fa fa-paste"></i> Edit Details
+                                                </button>
+                                                <button type="button" style="margin:5px; background-color: blue; border-color: blue" class="btn btn-info btn-xs" onclick="window.location.href='main_7.html'">
+                                                    <i class="fa fa-folder-open-o"></i> View Research
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <table class="table m-b-xs">
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Position: </strong></td>
+                                                    <td>Business Analyst</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Firm: </strong></td>
+                                                    <td>Advent Software, Inc</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Default Relationship Type: </strong></td>
+                                                    <td>Analyst</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Primary Email: </strong></td>
+                                                    <td><a href="mailto:dmiller@advent.com">dmiller@advent.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Seconday Email: </strong></td>
+                                                    <td><a href="mailto:dmiller@advent.com">dmiller@advent.com</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Business Phone: </strong></td>
+                                                    <td>(617)-912-0775</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Mobile Phone: </strong></td>
+                                                    <td>(781)-264-8475</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Home Phone: </strong></td>
+                                                    <td>(781)-447-5596</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Fax: </strong></td>
+                                                    <td>(XXX)-XXX-XXXX</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Home Address: </strong></td>
+                                                    <td><a data-toggle="modal" data-target="#viewHome">783 Dorchester Avenue Apt 2 Boston, MA</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Business Address: </strong></td>
+                                                    <td><a data-toggle="modal" data-target="#viewOffice">40 Broad Street 6th Floor Boston, MA</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>IM Handle: </strong></td>
+                                                    <td>tamalederek</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>IM Service: </strong></td>
+                                                    <td>AOL</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="wrapper wrapper-content animated fadeInUp">
+                        <div class="ibox">
+                            <div class="ibox-content" style="border:none">
+                                <div class="tab-content">   
+                                    <div id="contact-1" class="tab-pane active">
+                                        <div class="tabs-container">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a data-toggle="tab" href="#contact-1-tab-1" aria-expanded="true"> Recent Notes</a></li>
+                                                <li class=""><a data-toggle="tab" href="#contact-1-tab-2" aria-expanded="false"> Relationships</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div id="contact-1-tab-1" class="tab-pane active">
+                                                    <div class="panel-body">
+                                                        <div id="tab-1" class="tab-pane">
+                                                            <div class="feed-activity-list">
+                                                                <div class="feed-element" style="border-bottom:0px">
+                                                                    <a href="#" class="pull-left">
+                                                                        <img alt="image" class="img-circle" src="img/profile/Matt.png">
+                                                                    </a>
+                                                                    <div class="media-body ">
+                                                                        <small class="pull-right">2h ago</small>
+                                                                        <strong>Matt Terrill</strong> deposited a sidenote on <strong>Derek Miller</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">Great news at ADVS</a></strong><br>
+                                                                        <small class="text-muted">Today 2:00pm - 2015.09.24</small>
+                                                                        <div class="well">
+                                                                            It's a great news!
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="feed-element" style="border-bottom:0px">
+                                                                    <a href="#" class="pull-left">
+                                                                        <img alt="image" class="img-circle" src="img/profile/Derek.png">
+                                                                    </a>
+                                                                    <div class="media-body ">
+                                                                        <small class="pull-right">3h ago</small>
+                                                                        <strong>Derek Miller</strong> deposited a note on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">SS&C Technologies to Acquire Advent Software</a></strong>. <br>
+                                                                        <small class="text-muted">Today 1:00 pm - 2015.09.24</small>
+                                                                        <div class="well">
+                                                                            SSNC buy Advent as $42 per stock.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="feed-element" style="border-bottom:0px">
+                                                                    <a href="#" class="pull-left">
+                                                                        <img alt="image" class="img-circle" src="img/profile/Matt.png">
+                                                                    </a>
+                                                                    <div class="media-body ">
+                                                                        <small class="pull-right">2h ago</small>
+                                                                        <strong>Matt Terrill</strong> deposited a sidenote on <strong>Derek Miller</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">Great news at ADVS</a></strong><br>
+                                                                        <small class="text-muted">Today 2:00pm - 2015.09.24</small>
+                                                                        <div class="well">
+                                                                            It's a great news!
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="feed-element" style="border-bottom:0px">
+                                                                    <a href="#" class="pull-left">
+                                                                        <img alt="image" class="img-circle" src="img/profile/Derek.png">
+                                                                    </a>
+                                                                    <div class="media-body ">
+                                                                        <small class="pull-right">3h ago</small>
+                                                                        <strong>Derek Miller</strong> deposited a note on <strong>SSNC</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">SS&C Technologies to Acquire Advent Software</a></strong>. <br>
+                                                                        <small class="text-muted">Today 1:00 pm - 2015.09.24</small>
+                                                                        <div class="well">
+                                                                            SSNC buy Advent as $42 per stock.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="feed-element" style="border-bottom:0px">
+                                                                    <a href="#" class="pull-left">
+                                                                        <img alt="image" class="img-circle" src="img/profile/Matt.png">
+                                                                    </a>
+                                                                    <div class="media-body ">
+                                                                        <small class="pull-right">2h ago</small>
+                                                                        <strong>Matt Terrill</strong> deposited a sidenote on <strong>Derek Miller</strong> about <strong><a href="ThreadView_SSNCBuyAdvent.html">Great news at ADVS</a></strong><br>
+                                                                        <small class="text-muted">Today 2:00pm - 2015.09.24</small>
+                                                                        <div class="well">
+                                                                            It's a great news!
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <button class="btn btn-primary btn-xs pull-right" onclick="window.location.href='main_3.html'"><i class="fa fa-arrow-down"></i> View More Research...</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="contact-1-tab-2" class="tab-pane">
+                                                    <div class="panel-body">
+                                                        <button type="button" class="pull-right btn btn-primary btn-xs">Show Long Names</button>
+                                                        <div id="using_json"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer gray-bg">
+                <div class="pull-right">
+                    <strong>Copyright</strong> Advent Software &copy; 2014-2015
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:800px" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">New Note</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#newNote-tab-1"> Basic info</a></li>
+                            <li class=""><a data-toggle="tab" href="#newNote-tab-2"> Custom Metadata</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="newNote-tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">Note Type:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Tamale Note</option>
+                                                    <option>Report</option>
+                                                    <option>Call</option>
+                                                    <option>Clip</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Entities:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Source:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Date:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input date"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Sentiment:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control m-b" name="noteType">
+                                                    <option>Neutral</option>
+                                                    <option>Positive</option>
+                                                    <option>Negative</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Subjec:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input subject"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
+                                            <div class="col-sm-10">
+                                                <div class="ibox-content" style="border-style: solid;border-width:1px;">
+
+                                                    <div class="summernote">
+                                                        <h3>Lorem Ipsum is simply</h3>
+                                                        dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
+                                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                                        <br/>
+                                                        <br/>
+                                                        <ul>
+                                                            <li>Remaining essentially unchanged</li>
+                                                            <li>Make a type specimen book</li>
+                                                            <li>Unknown printer</li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id="newNote-tab-2" class="tab-pane">
+                                <div class="panel-body">
+
+                                    <fieldset class="form-horizontal">
+                                        <div class="form-group"><label class="col-sm-2 control-label">ID:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="543"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Model:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="..."></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Location:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="location"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Tax Class:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" >
+                                                    <option>option 1</option>
+                                                    <option>option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Quantity:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Quantity"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Minimum quantity:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="2"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Sort order:</label>
+                                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="0"></div>
+                                        </div>
+                                        <div class="form-group"><label class="col-sm-2 control-label">Status:</label>
+                                            <div class="col-sm-10">
+                                                <select class="form-control" >
+                                                    <option>option 1</option>
+                                                    <option>option 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="newContact" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:800px" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:15px 15px 15px 15px">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">New Contact</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ibox float-e-margins" style="margin-bottom:0px">
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Personal Information</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Name</label> <input type="name" class="form-control"></div>
+                                    <div class="form-group"><label>Job Title</label> <input type="title" class="form-control"></div>
+                                    <div class="form-group"><label>Company</label> <input type="company" class="form-control"></div>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Emails</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Primary</label> <input type="email" class="form-control"></div>
+                                    <div class="form-group"><label>Secondary</label> <input type="email" class="form-control"></div>
+                                </form>
+                                <form role="form">
+                                    <div class="form-group col-sm-7" style="padding:0"><label>IM Handle</label> <input type="IM" class="form-control"></div>
+                                    <div class="form-group col-sm-4" style="padding:0; margin-left:9px"><label>IM Service</label>
+                                        <select class="form-control m-b">
+                                            <option value="option1">AOL</option>
+                                            <option value="option2">ICQ</option>
+                                            <option value="option3">IRC</option>
+                                            <option value="option4">MSN</option>
+                                            <option value="option4" selected="selected">Unknown</option>
+                                            <option value="option4">Yahoo</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Phone Numbers</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Business</label> <input type="" class="form-control"></div>
+                                    <div class="form-group"><label>Home</label> <input type="" class="form-control"></div>
+                                    <div class="form-group"><label>Fax</label> <input type="" class="form-control"></div>
+                                    <div class="form-group"><label>Mobile</label> <input type="" class="form-control"></div>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Addresses</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Home</label> <input type="" class="form-control"></div>
+                                    <div class="form-group"><label>Business</label> <input type="" class="form-control"></div>
+                                </form>
+                                <div class="row">
+                                    <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Default Relationship Type</h3>
+                                        <form role="form">
+                                            <div class="form-group"></label>
+                                                <select class="form-control m-b">
+                                                    <option value="option1">Analyst</option>
+                                                    <option value="option2">Portfolio Manager</option>
+                                                    <option value="option3" selected="selected">Other</option>
+                                                    <option value="option4">CEO</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Image URL</h3>
+                                        <form role="form">
+                                            <div class="form-group"><label></label> <input type="" class="form-control"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0px">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="editContact" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:800px" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:15px 15px 15px 15px">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">Edit Contact</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="ibox float-e-margins" style="margin-bottom:0px">
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Personal Information</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Name</label> <input type="name" value="Derek Miller" class="form-control"></div>
+                                    <div class="form-group"><label>Job Title</label> <input type="title" value="Business Analyst" class="form-control"></div>
+                                    <div class="form-group"><label>Company</label> <input type="company" value="Advent Software, Inc." class="form-control"></div>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Emails</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Primary</label> <input type="email" href="mailto:dmiller@advent.com" value="dmiller@advent.com" class="form-control"></div>
+                                    <div class="form-group"><label>Secondary</label> <input type="email" href="mailto:dmiller@advent.com" value="dmiller@advent.com" class="form-control"></div>
+                                </form>
+                                <form role="form">
+                                    <div class="form-group col-sm-7" style="padding:0"><label>IM Handle</label> <input type="IM" value="tamalederek" class="form-control"></div>
+                                    <div class="form-group col-sm-4" style="padding:0; margin-left:9px"><label>IM Service</label>
+                                        <select class="form-control m-b">
+                                            <option value="option1" selected="selected">AOL</option>
+                                            <option value="option2">ICQ</option>
+                                            <option value="option3">IRC</option>
+                                            <option value="option4">MSN</option>
+                                            <option value="option4">Unknown</option>
+                                            <option value="option4">Yahoo</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Phone Numbers</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Business</label> <input type="" value="(617)-912-0775" class="form-control"></div>
+                                    <div class="form-group"><label>Home</label> <input type="" value="(781)-447-5596" class="form-control"></div>
+                                    <div class="form-group"><label>Fax</label> <input type="" value="" class="form-control"></div>
+                                    <div class="form-group"><label>Mobile</label> <input type="" value="(781)-264-8475" class="form-control"></div>
+                                </form>
+                            </div>
+                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Addresses</h3>
+                                <form role="form">
+                                    <div class="form-group"><label>Home</label> <input type="" value="783 Dorchester Avenue Apt 2 Boston, MA" class="form-control"></div>
+                                    <div class="form-group"><label>Business</label> <input type="" value="40 Broad Street 6th Floor Boston, MA" class="form-control"></div>
+                                </form>
+                                <div class="row">
+                                    <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Default Relationship Type</h3>
+                                        <form role="form">
+                                            <div class="form-group"></label>
+                                                <select class="form-control m-b">
+                                                    <option value="option1" selected="selected">Analyst</option>
+                                                    <option value="option2">Portfolio Manager</option>
+                                                    <option value="option3">Other</option>
+                                                    <option value="option4">CEO</option>
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Image URL</h3>
+                                        <form role="form">
+                                            <div class="form-group"></label> <input type="" value="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" class="form-control"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="modal-footer" style="margin-top:0px">
+                    <button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="viewHome" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:80%" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <iframe
+                    width="100%"
+                    height="600px"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
+                    &q=783+Dorchester+Avenue+Apt+2+Boston,MA" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal inmodal fade" id="viewOffice" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:80%px" class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <iframe
+                    width="100%"
+                    height="600px"
+                    frameborder="0" style="border:0"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
+                    &q=40+Broad+Street+Floor+6+Boston,MA" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script src="js/plugins/summernote/summernote.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote();
+
+        });
+        var edit = function() {
+            $('.click2edit').summernote({focus: true});
+        };
+        var save = function() {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        };
+    </script>
+
+    <script>
+        $(document).ready(function(){
+
+            $('#loading-example-btn').click(function () {
+                btn = $(this);
+                simpleLoad(btn, true)
+
+                // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+            simpleLoad(btn, false)
+        });
+        });
+
+        function simpleLoad(btn, state) {
+            if (state) {
+                btn.children().addClass('fa-spin');
+                btn.contents().last().replaceWith(" Loading");
+            } else {
+                setTimeout(function () {
+                    btn.children().removeClass('fa-spin');
+                    btn.contents().last().replaceWith(" Refresh");
+                }, 2000);
+            }
+        }
+    </script>
+
+    <!-- Tree View JS & CSS-->
+    <script src="js/plugins/jsTree/jstree.min.js"></script>
+
+    <style>
+        .jstree-open > .jstree-anchor > .fa-folder:before {
+            content: "\f07c";
+        }https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg
+
+        .jstree-default .jstree-icon.none {
+            width: 0;
+        }
+    </style>
+
+    <style>
+        #editContact .form-group {
+            margin-left:20px;
+        }
+
+        #newContact .form-group {
+            margin-left:20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $('#using_json').jstree({ 'core' : {
+                'checkbox' : { 'keep_selected_style' : false },
+                'themes' : [{'dots' : false},
+                {'icons' : false}],
+                'data' : [{
+                    'text': 'Derek Miller',
+                    'state': {
+                        'opened': true
+                    },
+                    'children': [{
+                        'text': 'Entities',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [{
+                            'text': 'Competes With',
+                            'state': {
+                                'opened': true
+                            },
+                            'children': [{'text': 'ADVS', 'icon': 'none', 'link': '123.html'},
+                            {'text': 'Backstop', 'icon': 'none'},
+                            {'text': 'Code Red', 'icon': 'none'},
+                            {'text': 'InvestCloud', 'icon': 'none'}]
+                        },
+                        {
+                            'text': 'Location',
+                            'state': {
+                                'opened': true
+                            },
+                            'children': [{'text': 'Boston', 'icon': 'none'},
+                            {'text': 'New York City', 'icon': 'none'},
+                            {'text': 'San Francisco', 'icon': 'none'},
+                            {'text': 'Beijing', 'icon': 'none'},
+                            {'text': 'Hong Kong', 'icon': 'none'}]
+                        }]
+                    }]
+                }]
+            }
+        }).bind("select_node.jstree", function (e, data) { 
+            window.location.href= "entityDetail_" + data.node.text+ '.html'});
+
+    });
+
+
+</script>
+
+</body>
+
+</html>
