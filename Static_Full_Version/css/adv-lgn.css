@@ -309,33 +309,33 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .rotator.logo1 {
-	background-image:url(../img/logo-1.png);
+	background-image:url(../img/logo-5.png);
 }
 #container .rotator.logo2 {
-	background-image:url(../img/logo-2.png);
+	background-image:url(../img/logo-5.png);
 }
 #container .rotator.logo3 {
-	background-image:url(../img/logo-3.png);
+	background-image:url(../img/logo-5.png);
 }
 #container .rotator.logo4 {
-	background-image:url(../img/logo-4.png);
+	background-image:url(../img/logo-5.png);
 }
 @media (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
     #container .rotator.logo1{
-        background:url(../img/logo-1bg@2x.png);
+        background:url(../img/logo-5bg@2x.png);
         background-size: 192px 200px;
     }
     #container .rotator.logo2{
-        background:url(../img/logo-2bg@2x.png);
+        background:url(../img/logo-5bg@2x.png);
         background-size: 192px 200px;
     }
     #container .rotator.logo3{
-        background:url(../img/logo-3bg@2x.png);
+        background:url(../img/logo-5bg@2x.png);
         background-size: 192px 200px;
     }
     #container .rotator.logo4{
-        background:url(../img/logo-4bg@2x.png);
+        background:url(../img/logo-5bg@2x.png);
         background-size: 192px 200px;
     }
 }
