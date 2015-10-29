@@ -86,7 +86,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	position:absolute;
 	left:0px;
 	bottom:0px;
-	width:192px;
+	width:200px;
 	height:200px;
 }
 
@@ -324,19 +324,19 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 (min-resolution: 192dpi) { 
     #container .rotator.logo1{
         background:url(../img/logo-5bg@2x.png);
-        background-size: 192px 200px;
+        background-size: 200px 200px;
     }
     #container .rotator.logo2{
         background:url(../img/logo-5bg@2x.png);
-        background-size: 192px 200px;
+        background-size: 200px 200px;
     }
     #container .rotator.logo3{
         background:url(../img/logo-5bg@2x.png);
-        background-size: 192px 200px;
+        background-size: 200px 200px;
     }
     #container .rotator.logo4{
         background:url(../img/logo-5bg@2x.png);
-        background-size: 192px 200px;
+        background-size: 200px 200px;
     }
 }
 
