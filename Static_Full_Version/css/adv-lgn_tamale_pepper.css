@@ -87,7 +87,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	left:0px;
 	bottom:0px;
 	width:200px;
-	height:200px;
+	height:207px;
 }
 
 /* Don't display the input X in IE */
@@ -309,34 +309,34 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .rotator.logo1 {
-	background-image:url(../img/logo-5_TA.png);
+	background-image:url(../img/logo-5_white_200.png);
 }
 #container .rotator.logo2 {
-	background-image:url(../img/logo-5_TA.png);
+	background-image:url(../img/logo-5_white_200.png);
 }
 #container .rotator.logo3 {
-	background-image:url(../img/logo-5_TA.png);
+	background-image:url(../img/logo-5_white_200.png);
 }
 #container .rotator.logo4 {
-	background-image:url(../img/logo-5_TA.png);
+	background-image:url(../img/logo-5_white_200.png);
 }
 @media (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
     #container .rotator.logo1{
-        background:url(../img/logo-5bg@2x_TA.png);
-        background-size: 200px 200px;
+        background:url(../img/logo-5bg@2x_white_400.png);
+        background-size: 200px 207px;
     }
     #container .rotator.logo2{
-        background:url(../img/logo-5bg@2x_TA.png);
-        background-size: 200px 200px;
+        background:url(../img/logo-5bg@2x_white_400.png);
+        background-size: 200px 207px;
     }
     #container .rotator.logo3{
-        background:url(../img/logo-5bg@2x_TA.png);
-        background-size: 200px 200px;
+        background:url(../img/logo-5bg@2x_white_400.png);
+        background-size: 200px 207px;
     }
     #container .rotator.logo4{
-        background:url(../img/logo-5bg@2x_TA.png);
-        background-size: 200px 200px;
+        background:url(../img/logo-5bg@2x_white_400.png);
+        background-size: 200px 207px;
     }
 }
 
