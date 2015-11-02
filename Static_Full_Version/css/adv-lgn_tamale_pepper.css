@@ -86,8 +86,8 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	position:absolute;
 	left:0px;
 	bottom:0px;
-	width:200px;
-	height:207px;
+	width:190px;
+	height:196px;
 }
 
 /* Don't display the input X in IE */
@@ -324,19 +324,19 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 (min-resolution: 192dpi) { 
     #container .rotator.logo1{
         background:url(../img/logo-5bg@2x_white_400.png);
-        background-size: 200px 207px;
+        background-size: 190px 196px;
     }
     #container .rotator.logo2{
         background:url(../img/logo-5bg@2x_white_400.png);
-        background-size: 200px 207px;
+        background-size: 190px 196px;
     }
     #container .rotator.logo3{
         background:url(../img/logo-5bg@2x_white_400.png);
-        background-size: 200px 207px;
+        background-size: 190px 196px;
     }
     #container .rotator.logo4{
         background:url(../img/logo-5bg@2x_white_400.png);
-        background-size: 200px 207px;
+        background-size: 190px 196px;
     }
 }
 
