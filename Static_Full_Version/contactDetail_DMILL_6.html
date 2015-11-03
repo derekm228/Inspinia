@@ -9,6 +9,8 @@
     <title>Tamale RMS</title>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -16,6 +18,7 @@
     <link rel="icon" href="img/tamale_red_pepper.ico" type="image/x-icon">
     <link href="css/plugins/summernote/summernote.css" rel="stylesheet">
     <link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+    <link href="css/plugins/star_rater/jquery.raty.css" rel="stylesheet">
 
 </head>
 
@@ -294,12 +297,13 @@
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                     <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="padding-top:0px">
                     <fieldset class="form-horizontal">
-                        <div class="form-group">
+
+                        <div class="form-group" style="margin-bottom:25px; padding-top:25px; padding-bottom:25px; border-bottom:1px solid #e5e5e5">
                             <label class="col-sm-2 control-label">Note Type <span style="color:red">*</span></label>
                             <div class="col-sm-10">
-                                <select id="noteType" name="noteType" type="select" class="form-control required m-b" aria-required="true">
+                                <select id="noteType" name="noteType" type="select" class="form-control required" style="width:100%" aria-required="true">
                                     <option>Tamale Note</option>
                                     <option>Report</option>
                                     <option>Call</option>
@@ -307,44 +311,61 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Entities:</label>
-                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input entities"></div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Source:</label>
-                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input source"></div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Date:</label>
-                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input date"></div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Sentiment:</label>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Entities <span style="color:red">*</span></label>
                             <div class="col-sm-10">
-                                <select class="form-control m-b" name="noteType">
+                                <select id="entities" name="entities" data-placeholder=" " class="form-control required" multiple style="width:100%;" aria-required="true">
+                                    <option value=""></option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Afghanistan">Afghanistan</option>
+                                    <option value="Aland Islands">Aland Islands</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Source <span style="color:red">*</span></label>
+                            <div class="col-sm-3" style="padding-right:0px">
+                                <select id="source" name="source" type="select" class="form-control required" style="width:100%" aria-required="true">
+                                    <option>Derek Miller</option>
+                                    <option>Damon Wang</option>
+                                    <option>Alan Yang</option>
+                                    <option>Daniel Wang</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-3" style="padding-left:25px; padding-right:7px">
+                                <div class="input-group date">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <input type="text" class="form-control required" value="11/02/2015">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-2" style="padding-left:5px; padding-right:7px">
+                                <select id="sentiment" name="sentiment" type="select" class="form-control required" style="width:100%" aria-required="true">
                                     <option>Neutral</option>
                                     <option>Positive</option>
                                     <option>Negative</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Subject:</label>
-                            <div class="col-sm-10"><input type="text" class="form-control" placeholder="Input subject"></div>
-                        </div>
-                        <div class="form-group"><label class="col-sm-2 control-label">Description:</label>
-                            <div class="col-sm-10">
-                                <div class="ibox-content" style="border-style: solid;border-width:1px;">
 
-                                    <div class="summernote">
-                                        <h3>Lorem Ipsum is simply</h3>
-                                        dummy text of the printing and typesetting industry. <strong>Lorem Ipsum has been the industry's</strong> standard dummy text ever since the 1500s,
-                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                                        <br/>
-                                        <br/>
-                                        <ul>
-                                            <li>Remaining essentially unchanged</li>
-                                            <li>Make a type specimen book</li>
-                                            <li>Unknown printer</li>
-                                        </ul>
-                                    </div>
+                            <div class="col-sm-2" style="padding-left:5px; padding-right:0px; margin-top:6px">
+                                <div id="priority"></div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="form-group"><label class="col-sm-2 control-label">Subject:</label>
+                            <div class="col-sm-10"><input type="text" id="subject" class="form-control" style="font-size:13px; width:590px"></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <div class="ibox-content" style="border-style:solid; border-width:1px; padding:0px">
+
+                                    <div class="summernote"></div>
 
                                 </div>
                             </div>
@@ -742,9 +763,67 @@
             window.location.href= "entityDetail_" + data.node.text+ '.html'});
 
     });
+    </script>
 
+    <!-- MULTI SELECT BOX -->
+    <script src="js/plugins/chosen/chosen.jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#entities').chosen({width:'600px'});
+            $('#noteType').chosen({width:'600px'});
+            $('#source').chosen({width:'200px'});
+            $('#sentiment').chosen({width:'125px'});
+            $(".chosen-single span").css({'margin-right':'0px'});
+            $(".chosen-single b").css({'margin-top':'4px'});
+            $(".chosen-container").css({'padding-right':'10px'});
+            $(".chosen-select").prepend("<option></option>");
+            var config = {
+                    '.chosen-select'           : {},
+                    '.chosen-select-deselect'  : {allow_single_deselect:true},
+                    '.chosen-select-no-single' : {disable_search_threshold:10},
+                    '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+                    }
+                for (var selector in config) {
+                    $(selector).chosen(config[selector]);
+                }
+            });
+    </script>
 
-</script>
+    <!-- DATE PICKER -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#date_1 .input-group .date').datepicker({
+                todayBtn: "linked",
+                keyboardNavigation: false,
+                forceParse: false,
+                calendarWeeks: true,
+                autoclose: true
+            });
+        });
+    </script>
+
+    <!-- PRIORITY SETTER -->
+    <script src="js/plugins/star_rater/jquery.raty.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#priority').raty({ 
+                number: 3 ,
+                cancel: true
+            });
+        });
+    </script>
+
+    <!-- NOTE BODY STYLE -->
+    <script>
+        $(document).ready(function(){
+            $('.btn-group').css({'margin-left':'0px'});
+            $('.btn-group').css({'margin-right':'0px'});
+            $('.btn-group button').css({'border':'0px'});
+            $('.btn-group btn-small').css({'background':'transparent'});
+            $('.btn-toolbar').css({'background':'transparent'});
+        });
+    </script>
 
 </body>
 
