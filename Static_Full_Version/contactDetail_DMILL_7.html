@@ -125,6 +125,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <table class="table m-b-xs">
@@ -370,19 +371,13 @@
 
                         <div class="form-group">
                             <div class="col-sm-12">
-                                <div class="ibox-content" style="border-width:1px; padding:0px">
-                                    <div class="summernote"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <form id="my-awesome-dropzone" class="dropzone" action="#">
-                                    <div class="dropzone-previews"></div>
+                                <form>
+                                    <textarea name="editor1" id="editor1"></textarea>
                                 </form>
                             </div>
                         </div>
+
+                        
 
                     </fieldset>
                 </div>
@@ -829,17 +824,27 @@
         });
     </script>
 
-    <!-- NOTE BODY STYLE -->
+    <!-- CKEDITOR -->
+    <script src="ckeditor/ckeditor.js"></script>
     <script>
         $(document).ready(function(){
-            $('.btn-group').css({'margin-left':'0px'});
-            $('.btn-group').css({'margin-right':'0px'});
-            $('.btn-group button').css({'border':'0px'});
-            $('.btn-group btn-small').css({'background':'transparent'});
-            $('.btn-toolbar').css({'background':'transparent'});
-            $('.note-editor .fullscreen').css({'width':'800px'});
+            CKEDITOR.replace('editor1');
+
+            $.fn.modal.Constructor.prototype.enforceFocus = function () {
+                var $modalElement = this.$element;
+                $(document).on('focusin.modal', function (e) {
+                    var $parent = $(e.target.parentNode);
+                    if ($modalElement[0] !== e.target && !$modalElement.has(e.target).length
+                    // add whatever conditions you need here:
+                    &&
+                    !$parent.hasClass('cke_dialog_ui_input_select') && !$parent.hasClass('cke_dialog_ui_input_text')) {
+                        $modalElement.focus()
+                    }
+                })
+            };
         });
     </script>
+
 
     <!-- FILE UPLOAD -->
     <script src="js/plugins/dropzone/dropzone.js"></script>

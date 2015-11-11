@@ -125,6 +125,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <table class="table m-b-xs">
@@ -368,27 +369,70 @@
 
                         <div class="form-group" style="margin-bottom:25px; margin-top:0px; padding-left:0px; padding-right:0px; border-bottom:1px solid #e5e5e5; height:25px"></div>
 
-                        <div class="form-group">
+                        <div class="form-group" style="margin-bottom:0px">
                             <div class="col-sm-12">
-                                <div class="ibox-content" style="border-width:1px; padding:0px">
-                                    <div class="summernote"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-sm-12">
-                                <form id="my-awesome-dropzone" class="dropzone" action="#">
-                                    <div class="dropzone-previews"></div>
+                                <form>
+                                    <textarea name="editor1" id="editor1"></textarea>
                                 </form>
                             </div>
                         </div>
 
+                        <div class="form-group" style="margin-bottom:25px; margin-top:0px; padding-left:0px; padding-right:0px; border-bottom:1px solid #e5e5e5; height:25px"></div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Attachments</label>
+                            <div class="col-sm-10" style="width:79%; border:2px dashed #cccccc; height:100px; text-align:center; padding-top:10px; margin-left:15px">
+                                <h3>Drop files here to attach them or</h3>
+                                <span class="btn btn-primary fileinput-button dz-clickable">
+                                    <i class="glyphicon glyphicon-plus"></i>
+                                    <span>Select files...</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label"></label>
+                            <div class="col-sm-10">
+                                <div class="table table-striped" class="files" id="previews">
+
+                                    <div id="template" class="file-row">
+                                    <!-- This is used as the file preview template -->
+                                        <div>
+                                            <span class="preview"><img data-dz-thumbnail /></span>
+                                        </div>
+                                        <div>
+                                            <p class="name" data-dz-name></p>
+                                            <strong class="error text-danger" data-dz-errormessage></strong>
+                                        </div>
+                                        <div>
+                                            <p class="size" data-dz-size></p>
+                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-primary start">
+                                                <i class="glyphicon glyphicon-upload"></i>
+                                                <span>Start</span>
+                                            </button>
+                                            <button data-dz-remove class="btn btn-warning cancel">
+                                                <i class="glyphicon glyphicon-ban-circle"></i>
+                                                <span>Cancel</span>
+                                            </button>
+                                            <button data-dz-remove class="btn btn-danger delete">
+                                                <i class="glyphicon glyphicon-trash"></i>
+                                                <span>Delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" style="margin-top:0px">
                     <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Deposit</button>
                 </div>
             </div>
         </div>
@@ -489,68 +533,54 @@
                 <div class="modal-body">
                     <div class="ibox float-e-margins" style="margin-bottom:0px">
                         <div class="row">
-                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Personal Information</h3>
+                            <div class="col-sm-6">
                                 <form role="form">
                                     <div class="form-group"><label>Name</label> <input type="name" value="Derek Miller" class="form-control"></div>
                                     <div class="form-group"><label>Job Title</label> <input type="title" value="Business Analyst" class="form-control"></div>
                                     <div class="form-group"><label>Company</label> <input type="company" value="Advent Software, Inc." class="form-control"></div>
+
+                                    <div class="form-group"><label>Mobile Phone</label> <input type="" value="(781)-264-8475" class="form-control"></div>
+                                    <div class="form-group"><label>Business Phone</label> <input type="" value="(617)-912-0775" class="form-control"></div>
+                                    <div class="form-group"><label>Home Phone</label> <input type="" value="(781)-447-5596" class="form-control"></div>
+                                    <div class="form-group"><label>Fax</label> <input type="" value="" class="form-control"></div>
                                 </form>
                             </div>
-                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Emails</h3>
+                            <div class="col-sm-6">
                                 <form role="form">
-                                    <div class="form-group"><label>Primary</label> <input type="email" href="mailto:dmiller@advent.com" value="dmiller@advent.com" class="form-control"></div>
-                                    <div class="form-group"><label>Secondary</label> <input type="email" href="mailto:dmiller@advent.com" value="dmiller@advent.com" class="form-control"></div>
-                                </form>
-                                <form role="form">
-                                    <div class="form-group col-sm-7" style="padding:0"><label>IM Handle</label> <input type="IM" value="tamalederek" class="form-control"></div>
-                                    <div class="form-group col-sm-4" style="padding:0; margin-left:9px"><label>IM Service</label>
+                                    <div class="form-group"><label>Primary Email</label> <input type="email" value="dmiller@advent.com" class="form-control"></div>
+                                    <div class="form-group"><label>Secondary Email</label> <input type="email" value="dmiller@advent.com" class="form-control"></div>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-7" style="padding:0"><label>IM Handle</label> <input type="IM" value="tamalederek" class="form-control"></div>
+                                        <div class="col-sm-4" style="padding:0; margin-left:9px"><label>IM Service</label>
+                                            <select class="form-control m-b">
+                                                <option value="option1" selected="selected">AOL</option>
+                                                <option value="option2">ICQ</option>
+                                                <option value="option3">IRC</option>
+                                                <option value="option4">MSN</option>
+                                                <option value="option4">Unknown</option>
+                                                <option value="option4">Yahoo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group"><label>Home Address</label> <input type="" value="783 Dorchester Avenue Apt 2 Boston, MA" class="form-control"></div>
+                                    <div class="form-group"><label>Business Address</label> <input type="" value="40 Broad Street 6th Floor Boston, MA" class="form-control"></div>
+
+                                    <div class="form-group"><label>Default Relationship Type</label>
                                         <select class="form-control m-b">
-                                            <option value="option1" selected="selected">AOL</option>
-                                            <option value="option2">ICQ</option>
-                                            <option value="option3">IRC</option>
-                                            <option value="option4">MSN</option>
-                                            <option value="option4">Unknown</option>
-                                            <option value="option4">Yahoo</option>
+                                            <option value="option1" selected="selected">Analyst</option>
+                                            <option value="option2">Portfolio Manager</option>
+                                            <option value="option3">Other</option>
+                                            <option value="option4">CEO</option>
                                         </select>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Phone Numbers</h3>
-                                <form role="form">
-                                    <div class="form-group"><label>Business</label> <input type="" value="(617)-912-0775" class="form-control"></div>
-                                    <div class="form-group"><label>Home</label> <input type="" value="(781)-447-5596" class="form-control"></div>
-                                    <div class="form-group"><label>Fax</label> <input type="" value="" class="form-control"></div>
-                                    <div class="form-group"><label>Mobile</label> <input type="" value="(781)-264-8475" class="form-control"></div>
-                                </form>
-                            </div>
-                            <div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Addresses</h3>
-                                <form role="form">
-                                    <div class="form-group"><label>Home</label> <input type="" value="783 Dorchester Avenue Apt 2 Boston, MA" class="form-control"></div>
-                                    <div class="form-group"><label>Business</label> <input type="" value="40 Broad Street 6th Floor Boston, MA" class="form-control"></div>
-                                </form>
-                                <div class="row">
-                                    <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Default Relationship Type</h3>
-                                        <form role="form">
-                                            <div class="form-group"></label>
-                                                <select class="form-control m-b">
-                                                    <option value="option1" selected="selected">Analyst</option>
-                                                    <option value="option2">Portfolio Manager</option>
-                                                    <option value="option3">Other</option>
-                                                    <option value="option4">CEO</option>
-                                                </select>
-                                            </div>
-                                        </form>
+
+                                    <div class="form-group"><label>Image URL</label>
+                                        <input type="" value="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" class="form-control">
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Image URL</h3>
-                                        <form role="form">
-                                            <div class="form-group"></label> <input type="" value="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" class="form-control"></div>
-                                        </form>
-                                    </div>
-                                </div>
+
+                                </form>
                             </div>
                         </div>
                         
@@ -829,50 +859,81 @@
         });
     </script>
 
-    <!-- NOTE BODY STYLE -->
+    <!-- CKEDITOR -->
+    <script src="ckeditor/ckeditor.js"></script>
     <script>
         $(document).ready(function(){
-            $('.btn-group').css({'margin-left':'0px'});
-            $('.btn-group').css({'margin-right':'0px'});
-            $('.btn-group button').css({'border':'0px'});
-            $('.btn-group btn-small').css({'background':'transparent'});
-            $('.btn-toolbar').css({'background':'transparent'});
-            $('.note-editor .fullscreen').css({'width':'800px'});
+            CKEDITOR.replace('editor1');
+
+            $.fn.modal.Constructor.prototype.enforceFocus = function () {
+                var $modalElement = this.$element;
+                $(document).on('focusin.modal', function (e) {
+                    var $parent = $(e.target.parentNode);
+                    if ($modalElement[0] !== e.target && !$modalElement.has(e.target).length
+                    // add whatever conditions you need here:
+                    &&
+                    !$parent.hasClass('cke_dialog_ui_input_select') && !$parent.hasClass('cke_dialog_ui_input_text')) {
+                        $modalElement.focus()
+                    }
+                })
+            };
         });
     </script>
 
+
     <!-- FILE UPLOAD -->
     <script src="js/plugins/dropzone/dropzone.js"></script>
+
+    <!-- FILE UPLOAD STYLING -->
     <script>
-        $(document).ready(function(){
+        // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+        var previewNode = document.querySelector("#template");
+        previewNode.id = "";
+        var previewTemplate = previewNode.parentNode.innerHTML;
+        previewNode.parentNode.removeChild(previewNode);
 
-            Dropzone.options.myAwesomeDropzone = {
+        var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+          url: "/target-url", // Set the url
+          thumbnailWidth: 80,
+          thumbnailHeight: 80,
+          parallelUploads: 20,
+          previewTemplate: previewTemplate,
+          autoQueue: false, // Make sure the files aren't queued until manually added
+          previewsContainer: "#previews", // Define the container to display the previews
+          clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+        });
 
-                autoProcessQueue: false,
-                uploadMultiple: true,
-                parallelUploads: 100,
-                maxFiles: 100,
+        myDropzone.on("addedfile", function(file) {
+          // Hookup the start button
+          file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file); };
+        });
 
-                // Dropzone settings
-                init: function() {
-                    var myDropzone = this;
+        // Update the total progress bar
+        myDropzone.on("totaluploadprogress", function(progress) {
+          document.querySelector("#total-progress .progress-bar").style.width = progress + "%";
+        });
 
-                    this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        myDropzone.processQueue();
-                    });
-                    this.on("sendingmultiple", function() {
-                    });
-                    this.on("successmultiple", function(files, response) {
-                    });
-                    this.on("errormultiple", function(files, response) {
-                    });
-                }
+        myDropzone.on("sending", function(file) {
+          // Show the total progress bar when upload starts
+          document.querySelector("#total-progress").style.opacity = "1";
+          // And disable the start button
+          file.previewElement.querySelector(".start").setAttribute("disabled", "disabled");
+        });
 
-            }
+        // Hide the total progress bar when nothing's uploading anymore
+        myDropzone.on("queuecomplete", function(progress) {
+          document.querySelector("#total-progress").style.opacity = "0";
+        });
 
-       });
+        // Setup the buttons for all transfers
+        // The "add files" button doesn't need to be setup because the config
+        // `clickable` has already been specified.
+        document.querySelector("#actions .start").onclick = function() {
+          myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED));
+        };
+        document.querySelector("#actions .cancel").onclick = function() {
+          myDropzone.removeAllFiles(true);
+        };
     </script>
 
 </body>
