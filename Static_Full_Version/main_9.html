@@ -86,7 +86,9 @@
 			<div class="row border-bottom">
 				<nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;background-color:#f3f3f4">
 					<div class="navbar-header">
-						<a class="navbar-brand" style="color:Red">Tamale RMS</a>
+						<a class="navbar-brand" style="color:Red;height:30px">
+							<img alt="Brand" style="max-width:130px"; src="img/tamale-rms-logo2.png">
+						</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<form class="navbar-form pull-right" role="search">
@@ -644,7 +646,7 @@
 									</div>
 									<div class="file-box">
 										<div class="file">
-											<a href="#">
+											<a href="#" data-toggle="modal" data-target="#viewExcel">
 												<span class="corner"></span>
 
 												<div class="icon">
@@ -1058,6 +1060,16 @@
 		<div class="modal-content">
 			<div class="modal-body" style="padding:0; height:700px">
 				<iframe src = "/ViewerJS/#../TamaleNextGen/Static_Full_Version/docs/Quarterly_Earnings_Slides_Q115.pdf" width='100%' height='700' allowfullscreen webkitallowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal inmodal fade" id="viewExcel" tabindex="-1" role="dialog" aria-hidden="true">
+	<div style="width:60%;height:90%" class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-body" style="padding:0; height:700px">
+				<iframe src = "/ViewerJS/#../TamaleNextGen/Static_Full_Version/docs/FrontSheet.xlsx" width='100%' height='700' allowfullscreen webkitallowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
