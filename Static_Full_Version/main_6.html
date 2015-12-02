@@ -62,11 +62,7 @@
 						</div>
 					</li>
 					<li>
-						<a href="main_6.html"><i class="fa fa-globe"></i><span class="nav-label">Research</span><span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level collapse">
-							<li><a href="main_3.html">Research</a></li>
-							<li><a href="main_3.html">My SSNC Notes</a></li>
-						</ul>
+						<a href="main_6.html"><span>a</span></a>
 					</li>
 					<li>
 						<a href="entityList.html"><i class="fa fa-university"></i><span class="nav-label">Entities</span></a>
@@ -154,6 +150,27 @@
 							</div>
 							<div id="nav-tab-2" class="tab-pane">
 								<div class="panel-body" style="padding:10px 10px 10px 10px; border:none">
+
+									<div class="form-group">
+										<button type="button" class="btn btn-primary">Suspend</button>
+										<div class="btn-group pull-right">
+											<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												Add Filter <span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a href="#">Entry Type</a></li>
+												<li><a href="#">Source</a></li>
+												<li><a href="#">Submitter</a></li>
+												<li><a href="#">Priority</a></li>
+												<li><a href="#">Sentiment</a></li>
+												<li><a href="#">Subject</a></li>
+											</ul>
+										</div>
+									</div>
+									<div>
+										Show if any of the following match
+									</div>
+									<div class="hr-line-dashed"></div>
 									<div class="form-group"><label class="control-label">Note Type</label>
 										<div>
 											<select class="form-control m-b" name="account">
@@ -164,6 +181,7 @@
 											</select>
 										</div>
 									</div>
+
 								</div>
 							</div>
 							<div id="nav-tab-3" class="tab-pane">
@@ -183,7 +201,7 @@
 					</div>
 				</div>
 
-				<div class="fh-column" style="border-left:1px solid #e7eaec; height:89%">
+				<div class="fh-column" style="border-left:1px solid #e7eaec; height:89%;width:260px">
 
 					<div class="panel panel-default" style="background-color:white; margin-top:5px; margin-left:4px; margin-right:4px; margin-bottom: 3px; border:none;">
 						<div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:45px">
@@ -205,24 +223,25 @@
 
 					<div class="full-height-scroll border-left" id="myScroll" style="border-left:1px solid #e7eaec">
 						<ul class="list-group elements-list">
-							<li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394">
+							<li class="list-group-item" ondblclick="openThread()" style="padding:5px; border-left: 5px solid #1ab394">
 								<a data-toggle="tab" href="#tab-1">
 									<div>
-										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+										<strong>It's a very very very very long entity40</strong>
+									</div>
+									<div>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="text-muted"> Vinh Hong on 09.28.2015</small>
 										<small class="pull-right small text-muted">
 											<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
 										</small>
 									</div>
 									<div>
-
-										<small class="pull-right text-muted">Vinh Hong</small>
-										<small class="text-muted"><em>TamaleNote</em></small>
-									</div>
-									<div>
-										<small class="pull-right text-muted"> 09.28.2015</small>
-										<small class="text-muted">AAPL Recommendation</small>
+										<small class="text-muted">AAPL Recommendation blabal bal bal bal</small>
 										<i class="" onClick="deleteNote(this.parentNode.firstChild.nextElementSibling.innerText)"></i>
 									</div>
+
 								</a>
 							</li>
 							<li class="list-group-item" style="padding:10px; border-left: 5px solid #ed5565">
@@ -633,158 +652,145 @@
 							<div class="m-t-lg">
 								<h2>Attachments:</h2>
 								<p>
-									<span><i class="fa fa-paperclip"></i> 2 attachments - </span>
-									<a href="#">Download all</a>
+									<span><i class="fa fa-paperclip"></i> 5 attachments - </span>
 								</p>
 
-								<div class="attachment">
-									<div class="file-box">
-										<div class="file">
-											<a href="#" data-toggle="modal" data-target="#viewPDF">
-												<span class="corner"></span>
-
-												<div class="icon">
-													<i class="fa fa-file-pdf-o"></i>
-												</div>
-												<div class="file-name">
-													Analysis_2015.pdf
-													<br>
-													<small>Added: Sep 28, 2015</small>
-												</div>
-											</a>
+								<div class="ibox">
+									<div class="ibox-content">
+										<div class="dropdown">
+											<ul class="list-inline file-list">
+												<li>
+													<div class="dropdown">
+													<a href="" data-toggle="dropdown" class="dropdown-toggle"><i class="fa fa-file"></i> Project_document.docx</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Preview</a></li>
+														<li><a href="#">Download</a></li>
+														<li><a href="#">Delete</a></li>
+													</ul>
+													</div>
+												</li>
+												<li><a href=""><i class="fa fa-file-picture-o"></i> Logo_zender_company.jpg</a></li>
+												<li><a href=""><i class="fa fa-stack-exchange"></i> Email_from_Alex.mln</a></li>
+												<li><a href=""><i class="fa fa-file"></i> Contract_20_11_2014.docx</a></li>
+												<li><a href=""><i class="fa fa-file-powerpoint-o"></i> Presentation.pptx</a></li>
+												<li><a href=""><i class="fa fa-file"></i> 10_08_2015.docx</a></li>
+											</ul>
 										</div>
-
 									</div>
-									<div class="file-box">
-										<div class="file">
-											<a href="#">
-												<span class="corner"></span>
-
-												<div class="icon">
-													<i class="fa fa-file-excel-o"></i>
-												</div>
-												<div class="file-name">
-													Numbers_2015.xls
-													<br>
-													<small>Added: Sep 28, 2015</small>
-												</div>
-											</a>
-										</div>
-
-									</div>
-									<div class="clearfix"></div>
 								</div>
-							</div>
 
-							<div class="article row">
-								<div class="col-lg-12">
-									<h2>Sidenotes:
-										<button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+								<div class="article row">
+									<div class="col-lg-12">
+										<h2>Sidenotes:
+											<button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+												<strong>Add Sidenote</strong>
+											</button>
+										</h2>
+										<div class="social-feed-box">
+											<div class="social-avatar">
+												<a href="" class="pull-left">
+													<img alt="image" src="img/profile/Derek.png">
+												</a>
+												<div class="media-body">
+													<a href="#">
+														Derek Miller
+													</a>
+													<small class="text-muted">Monday, 28 Sep 2015, 10:32 am</small>
+												</div>
+											</div>
+											<div class="social-body">
+												<h4>Q3 Report for Advent & SSNC</h4>
+												<p>
+													I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+												</p>
+												<br>
+												<img src="img/aapl_forecast.png" style="width: 608px;">
+											</div>
+										</div>
+										<div class="social-feed-box">
+											<div class="social-avatar">
+												<a href="" class="pull-left">
+													<img alt="image" src="img/profile/Damon.png">
+												</a>
+												<div class="media-body">
+													<a href="profile_DamonWang.html">
+														Damon Wang
+													</a>
+													<small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
+												</div>
+											</div>
+											<div class="social-body">
+												<p>
+													I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
+												</p>
+											</div>
+										</div>
+										<div class="social-feed-box">
+											<div class="social-avatar">
+												<a href="" class="pull-left">
+													<img alt="image" src="img/profile/Alan.png">
+												</a>
+												<div class="media-body">
+													<a href="#">
+														Alan Yang
+													</a>
+													<small class="text-muted">Today 12:01 pm - 09.27.2015</small>
+												</div>
+											</div>
+											<div class="social-body">
+												<p>
+													Any update on those numbers?
+												</p>
+											</div>
+										</div>
+										<div class="social-feed-box">
+											<div class="social-avatar">
+												<a href="" class="pull-left">
+													<img alt="image" src="img/profile/Matt.png">
+												</a>
+												<div class="media-body">
+													<a href="#">
+														Matt Terrill
+													</a>
+													<small class="text-muted">Today 2:21 pm - 09.27.2015</small>
+												</div>
+											</div>
+											<div class="social-body">
+												<p>
+													I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+												</p>
+												<br>
+												<img src="img/aapl_forecast.png" style="width: 608px;">
+											</div>
+										</div>
+									</div>
+								</div>
+								<br>
+								<div class="row" style="padding-bottom:10px">
+									<div class="col-lg-12">
+										<button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
 											<strong>Add Sidenote</strong>
 										</button>
-									</h2>
-									<div class="social-feed-box">
-										<div class="social-avatar">
-											<a href="" class="pull-left">
-												<img alt="image" src="img/profile/Derek.png">
-											</a>
-											<div class="media-body">
-												<a href="#">
-													Derek Miller
-												</a>
-												<small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
-											</div>
-										</div>
-										<div class="social-body">
-											<p>
-												Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
-											</p>
-										</div>
 									</div>
-									<div class="social-feed-box">
-										<div class="social-avatar">
-											<a href="" class="pull-left">
-												<img alt="image" src="img/profile/Damon.png">
-											</a>
-											<div class="media-body">
-												<a href="profile_DamonWang.html">
-													Damon Wang
-												</a>
-												<small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
-											</div>
-										</div>
-										<div class="social-body">
-											<p>
-												I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
-											</p>
-										</div>
-									</div>
-									<div class="social-feed-box">
-										<div class="social-avatar">
-											<a href="" class="pull-left">
-												<img alt="image" src="img/profile/Alan.png">
-											</a>
-											<div class="media-body">
-												<a href="#">
-													Alan Yang
-												</a>
-												<small class="text-muted">Today 12:01 pm - 09.27.2015</small>
-											</div>
-										</div>
-										<div class="social-body">
-											<p>
-												Any update on those numbers?
-											</p>
-										</div>
-									</div>
-									<div class="social-feed-box">
-										<div class="social-avatar">
-											<a href="" class="pull-left">
-												<img alt="image" src="img/profile/Matt.png">
-											</a>
-											<div class="media-body">
-												<a href="#">
-													Matt Terrill
-												</a>
-												<small class="text-muted">Today 2:21 pm - 09.27.2015</small>
-											</div>
-										</div>
-										<div class="social-body">
-											<p>
-												I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
-											</p>
-											<br>
-											<img src="img/aapl_forecast.png" style="width: 608px;">
-										</div>
-									</div>
-								</div>
-							</div>
-							<br>
-							<div class="row" style="padding-bottom:10px">
-								<div class="col-lg-12">
-									<button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
-										<strong>Add Sidenote</strong>
-									</button>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
+				</div>
+			</div>
+
+
+
+		</div>
+		<div class="footer" style="background-color:#f5f5f5">
+			<div class="pull-left">Showing <strong>50</strong> of <strong>1454</strong> results</div>
+			<div class="pull-right">
+				<button class="btn btn-sm pull-right demo1" style="padding-top:0px; padding-bottom:0px; background-color:#f5f5f5"><i class="fa fa-save"></i> Save Screen</button>
 			</div>
 		</div>
 
-
-
 	</div>
-	<div class="footer" style="background-color:#f5f5f5">
-		<div class="pull-left">Showing <strong>50</strong> of <strong>1454</strong> results</div>
-		<div class="pull-right">
-			<button class="btn btn-sm pull-right demo1" style="padding-top:0px; padding-bottom:0px; background-color:#f5f5f5"><i class="fa fa-save"></i> Save Screen</button>
-		</div>
-	</div>
-
-</div>
 </div>
 
 <!--New Note Dialog-->
@@ -994,7 +1000,7 @@
 								<div class="panel-body">
 									<fieldset class="form-horizontal">
 										<div class="form-group" style="padding-left:40px;padding-right:40px;">
-											<label> <input type="checkbox" class="i-checks"> Private entity </label>
+											<label> <input type="checkbox" class="i-checks"> Private team (Team is only visible to its members) </label>
 											<form id="demoform" action="#" method="post">
 												<select multiple="multiple" size="10" id="duallistbox1" name="duallistbox_demo1[]">
 													<option value="option1">Derek Miller</option>
@@ -1224,15 +1230,23 @@ function openThread(){
 
 	$('#myScroll').scroll(function() {
 		if($(this).scrollTop() + $(this).innerHeight() >= this.scrollHeight) {
-       		alert('I will call API to load more data..');
-  		}
+			alert('I will call API to load more data..');
+
+		}
 
 
-		});
+	});
 
 	$('#myTokenfield').tokenfield();
 
-	var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox();
+	var demo1 = $('select[name="duallistbox_demo1[]"]').bootstrapDualListbox({
+		preserveSelectionOnMove: 'moved',
+		moveOnSelect: false,
+		nonSelectedFilter: '',
+  		infoText: 'Not team members',                                                        // text when all options are visible / false for no info text
+      	infoTextFiltered: 'Team members', // when not all of the options are visible due to the filter
+      	infoTextEmpty: 'Team members'  
+      });
 	$("#demoform").submit(function() {
 		alert($('[name="duallistbox_demo1[]"]').val());
 		return false;
