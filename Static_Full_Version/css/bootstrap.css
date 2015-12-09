@@ -5510,6 +5510,11 @@ button.list-group-item-danger.active:focus {
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
+.panel-heading-sm{
+    height: 30px;
+    padding: 6px 2px;
+}
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
 }
