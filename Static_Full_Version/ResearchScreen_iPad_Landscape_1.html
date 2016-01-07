@@ -62,42 +62,6 @@
                             <li><a href="">Matt Terrill</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white"> Grid Views </a>
-                        <ul role="menu" class="dropdown-menu" style="background-color:#333333; color:white">
-                            <li><a href="">Contact List</a></li>
-                            <li><a href="">Derek Miller</a></li>
-                            <li><a href="">Damon Wang</a></li>
-                            <li><a href="">Matt Terrill</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white"> Tear Sheets </a>
-                        <ul role="menu" class="dropdown-menu" style="background-color:#333333; color:white">
-                            <li><a href="">Contact List</a></li>
-                            <li><a href="">Derek Miller</a></li>
-                            <li><a href="">Damon Wang</a></li>
-                            <li><a href="">Matt Terrill</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white"> Dashboards </a>
-                        <ul role="menu" class="dropdown-menu" style="background-color:#333333; color:white">
-                            <li><a href="">Contact List</a></li>
-                            <li><a href="">Derek Miller</a></li>
-                            <li><a href="">Damon Wang</a></li>
-                            <li><a href="">Matt Terrill</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:white"> Notebook </a>
-                        <ul role="menu" class="dropdown-menu" style="background-color:#333333; color:white">
-                            <li><a href="">Contact List</a></li>
-                            <li><a href="">Derek Miller</a></li>
-                            <li><a href="">Damon Wang</a></li>
-                            <li><a href="">Matt Terrill</a></li>
-                        </ul>
-                    </li>
                 </ul>
 
                 <ul class="nav navbar-top-links navbar-right" style="margin-top:0px">
@@ -143,7 +107,7 @@
                 </ul>
             </div>
 
-            <div class="row wrapper border-bottom white-bg page-heading" style="padding-bottom:20px;padding-left:20px">
+            <div class="row wrapper border-bottom white-bg page-heading" style="padding-bottom:20px;padding-left:20px;">
                 <div class="pull-left" style="margin-left:10px">
                     <h2>My Team's Research</h2>
                     <ol class="breadcrumb">
@@ -171,18 +135,7 @@
         <div id="page-wrapper" class="gray-bg" style="margin-left:0px">
             <div class="row">
                 <div class="fh-breadcrumb" style="margin:3px">
-                <div class="fh-column" id="leftPanel" style="min-height:584px; width:250px; margin-right:3px;">
-
-                    <div class="panel panel-default" style="background-color:white; margin-top:5px; margin-left:4px; margin-right:4px; margin-bottom: 3px; border:none;">
-                        <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
-                            <p style="margin-top:3px; font-size:16px">
-                            <input type="text" placeholder="Type an entity..." name="finder" value="Derek Miller" id="finder" 
-                                style="background-color:white;border:none; width:100%">
-                        </div>
-                        <div class="panel-body">
-                            <div id="using_json" style="background-color:white"></div>
-                        </div>
-                    </div>
+                <div class="fh-column" id="leftPanel" style="min-height:584px; width:50px; margin-right:3px;">
 
                 </div>
 
@@ -190,7 +143,6 @@
 
                     <div class="panel panel-default" style="background-color:white; margin-top:5px; margin-left:4px; margin-right:4px; margin-bottom: 3px; border:none;">
                         <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
-                            <p style="margin-top:3px; font-size:16px">1321 items
 
                             <button type="button" id="sortButton" class="pull-right btn btn-sm btn-primary btn-outline filter" style="margin-top:-4px" title="Sort By"
                                 data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" data-content=
@@ -200,12 +152,6 @@
                                         <option>Last Modified Date</option>
                                      </select>">
                                 <i class="fa fa-sort-amount-asc"></i>
-                            </button>
-
-                            <button type="button" id="keywordButton" class="pull-right btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-4px" title="Keyword Search"
-                                data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" data-content=
-                                    "<input type='text' style='padding:0; font-size:14px'/>">
-                                <i class="fa fa-search"></i>
                             </button>
 
                             <button type="button" id="filterButton" class="pull-right btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-4px;" title="Filtering Options"
@@ -219,7 +165,13 @@
                                     </select>'>
                                 <i class="fa fa-filter"></i>
                             </button>
-                        </p>
+
+                            
+                            <button type="button" id="keywordButton" class="pull-right btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-4px; padding-top:5px"><i class="fa fa-search"></i>
+                                <form class="pull-left search-container2">
+                                    <input id="search-box2" type="text" class="search-box2" name="q">
+                                </form>
+                            </button>
                         </div>
                     </div>
 
@@ -1013,6 +965,64 @@
         document.addEventListener("touchstart", function(){}, true);
     </script>
 
+    <!-- Keyword Search Animation -->
+    <style>
+        .search-box2 {
+            -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+            transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+            width: 0px;
+            height: 28px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding-left: 5px;
+            cursor: text;
+            width: 218px;
+            border-radius: auto;
+            background: white;
+            color: black;
+        }
+
+        /*
+        .search-box:hover {
+            color: white;
+            background: #c8c8c8;
+            box-shadow: 0 0 0 2px #3d4752;
+        }
+        .search-box:hover + label .search-icon {
+            color: white;
+        }
+        
+        .search-box2:focus {
+            -webkit-transition: width 0.6s ease, border-radius 0.6s, background 0.6s;
+            transition: width 0.6s ease, border-radius 0.6s, background 0.6s;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding-left: 5px;
+            cursor: text;
+            width: 228px;
+            border-radius: auto;
+            background: white;
+            color: black;
+        }
+        .search-box2:focus + label .search-icon2 {
+            color: black;
+        }
+        .search-box2:not(:focus) {
+            text-indent: -5000px;
+        }
+/*
+        .search-icon2 {
+            position: relative;
+            top: 3px;
+            left: -30px;
+            color: white;
+            cursor: pointer;
+        }
+*/
+    </style>
+
     <!-- Rel Tree JS -->
     <script>
         $(document).ready(function(){
@@ -1206,6 +1216,29 @@
             });
         });
     </script>
+
+    <!-- Keyword Search CSS and JS-->
+    <style>
+        .collapse.width {
+            height: auto;
+            -webkit-transition: width 0.35s ease;
+            -moz-transition: width 0.35s ease;
+            -o-transition: width 0.35s ease;
+            transition: width 0.35s ease;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".search-container2").hide();
+            $("#keywordButton").click(function() {
+                $(".search-container2").show(500);
+                //$("#keywordButton").css("background-color","white");
+                $("#keywordButton").css("padding","0");
+                $("#keywordButton i").css("padding","8");
+            });
+        });
+    </script>
+    search-container2
 
 </body>
 
