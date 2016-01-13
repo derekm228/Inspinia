@@ -68,7 +68,7 @@
                         </a>
                     </li>
                     <li>
-                        <a data-toggle="modal" data-target="#newNote" style="top:2px; min-height:0px; padding:0px 10px; font-size:large; color:white">
+                        <a id="trigger2" style="top:2px; min-height:0px; padding:0px 10px; font-size:large; color:white">
                             <i class="fa fa-pencil"></i>
                         </a>
                     </li>
@@ -497,8 +497,8 @@
             </div>
         </div>
     </div>
-    <div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
-        <div style="width:800px" class="modal-dialog modal-lg">
+    <div id="slider2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div style="width:800px">
             <div class="modal-content">
                 <div class="modal-header" style="padding-top:15px; padding-bottom:15px">
                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -1174,6 +1174,64 @@
             box-sizing: border-box;
         }
     </style>
+
+    <!-- Sliding Panels JS -->
+    <script src="js/plugins/slideReveal/jquery.slideReveal.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            slider = $("#slider").slideReveal({
+                width: 600,
+                push: false,
+                position: "left",
+                speed: 600,
+                trigger: $("#trigger"),
+                top: 51,
+                // autoEscape: false,
+                show: function(obj){
+                    console.log(obj);
+                },
+                shown: function(obj){
+                    console.log(obj);
+                },
+                hide: function(obj){
+                    console.log(obj);
+                },
+                hidden: function(obj){
+                    console.log(obj);
+                }
+            });
+
+            slider2 = $("#slider2").slideReveal({
+                width: 800,
+                push: false,
+                position: "right",
+                speed: 400,
+                trigger: $("#trigger2"),
+                top: 0,
+                // autoEscape: false,
+                show: function(obj){
+                    console.log(obj);
+                },
+                shown: function(obj){
+                    console.log(obj);
+                },
+                hide: function(obj){
+                    console.log(obj);
+                },
+                hidden: function(obj){
+                    console.log(obj);
+                }
+            });
+
+
+        });
+
+      /*
+      Then you call:
+      $("#slider").slideReveal("show");
+      $("#slider").slideReveal("hide");
+      */
+    </script>
 </body>
 
 </html>
