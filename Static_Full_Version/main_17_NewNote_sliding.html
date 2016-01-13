@@ -501,7 +501,9 @@
         <div style="width:800px">
             <div class="modal-content">
                 <div class="modal-header" style="padding-top:15px; padding-bottom:15px">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <button type="button" id="newNoteClose" class="close">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
                     <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
                 </div>
                 <div class="modal-body" style="padding-top:0px">
@@ -1226,11 +1228,10 @@
 
         });
 
-      /*
-      Then you call:
-      $("#slider").slideReveal("show");
-      $("#slider").slideReveal("hide");
-      */
+      $("#newNoteClose").click(function(){
+          slider2.slideReveal("hide");
+        });
+
     </script>
 </body>
 
