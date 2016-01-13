@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Tamale RMS</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/plugins/chosen/chosen.css" rel="stylesheet">
+	<link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+	<link rel="icon" href="img/tamale_red_pepper.ico" type="image/x-icon">
+	<link href="css/plugins/summernote/summernote.css" rel="stylesheet">
+	<link href="css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+	<link href="css/plugins/star_rater/jquery.raty.css" rel="stylesheet">
+	<link href="css/plugins/dropzone/basic.css" rel="stylesheet">
+	<link href="css/plugins/dropzone/dropzone.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div id="wrapper" style="background-color:white">
+
+		<nav class="navbar navbar-static-top" role="navigation" style="background-color:black; margin-bottom:0px">
+			<div class="navbar-header">
+				<img alt="image" src="img/logo-5_white.png" width="41" height="50" style="padding:5px 3px 5px 3px; margin-left:10px">
+			</div>
+
+			<div class="navbar-collapse collapse" id="navbar">
+
+				<ul class="nav navbar-top-links navbar-left" style="margin-left:20px">
+					<li class="dropdown">
+						<a aria-expanded="false" role="button" href="main_17.html"
+						style="color:white; margin-left:-3px"> Research </a>
+					</li>
+					<li class="dropdown">
+						<a aria-expanded="false" role="button" href="entityDetail_SSNC2.html"
+						style="color:white; margin-left:-3px"> Entities </a>
+					</li>
+					<li class="dropdown">
+						<a aria-expanded="false" role="button" href="ContactList_2.html"
+						style="color:white; margin-left:-3px"> Contacts </a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-top-links navbar-right" style="margin-top:0px">
+					<li>
+						<form class="search-container" style="margin-right:-10px">
+							<input id="search-box" style="background-color:#999; color:white; font-weight:400" type="text" class="search-box" name="q" />
+							<label for="search-box"><span class="glyphicon glyphicon-search search-icon"></span></label>
+						</form>
+					</li>
+					<li>
+						<a data-toggle="modal" data-target="#newEntity" style="top:2px; min-height:0px; padding:0px 10px; font-size:large; color:white">
+							<i class="fa fa-bank"></i>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="modal" data-target="#newContact" style="top:2px; min-height:0px; padding:0px 10px; font-size:large; color:white">
+							<i class="fa fa-user"></i>
+						</a>
+					</li>
+					<li>
+						<a data-toggle="modal" data-target="#newNote" style="top:2px; min-height:0px; padding:0px 10px; font-size:large; color:white">
+							<i class="fa fa-pencil"></i>
+						</a>
+					</li>
+					<li>
+						<button data-toggle="dropdown" class="dropdown-toggle btn btn-sm btn-circle" href="#" aria-expanded="true" style="padding-top:0px; border:1px solid white; color:white">
+							<img src="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" class="img-circle" style="width:95%">
+						</button>
+						<ul class="dropdown-menu animated fadeInRight" style="top:34px">
+							<li style="padding-top:5px; padding-left:10px">
+								<h3>Derek Miller</h3>
+								<h4>Business Analyst</h4>
+								<small>Advent Software, Inc.</small>
+							</li>
+							<li class="divider"></li>
+							<li><a href="http://engage.advent.html" style="padding-left:10px"><i class="fa fa-question" style="min-width:35px;"></i>Contact Support</a></li>
+							<li><a href="http://engage.advent.html" style="padding-left:10px"><i class="fa fa-comments-o" style="min-width:35px;"></i>Advent Community</a></li>
+							<li><a href="http://engage.advent.html" style="padding-left:10px"><i class="fa fa-cloud-download" style="min-width:35px;"></i>Get Desktop Plugins</a></li>
+							<li class="divider"></li>
+							<li><a href="tamale_login_2.html" style="padding-left:10px"><i class="fa fa-sign-out" style="min-width:35px;"></i>Log Out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="page-wrapper" class="gray-bg" style="margin-left:0px">
+			<div class="row">
+				<div class="fh-breadcrumb" style="margin:10px">
+					<div class="fh-column" id="leftPanel" style="min-height:652px; width:250px; margin-right:10px;">
+
+						<div class="panel panel-default" style="background-color:white; margin-top:5px; margin-bottom: 3px; border:none;">
+							<div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
+								<p style="margin-top:3px; font-size:16px">
+									<input type="text" placeholder="Type an entity..." name="finder" value="Derek Miller" id="finder" 
+									style="background-color:white;border:none; width:100%">
+								</div>
+								<div class="panel-body">
+									<div id="using_json" style="background-color:white"></div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="fh-column" style="border-left:1px solid #e7eaec; min-height:652px; width:350px; margin-right:10px">
+
+							<div class="panel panel-default" style="background-color:white; margin-top:5px;margin-bottom:0px; border:none;">
+								<div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
+
+									<button type="button" id="filterButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px;" title="Filtering Options"
+									data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" rel="popover" data-content=
+									'<select id="entities" name="entities" data-placeholder=" " class="form-control required" multiple style="width:100%;" aria-required="true">
+									<option value=""></option>
+									<option value="United States">United States</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="Afghanistan">Afghanistan</option>
+									<option value="Aland Islands">Aland Islands</option>
+								</select>'>
+								<i class="fa fa-filter"></i>
+								Filter results
+							</button>
+
+							<button type="button" id="keywordButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px; padding-top:5px"><i class="fa fa-search"></i>
+								<form class="pull-left search-container2">
+									<input id="search-box2" type="text" class="search-box2" name="q">
+								</form>
+								Search within notes
+							</button>
+						</div>
+					</div>
+
+					<div class="panel panel-default" style="border:none;margin-bottom:0px">
+						<div class="panel-heading" style="background-color:white;padding-top:0px;padding-bottom:0px;font-size:11px">
+							<small><em>1354 items</em></small>
+							<select class="select pull-right" style="border:none;background-color:white;">
+								<option>Newest</option>
+								<option>Oldest</option>
+							</select>
+							<select class="select pull-right" style="border:none;background-color:white;">
+								<option>Last Modified Date</option>
+								<option>Display Date</option>
+								<option>Submitted Date</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="full-height-scroll border-left" style="border-left:1px solid #e7eaec">
+						<ul class="list-group elements-list" style="margin-bottom:0px">
+							<li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+							<li class="list-group-item" style="padding:10px; border-left: 5px solid #ed5565">
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+							<li class="list-group-item" style="padding:10px">
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+							<li class="list-group-item" style="padding:10px">
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+							<li class="list-group-item" style="padding:10px">
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+							<li class="list-group-item" style="padding:10px">
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+							<li class="list-group-item" style="padding:10px">
+								<a data-toggle="tab" href="#tab-1">
+									<div>
+										<strong>AAPL, MSFT, GOOG, SSNC</strong>
+									</div>
+									<div>
+										<small class="pull-right text-muted">Vinh Hong</small>
+										<small class="text-muted"><em>TamaleNote</em></small>
+									</div>
+									<div>
+										<small class="pull-right text-muted"> 09.28.2015</small>
+										<small class="text-muted">AAPL Recommendation</small>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="full-height" style="max-height:652px;overflow:auto">
+					<div class="full-height-scroll white-bg border-left">
+
+						<div class="element-detail-box">
+
+							<div class="tab-content">
+
+								<div id="tab-1" class="tab-pane active">
+									<div class="pull-right">
+										<div class="tooltip-demo">
+											<button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Add Sidenote"><i class="fa fa-plus"></i></button>
+											<button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Edit Note"><i class="fa fa-pencil-square-o"></i></button>
+											<button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i> </button>
+											<a role="button" class="btn btn-white btn-s" data-toggle="tooltip" data-placement="top" title="" data-original-title="View in New Tab" 
+											href="ThreadView_SSNCBuyAdvent.html"
+											target="_blank">
+											<i class="fa fa-expand"></i>
+										</a>
+
+									</div>
+								</div>
+								<div>
+									<strong>AAPL, MSFT, GOOG</strong>
+								</div>
+								<div class="small text-muted">
+									<i class="fa fa-clock-o"></i> Monday, 28 Sep 2015, 10:32 am
+								</div>
+								<div class="small text-muted">
+									<i class="fa fa-user"></i> Vinh Hong
+								</div>
+								<div class="small text-muted">
+									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+								</div>
+
+								<h1>
+									AAPL Recommendation
+								</h1>
+
+								<div>
+
+									<br>
+									<table class="small m-b-xs">
+										<tbody>
+											<tr>
+												<td style="padding-right:10px"><strong>Target Price:</strong></td>
+												<td>$150</td>
+											</tr>
+											<tr>
+												<td style="padding-right:10px"><strong>Current Price:</strong></td>
+												<td>$115.05</td>
+											</tr>
+											<tr>
+												<td style="padding-right:10px"><strong>Recommendation Type:</strong></td>
+												<td>Buy</td>
+											</tr>
+											<tr>
+												<td style="padding-right:10px"><strong>Trigger Price</strong></td>
+												<td>$120.00</td>
+											</tr>
+											<tr>
+												<td style="padding-right:10px"><strong>EPS</strong></td>
+												<td>26.9</td>
+											</tr>
+											<tr>
+												<td style="padding-right:10px"><strong>Implied PE:</strong></td>
+												<td>15.1x</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<br>
+
+								<p><u>Company Description</u></p>
+								<p>
+									Apple Inc. (Apple) designs, manufactures and markets mobile communication and media devices, personal computers, and portable digital music players, and a variety of related software, services, peripherals, networking solutions, and third-party digital content and applications. The Company's products and services include iPhone, iPad, Mac, iPod, Apple TV, a portfolio of consumer and professional software applications, the iOS and OS X operating systems, iCloud, and a variety of accessory, service and support offerings. The Company also delivers digital content and applications through the iTunes Store, App StoreSM, iBookstoreSM, and Mac App Store. The Company distributes its products worldwide through its retail stores, online stores, and direct sales force, as well as through third-party cellular network carriers, wholesalers, retailers, and value-added resellers. In February 2012, the Company acquired app-search engine Chomp.
+								</p>
+								<p><u>Recommendation</u></p>
+								<p>
+									"We rate APPLE INC (AAPL) a BUY. This is based on the convergence of positive investment measures, which should help this stock outperform the majority of stocks that we rate. The company's strengths can be seen in multiple areas, such as its solid stock price performance, impressive record of earnings per share growth, compelling growth in net income, revenue growth and notable return on equity. Although no company is perfect, currently we do not see any significant weaknesses which are likely to detract from the generally positive outlook."
+								</p>
+
+							</p>
+
+							<div class="m-t-lg">
+								<h2>Attachments:</h2>
+								<p>
+									<span><i class="fa fa-paperclip"></i> 2 attachments - </span>
+									<a href="#">Download all</a>
+								</p>
+
+								<div class="attachment">
+									<div class="file-box">
+										<div class="file">
+											<a href="#" data-toggle="modal" data-target="#viewPDF">
+												<span class="corner"></span>
+
+												<div class="icon">
+													<i class="fa fa-file-pdf-o"></i>
+												</div>
+												<div class="file-name">
+													Analysis_2015.pdf
+													<br>
+													<small>Added: Sep 28, 2015</small>
+												</div>
+											</a>
+										</div>
+
+									</div>
+									<div class="file-box">
+										<div class="file">
+											<a href="#">
+												<span class="corner"></span>
+
+												<div class="icon">
+													<i class="fa fa-file-excel-o"></i>
+												</div>
+												<div class="file-name">
+													Numbers_2015.xls
+													<br>
+													<small>Added: Sep 28, 2015</small>
+												</div>
+											</a>
+										</div>
+
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+
+							<div class="article row">
+								<div class="col-lg-12">
+									<h2>Sidenotes:
+										<button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+											<strong>Add Sidenote</strong>
+										</button>
+									</h2>
+									<div class="social-feed-box">
+										<div class="social-avatar">
+											<a href="" class="pull-left">
+												<img alt="image" src="img/profile/Derek.png">
+											</a>
+											<div class="media-body">
+												<a href="#">
+													Derek Miller
+												</a>
+												<small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
+											</div>
+										</div>
+										<div class="social-body">
+											<p>
+												Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
+											</p>
+										</div>
+									</div>
+									<div class="social-feed-box">
+										<div class="social-avatar">
+											<a href="" class="pull-left">
+												<img alt="image" src="img/profile/Damon.png">
+											</a>
+											<div class="media-body">
+												<a href="profile_DamonWang.html">
+													Damon Wang
+												</a>
+												<small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
+											</div>
+										</div>
+										<div class="social-body">
+											<p>
+												I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
+											</p>
+										</div>
+									</div>
+									<div class="social-feed-box">
+										<div class="social-avatar">
+											<a href="" class="pull-left">
+												<img alt="image" src="img/profile/Alan.png">
+											</a>
+											<div class="media-body">
+												<a href="#">
+													Alan Yang
+												</a>
+												<small class="text-muted">Today 12:01 pm - 09.27.2015</small>
+											</div>
+										</div>
+										<div class="social-body">
+											<p>
+												Any update on those numbers?
+											</p>
+										</div>
+									</div>
+									<div class="social-feed-box">
+										<div class="social-avatar">
+											<a href="" class="pull-left">
+												<img alt="image" src="img/profile/Matt.png">
+											</a>
+											<div class="media-body">
+												<a href="#">
+													Matt Terrill
+												</a>
+												<small class="text-muted">Today 2:21 pm - 09.27.2015</small>
+											</div>
+										</div>
+										<div class="social-body">
+											<p>
+												I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+											</p>
+											<br>
+											<img src="img/aapl_forecast.png" style="width: 608px;">
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<div class="row" style="padding-bottom:10px">
+								<div class="col-lg-12">
+									<button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
+										<strong>Add Sidenote</strong>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+	<div style="width:800px" class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header" style="padding-top:15px; padding-bottom:15px">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				<h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
+				</div>
+				<div class="modal-body" style="padding-top:0px">
+					<fieldset class="form-horizontal">
+
+						<div class="form-group" style="padding-top:25px; margin-bottom:0px">
+
+							<label class="col-sm-2 control-label">Note Type <span style="color:red">*</span></label>
+							<div class="col-sm-4" style="padding-right:0px">
+								<select id="noteType" name="noteType" type="select" class="form-control required" style="width:100%" aria-required="true">
+									<option>Tamale Note</option>
+									<option>Report</option>
+									<option>Call</option>
+									<option>Clip</option>
+								</select>
+							</div>
+
+							<label class="col-sm-2 control-label">Privacy <span style="color:red">*</span></label>
+							<div class="col-sm-3" style="padding-right:0px">
+								<select id="privacy" name="privacy" type="select" class="form-control required" style="width:100%" aria-required="true">
+									<option>Equities Team</option>
+									<option>Analysts</option>
+									<option>Fund Administrators</option>
+									<option>Myself</option>
+								</select>
+							</div>
+
+						</div>
+
+						<div class="form-group" style="margin-bottom:25px; margin-top:0px; padding-left:0px; padding-right:0px; border-bottom:1px solid #e5e5e5; height:25px"></div>
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Entities <span style="color:red">*</span></label>
+							<div class="col-sm-10">
+								<select id="entities" name="entities" data-placeholder=" " class="form-control required" multiple style="width:100%;" aria-required="true">
+									<option value=""></option>
+									<option value="United States">United States</option>
+									<option value="United Kingdom">United Kingdom</option>
+									<option value="Afghanistan">Afghanistan</option>
+									<option value="Aland Islands">Aland Islands</option>
+								</select>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label class="col-sm-2 control-label">Source <span style="color:red">*</span></label>
+							<div class="col-sm-3" style="padding-right:0px">
+								<select id="source" name="source" type="select" class="form-control required" style="width:100%" aria-required="true">
+									<option>Derek Miller</option>
+									<option>Damon Wang</option>
+									<option>Alan Yang</option>
+									<option>Daniel Wang</option>
+								</select>
+							</div>
+
+							<div class="col-sm-3" style="padding-left:25px; padding-right:7px">
+								<div class="input-group date">
+									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									<input type="text" class="form-control required" value="11/02/2015">
+								</div>
+							</div>
+
+							<div class="col-sm-2" style="padding-left:5px; padding-right:7px">
+								<select id="sentiment" name="sentiment" type="select" class="form-control required" style="width:100%" aria-required="true">
+									<option>Neutral</option>
+									<option>Positive</option>
+									<option>Negative</option>
+								</select>
+							</div>
+
+							<div class="col-sm-2" style="padding-left:5px; padding-right:0px; margin-top:6px">
+								<div id="priority"></div>
+							</div>
+
+						</div>
+
+						<div class="form-group" style="margin-bottom:0px"><label class="col-sm-2 control-label">Subject </label>
+							<div class="col-sm-10"><input type="text" id="subject" class="form-control" style="font-size:13px; width:590px"></div>
+						</div>
+
+						<div class="form-group" style="margin-bottom:25px; margin-top:0px; padding-left:0px; padding-right:0px; border-bottom:1px solid #e5e5e5; height:25px"></div>
+
+						<div class="form-group">
+							<div class="col-sm-12">
+								<form>
+									<textarea name="editor1" id="editor1"></textarea>
+								</form>
+							</div>
+						</div>
+
+
+
+					</fieldset>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal inmodal fade" id="newContact" tabindex="-1" role="dialog" aria-hidden="true">
+		<div style="width:800px" class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header" style="padding:15px 15px 15px 15px">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">New Contact</h4>
+				</div>
+				<div class="modal-body">
+					<div class="ibox float-e-margins" style="margin-bottom:0px">
+						<div class="row">
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Personal Information</h3>
+								<form role="form">
+									<div class="form-group"><label>Name</label> <input type="name" class="form-control"></div>
+									<div class="form-group"><label>Job Title</label> <input type="title" class="form-control"></div>
+									<div class="form-group"><label>Company</label> <input type="company" class="form-control"></div>
+								</form>
+							</div>
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Emails</h3>
+								<form role="form">
+									<div class="form-group"><label>Primary</label> <input type="email" class="form-control"></div>
+									<div class="form-group"><label>Secondary</label> <input type="email" class="form-control"></div>
+								</form>
+								<form role="form">
+									<div class="form-group col-sm-7" style="padding:0"><label>IM Handle</label> <input type="IM" class="form-control"></div>
+									<div class="form-group col-sm-4" style="padding:0; margin-left:9px"><label>IM Service</label>
+										<select class="form-control m-b">
+											<option value="option1">AOL</option>
+											<option value="option2">ICQ</option>
+											<option value="option3">IRC</option>
+											<option value="option4">MSN</option>
+											<option value="option4" selected="selected">Unknown</option>
+											<option value="option4">Yahoo</option>
+										</select>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Phone Numbers</h3>
+								<form role="form">
+									<div class="form-group"><label>Business</label> <input type="" class="form-control"></div>
+									<div class="form-group"><label>Home</label> <input type="" class="form-control"></div>
+									<div class="form-group"><label>Fax</label> <input type="" class="form-control"></div>
+									<div class="form-group"><label>Mobile</label> <input type="" class="form-control"></div>
+								</form>
+							</div>
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Addresses</h3>
+								<form role="form">
+									<div class="form-group"><label>Home</label> <input type="" class="form-control"></div>
+									<div class="form-group"><label>Business</label> <input type="" class="form-control"></div>
+								</form>
+								<div class="row">
+									<div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Default Relationship Type</h3>
+										<form role="form">
+											<div class="form-group"></label>
+												<select class="form-control m-b">
+													<option value="option1">Analyst</option>
+													<option value="option2">Portfolio Manager</option>
+													<option value="option3" selected="selected">Other</option>
+													<option value="option4">CEO</option>
+												</select>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Image URL</h3>
+										<form role="form">
+											<div class="form-group"><label></label> <input type="" class="form-control"></div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="modal-footer" style="margin-top:0px">
+					<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal inmodal fade" id="editContact" tabindex="-1" role="dialog" aria-hidden="true">
+		<div style="width:800px" class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header" style="padding:15px 15px 15px 15px">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Edit Contact</h4>
+				</div>
+				<div class="modal-body">
+					<div class="ibox float-e-margins" style="margin-bottom:0px">
+						<div class="row">
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Personal Information</h3>
+								<form role="form">
+									<div class="form-group"><label>Name</label> <input type="name" value="Derek Miller" class="form-control"></div>
+									<div class="form-group"><label>Job Title</label> <input type="title" value="Business Analyst" class="form-control"></div>
+									<div class="form-group"><label>Company</label> <input type="company" value="Advent Software, Inc." class="form-control"></div>
+								</form>
+							</div>
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Emails</h3>
+								<form role="form">
+									<div class="form-group"><label>Primary</label> <input type="email" href="mailto:dmiller@advent.com" value="dmiller@advent.com" class="form-control"></div>
+									<div class="form-group"><label>Secondary</label> <input type="email" href="mailto:dmiller@advent.com" value="dmiller@advent.com" class="form-control"></div>
+								</form>
+								<form role="form">
+									<div class="form-group col-sm-7" style="padding:0"><label>IM Handle</label> <input type="IM" value="tamalederek" class="form-control"></div>
+									<div class="form-group col-sm-4" style="padding:0; margin-left:9px"><label>IM Service</label>
+										<select class="form-control m-b">
+											<option value="option1" selected="selected">AOL</option>
+											<option value="option2">ICQ</option>
+											<option value="option3">IRC</option>
+											<option value="option4">MSN</option>
+											<option value="option4">Unknown</option>
+											<option value="option4">Yahoo</option>
+										</select>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Phone Numbers</h3>
+								<form role="form">
+									<div class="form-group"><label>Business</label> <input type="" value="(617)-912-0775" class="form-control"></div>
+									<div class="form-group"><label>Home</label> <input type="" value="(781)-447-5596" class="form-control"></div>
+									<div class="form-group"><label>Fax</label> <input type="" value="" class="form-control"></div>
+									<div class="form-group"><label>Mobile</label> <input type="" value="(781)-264-8475" class="form-control"></div>
+								</form>
+							</div>
+							<div class="col-sm-6 b-r"><h3 class="m-t-none m-b">Addresses</h3>
+								<form role="form">
+									<div class="form-group"><label>Home</label> <input type="" value="783 Dorchester Avenue Apt 2 Boston, MA" class="form-control"></div>
+									<div class="form-group"><label>Business</label> <input type="" value="40 Broad Street 6th Floor Boston, MA" class="form-control"></div>
+								</form>
+								<div class="row">
+									<div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Default Relationship Type</h3>
+										<form role="form">
+											<div class="form-group"></label>
+												<select class="form-control m-b">
+													<option value="option1" selected="selected">Analyst</option>
+													<option value="option2">Portfolio Manager</option>
+													<option value="option3">Other</option>
+													<option value="option4">CEO</option>
+												</select>
+											</div>
+										</form>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-12 b-r"><h3 class="m-t-none m-b">Image URL</h3>
+										<form role="form">
+											<div class="form-group"></label> <input type="" value="https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg" class="form-control"></div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="modal-footer" style="margin-top:0px">
+					<button type="button" class="btn btn-white" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal inmodal fade" id="viewHome" tabindex="-1" role="dialog" aria-hidden="true">
+		<div style="width:80%" class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<iframe
+				width="100%"
+				height="600px"
+				frameborder="0" style="border:0"
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
+				&q=783+Dorchester+Avenue+Apt+2+Boston,MA" allowfullscreen>
+			</iframe>
+		</div>
+	</div>
+</div>
+
+<div class="modal inmodal fade" id="viewOffice" tabindex="-1" role="dialog" aria-hidden="true">
+	<div style="width:80%" class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<iframe
+			width="100%"
+			height="600px"
+			frameborder="0" style="border:0"
+			src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
+			&q=40+Broad+Street+Floor+6+Boston,MA" allowfullscreen>
+		</iframe>
+	</div>
+</div>
+</div>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<script src="js/plugins/summernote/summernote.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+
+		$('.summernote').summernote();
+
+	});
+	var edit = function() {
+		$('.click2edit').summernote({focus: true});
+	};
+	var save = function() {
+            var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
+            $('.click2edit').destroy();
+        };
+    </script>
+
+    <script>
+    	$(document).ready(function(){
+
+    		$('#loading-example-btn').click(function () {
+    			btn = $(this);
+    			simpleLoad(btn, true)
+
+                // Ajax example
+//                $.ajax().always(function () {
+//                    simpleLoad($(this), false)
+//                });
+
+    		simpleLoad(btn, false)
+    	});
+    	});
+
+    	function simpleLoad(btn, state) {
+    		if (state) {
+    			btn.children().addClass('fa-spin');
+    			btn.contents().last().replaceWith(" Loading");
+    		} else {
+    			setTimeout(function () {
+    				btn.children().removeClass('fa-spin');
+    				btn.contents().last().replaceWith(" Refresh");
+    			}, 2000);
+    		}
+    	}
+    </script>
+
+    <!-- Tree View JS & CSS-->
+    <script src="js/plugins/jsTree/jstree.min.js"></script>
+
+    <style>
+    	.jstree-open > .jstree-anchor > .fa-folder:before {
+    		content: "\f07c";
+    	}https://media.licdn.com/media/p/2/000/0e5/273/2006d4e.jpg
+
+    	.jstree-default .jstree-icon.none {
+    		width: 0;
+    	}
+    </style>
+
+    <style>
+    	#editContact .form-group {
+    		margin-left:20px;
+    	}
+
+    	#newContact .form-group {
+    		margin-left:20px;
+    	}
+    </style>
+
+    <!-- SEARCH BOX STYLING -->
+    <style>
+    	.search-box {
+    		-webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    		transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    		width: 30px;
+    		height: 34px;
+    		border-radius: 3px;
+    		margin-top: 8px;
+    		margin-right: 0px;
+    		border: 1px solid white;
+    		cursor: pointer;
+    		background: #ebebeb;
+    	}
+    	.search-box + label .search-icon {
+    		color: black;
+    	}
+
+        /*
+        .search-box:hover {
+            color: white;
+            background: #c8c8c8;
+            box-shadow: 0 0 0 2px #3d4752;
+        }
+        .search-box:hover + label .search-icon {
+            color: white;
+        }
+        */
+        .search-box {
+        	-webkit-transition: width 0.4s cubic-bezier(1, 1, 0, 0), border-radius 0.4s, background 0.4s;
+        	transition: width 0.4s cubic-bezier(1, 1, 0, 0), border-radius 0.4s, background 0.4s;
+        	border: none;
+        	outline: none;
+        	box-shadow: none;
+        	padding-left: 10px;
+        	cursor: text;
+        	width: 300px;
+        	border-radius: auto;
+        	background: #ebebeb;
+        	color: black;
+        	font-size:15px;
+        }
+        .search-box:focus + label .search-icon {
+        	color: black;
+        }
+        .search-box:not(:focus) {
+        	text-indent: -5000px;
+        }
+
+        .search-icon {
+        	position: relative;
+        	top: 3px;
+        	left: -30px;
+        	color: black;
+        	cursor: pointer;
+        	font-size:14px;
+        }
+    </style>
+
+    <!-- SEARCH BOX JS -->
+    <script>
+    	document.addEventListener("touchstart", function(){}, true);
+    </script>
+
+    <!-- Keyword Search Animation -->
+    <style>
+    	.search-box2 {
+    		-webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    		transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    		width: 0px;
+    		height: 28px;
+    		border: none;
+    		outline: none;
+    		box-shadow: none;
+    		padding-left: 5px;
+    		cursor: text;
+    		width: 218px;
+    		border-radius: auto;
+    		background: white;
+    		color: black;
+    	}
+    </style>
+    <script>
+    	$(document).ready(function(){
+    		$(".search-container2").hide();
+    		$("#keywordButton").click(function() {
+    			$(".search-container2").show(500);
+                //$("#keywordButton").css("background-color","white");
+                $("#keywordButton").css("padding","0");
+                $("#keywordButton i").css("padding","8");
+            });
+    	});
+    </script>
+
+    <!-- Rel Tree JS -->
+    <script>
+    	$(document).ready(function(){
+    		$('#using_json').jstree({ 'core' : {
+    			'checkbox' : { 'keep_selected_style' : false },
+    			'themes' : [{'dots' : false},
+    			{'icons' : false}],
+    			'data' : [{
+    				'text': 'Relationships',
+    				'state': {
+    					'opened': true
+    				},
+    				'children': [{
+    					'text': 'Entities',
+    					'state': {
+    						'opened': true
+    					},
+    					'children': [{
+    						'text': 'Competes With',
+    						'state': {
+    							'opened': true
+    						},
+    						'children': [{'text': 'ADVS', 'icon': 'none', 'link': '123.html'},
+    						{'text': 'Backstop', 'icon': 'none'},
+    						{'text': 'Code Red', 'icon': 'none'},
+    						{'text': 'InvestCloud', 'icon': 'none'}]
+    					},
+    					{
+    						'text': 'Location',
+    						'state': {
+    							'opened': true
+    						},
+    						'children': [{'text': 'Boston', 'icon': 'none'},
+    						{'text': 'New York City', 'icon': 'none'},
+    						{'text': 'San Francisco', 'icon': 'none'},
+    						{'text': 'Beijing', 'icon': 'none'},
+    						{'text': 'Hong Kong', 'icon': 'none'}]
+    					}]
+    				}]
+    			}]
+    		}
+    	}).bind("select_node.jstree", function (e, data) { 
+    		window.location.href= "entityDetail_" + data.node.text+ '.html'});
+
+    });
+</script>
+
+<!-- MULTI SELECT BOX -->
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#entities').chosen({width:'600px'});
+		$('#noteType').chosen({width:'275px'});
+		$('#source').chosen({width:'200px'});
+		$('#sentiment').chosen({width:'125px'});
+		$('#privacy').chosen({width:'216px'});
+		$(".chosen-single span").css({'margin-right':'0px'});
+		$(".chosen-single b").css({'margin-top':'4px'});
+		$(".chosen-container").css({'padding-right':'10px'});
+		$(".entities_chosen").css({'width':'590px'});
+		$(".chosen-select").prepend("<option></option>");
+		var config = {
+			'.chosen-select'           : {},
+			'.chosen-select-deselect'  : {allow_single_deselect:true},
+			'.chosen-select-no-single' : {disable_search_threshold:10},
+			'.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+		}
+		for (var selector in config) {
+			$(selector).chosen(config[selector]);
+		}
+	});
+</script>
+
+<!-- DATE PICKER -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#date_1 .input-group .date').datepicker({
+			todayBtn: "linked",
+			keyboardNavigation: false,
+			forceParse: false,
+			calendarWeeks: true,
+			autoclose: true
+		});
+	});
+</script>
+
+<!-- PRIORITY SETTER -->
+<script src="js/plugins/star_rater/jquery.raty.js"></script>
+<script>
+	$(document).ready(function(){
+		$('#priority').raty({ 
+			number: 3 ,
+			cancel: true
+		});
+	});
+</script>
+
+<!-- CKEDITOR -->
+<script src="ckeditor/ckeditor.js"></script>
+<script>
+	$(document).ready(function(){
+		CKEDITOR.replace('editor1');
+
+		$.fn.modal.Constructor.prototype.enforceFocus = function () {
+			var $modalElement = this.$element;
+			$(document).on('focusin.modal', function (e) {
+				var $parent = $(e.target.parentNode);
+				if ($modalElement[0] !== e.target && !$modalElement.has(e.target).length
+                    // add whatever conditions you need here:
+                    &&
+                    !$parent.hasClass('cke_dialog_ui_input_select') && !$parent.hasClass('cke_dialog_ui_input_text')) {
+					$modalElement.focus()
+			}
+		})
+		};
+	});
+</script>
+
+
+<!-- FILE UPLOAD -->
+<script src="js/plugins/dropzone/dropzone.js"></script>
+<script>
+	$(document).ready(function(){
+
+		Dropzone.options.myAwesomeDropzone = {
+
+			autoProcessQueue: false,
+			uploadMultiple: true,
+			parallelUploads: 100,
+			maxFiles: 100,
+
+                // Dropzone settings
+                init: function() {
+                	var myDropzone = this;
+
+                	this.element.querySelector("button[type=submit]").addEventListener("click", function(e) {
+                		e.preventDefault();
+                		e.stopPropagation();
+                		myDropzone.processQueue();
+                	});
+                	this.on("sendingmultiple", function() {
+                	});
+                	this.on("successmultiple", function(files, response) {
+                	});
+                	this.on("errormultiple", function(files, response) {
+                	});
+                }
+
+            }
+
+        });
+</script>
+
+
+<!-- Nav Bar Top Links CSS and JS -->
+<style>
+	.navbar-top-links li a {
+		padding: 15px;
+	}
+</style>
+<script>
+	$('.dropdown').hover(
+		function() {
+			$(this).find('.dropdown-menu').stop(true, true).delay(0).show();
+			$(this).css({'background-color':'#333333'});
+		}, 
+		function() {
+			$(this).find('.dropdown-menu').stop(true, true).delay(0).hide();
+			$(this).css({'background-color':'black'});
+		}
+		);
+
+	$('.dropdown-menu').hover(
+		function() {
+			$(this).stop(true, true);
+		},
+		function() {
+			$(this).stop(true, true).delay(50).hide();
+		}
+		);
+</script>
+
+<!-- Popover CSS and JS-->
+
+<script>
+	$(document).ready(function(){
+
+		$("#filterButton").click(function() {
+			$(".popover").css("min-width","50%");
+		});
+	});
+</script>
+
+<!-- Box Sizing fix for Selects -->
+<style>
+	select {
+		box-sizing: border-box;
+	}
+</style>
+</body>
+
+</html>
