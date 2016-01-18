@@ -117,6 +117,7 @@
                     <div class="panel panel-default" style="background-color:white; margin-top:5px;margin-bottom:0px; border:none;">
                         <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
 
+
                             <button type="button" id="filterButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px;" title="Filtering Options"
                                 data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" rel="popover" data-content=
                                     '<select id="entities" name="entities" data-placeholder=" " class="form-control required" multiple style="width:100%;" aria-required="true">
@@ -130,12 +131,9 @@
                                 Filter Results
                             </button>
 
-                            <button type="button" id="keywordButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px; padding-top:5px"><i class="fa fa-search"></i>
-                                <form class="pull-right search-container2" style="padding-right:4px;">
-                                    <input id="search-box2" type="text" class="search-box2" name="q">
-                                    x
-                                </form>
-                            </button>
+                            <form class="pull-left search-container2" style="padding-right:4px;border:1px solid #1ab394; border-radius:3px; margin-right:5px; margin-top:-1px; padding-top:0px"><i class="fa fa-search" style="color:1ab394"></i>
+                                <input id="search-box2" type="text" class="search-box2" name="q">
+                            </form>
                         </div>
                     </div>
 
@@ -971,6 +969,7 @@
                 $("#keywordButton").css("padding","0");
                 $("#keywordButton i").css("padding","8");
             //});
+            $("#keywordButton").css("padding","0");
         });
     </script>
 
@@ -1158,7 +1157,6 @@
     </script>
 
     <!-- Popover CSS and JS-->
-    
     <script>
         $(document).ready(function(){
 
@@ -1174,6 +1172,7 @@
             box-sizing: border-box;
         }
     </style>
+
 </body>
 
 </html>

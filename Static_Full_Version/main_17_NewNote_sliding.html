@@ -506,7 +506,7 @@
                     </button>
                     <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
                 </div>
-                <div class="modal-body" style="padding-top:0px">
+                <div id="noteModalBody" class="modal-body" style="padding-top:0px">
                     <fieldset class="form-horizontal">
 
                         <div class="form-group" style="padding-top:25px; margin-bottom:0px">
@@ -1224,14 +1224,12 @@
                     console.log(obj);
                 }
             });
+            
 
-
+            $("#newNoteClose").click(function(){
+                slider2.slideReveal("hide");
+            });
         });
-
-      $("#newNoteClose").click(function(){
-          slider2.slideReveal("hide");
-        });
-
     </script>
 </body>
 
