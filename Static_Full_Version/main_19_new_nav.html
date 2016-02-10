@@ -30,23 +30,22 @@
 
         <nav class="navbar navbar-static-top" role="navigation" style="background-color:black; margin-bottom:0px">
             <div class="navbar-header">
+                <a class="btn" id="trigger3" href="#" style="margin:1px 0px 0px 10px"><i class="fa fa-2x fa-bars" style="color:white"></i> </a>
                 <img alt="image" src="img/logo-5_white.png" width="41" height="50" style="padding:5px 3px 5px 3px; margin-left:10px">
             </div>
 
             <div class="navbar-collapse collapse" id="navbar">
 
-                <ul class="nav navbar-top-links navbar-left" style="margin-left:20px">
+                <ul class="nav navbar-top-links navbar-left" style="margin-left:36%">
                     <li class="dropdown">
                         <a aria-expanded="false" role="button" href="main_17.html"
-                        style="color:white; margin-left:-3px"> Research </a>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" href="entityDetail_SSNC2.html"
-                        style="color:white; margin-left:-3px"> Entities </a>
-                    </li>
-                    <li class="dropdown">
-                        <a aria-expanded="false" role="button" href="ContactList_2.html"
-                        style="color:white; margin-left:-3px"> Contacts </a>
+                        style="color:white; margin-left:-3px; font-size:22px;padding-top: 10px;padding-bottom: 0px;font-weight: 300;"> MY RESEARCH <span class="caret"></span></a>
+                        <ul role="menu" class="dropdown-menu" style="background-color:#333333; color:white; margin-left:00px; width:150%">
+                            <h5 style="font-size:15px; line-height:15px; font-weight:100; padding-left:15px; margin-top:10px">Recently Viewed</h5>
+                            <li><a href="">Research Screen</a></li>
+                            <li><a href="">My Team's Research</a></li>
+                            <li><a href="">SS&C Activity</a></li>
+                        </ul>
                     </li>
                 </ul>
 
@@ -100,13 +99,37 @@
                 <div class="fh-column" id="leftPanel" style="min-height:751px; width:250px; margin-right:10px;">
 
                     <div class="panel panel-default" style="background-color:white; margin-top:5px; margin-bottom: 3px; border:none;">
-                        <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
-                            <p style="margin-top:0px; font-size:22px">
-                            <input type="text" placeholder="Type an entity..." name="finder" value="SS&C Technologies" id="finder"
-                                style="background-color:white;border:none; width:100%">
-                        </div>
                         <div class="panel-body">
-                            <div id="using_json" style="background-color:white"></div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary">Suspend</button>
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Add Filter <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Entry Type</a></li>
+                                        <li><a href="#">Source</a></li>
+                                        <li><a href="#">Submitter</a></li>
+                                        <li><a href="#">Priority</a></li>
+                                        <li><a href="#">Sentiment</a></li>
+                                        <li><a href="#">Subject</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                                Show if any of the following match
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group"><label class="control-label">Note Type</label>
+                                <div>
+                                    <select class="form-control m-b" name="account">
+                                        <option>Thesis</option>
+                                        <option>Note Type</option>
+                                        <option>TamaleNote</option>
+                                        <option>EMail</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -631,13 +654,88 @@
 
                     </fieldset>
                 </div>
-                <div class="modal-footer">
+                <div class="modal-footer" style="padding: 31px 20px 28px">
                     <button type="button" class="pull-left btn btn-primary">Attach File...</button>
                     <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="slider3" tabindex="-1" role="dialog" aria-hidden="true" style="background-color:#DDDDDD">
+            <div class="panel panel-default" style="background-color:#DDDDDD; margin-bottom: 3px; border:none; height:816px">
+                <div class="panel-heading" style="background-color:#DDDDDD; padding-right:5px; padding-left:5px; height:70px; padding-top:3px;">
+                    <p style="margin-top:0px; font-size:16px">
+                    <input type="text" placeholder="Type an entity..." name="finder" value="SS&C Technologies" id="finder"
+                        style="background-color:white;border-radius:7px; border:1px solid gray; width:90%; margin: 15px 0px 0px 15px; padding:5px 1px 5px 5px">
+                </div>
+                <div class="panel-body" style="padding:0">
+                    <div id="using_json_properties" style="background-color:#DDDDDD"></div>
+                    <div class="ibox float-e-margins" style="margin-bottom:0px; border-top: 1px solid white">
+                        <div class="ibox-title" style="border-width:0px; background-color:#DDDDDD;padding-top: 16px;color: #333333;border-left:5px solid green">
+                            <h5>Research</h5>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins" style="margin-bottom:0px; border-top: 1px solid white">
+                        <div class="ibox-title" style="border-width:0px; background-color:#DDDDDD;padding-top: 16px;color: #333333;border-left: 5px solid black;">
+                            <h5>Entities</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-down" style="color: #333333"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content no-padding" style="display: none;border-width:0px">
+                            <div id="using_json_entities" style="background-color:#DDDDDD; border-left: 5px solid black;padding-left: 15px;padding-bottom: 15px;margin-top: -5px;"></div>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins" style="margin-bottom:0px; border-top: 1px solid white">
+                        <div class="ibox-title" style="border-width:0px; background-color:#DDDDDD;padding-top: 16px;color: #333333;border-left: 5px solid purple;">
+                            <h5>Contacts</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-down" style="color: #333333"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content no-padding" style="display: none;">
+                            <div id="using_json_contacts" style="background-color:#DDDDDD; border-left: 5px solid purple;padding-left: 15px;padding-bottom: 15px;margin-top: -5px;"></div>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins" style="margin-bottom:0px; border-top: 1px solid white">
+                        <div class="ibox-title" style="border-width:0px; background-color:#DDDDDD;padding-top: 16px;color: #333333;border-left: 5px solid yellow;">
+                            <h5>Grid Views</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-down" style="color: #333333"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content no-padding" style="display: none;">
+                            <div id="using_json_grids" style="background-color:#DDDDDD; border-left: 5px solid yellow;padding-left: 15px;padding-bottom: 15px;margin-top: -5px;"></div>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins" style="margin-bottom:0px; border-top: 1px solid white">
+                        <div class="ibox-title" style="border-width:0px; background-color:#DDDDDD;padding-top: 16px;color: #333333;border-left: 5px solid blue;">
+                            <h5>Tear Sheets</h5>
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-down" style="color: #333333"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content no-padding" style="display: none;">
+                            <div id="using_json_tearsheets" style="background-color:#DDDDDD; border-left: 5px solid blue;padding-left: 15px;padding-bottom: 15px;margin-top: -5px;"></div>
+                        </div>
+                    </div>
+                    <div class="ibox float-e-margins" style="margin-bottom:0px; border-top: 1px solid white">
+                        <div class="ibox-title" style="border-width:0px; background-color:#DDDDDD;padding-top: 16px;color: #333333;border-left: 5px solid orange;">
+                            <h5>Configuration</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 
     <div class="modal inmodal fade" id="newContact" tabindex="-1" role="dialog" aria-hidden="true">
@@ -1012,107 +1110,156 @@
     <!-- Rel Tree JS -->
     <script>
         $(document).ready(function(){
-            $('#using_json').jstree({ 'core' : {
+            $('#using_json_entities').jstree({ 'core' : {
                 'checkbox' : { 'keep_selected_style' : false },
                 'themes' : [{'dots' : false},
                 {'icons' : false}],
-                'data' : [{
-                    'text': 'Relationships',
-                    'state': {
-                        'opened': true
-                    },
-                    'children': [{
-                        'text': 'Entities',
+                'data' : [
+                    {
+                        'text': 'Competes With',
                         'state': {
-                            'opened': true
+                            'opened': false
                         },
-                        'children': [{
-                            'text': 'Competes With',
-                            'state': {
-                                'opened': true
-                            },
-                            'children': [
-                            {'text': 'ADVS', 'icon': 'none', 'link': '123.html'},
-                            {'text': 'Backstop', 'icon': 'none'},
-                            {'text': 'Code Red', 'icon': 'none'},
-                            {'text': 'InvestCloud', 'icon': 'none'}]
+                        'children': [
+                        {'text': 'ADVS', 'icon': 'none', 'link': '123.html'},
+                        {'text': 'Backstop', 'icon': 'none'},
+                        {'text': 'Code Red', 'icon': 'none'},
+                        {'text': 'InvestCloud', 'icon': 'none'}]
+                    },
+                    {
+                        'text': 'Invests In',
+                        'state': {
+                            'opened': false
                         },
-                        {
-                            'text': 'Invests In',
-                            'state': {
-                                'opened': true
-                            },
-                            'children': [
-                            {'text': 'Advent Software', 'icon': 'none', 'link': '123.html'},
-                            {'text': 'DST Global Solutions', 'icon': 'none'},
-                            {'text': 'Primatics Financial', 'icon': 'none'},
-                            {'text': 'Varden Technologies', 'icon': 'none'}]
+                        'children': [
+                        {'text': 'Advent Software', 'icon': 'none', 'link': '123.html'},
+                        {'text': 'DST Global Solutions', 'icon': 'none'},
+                        {'text': 'Primatics Financial', 'icon': 'none'},
+                        {'text': 'Varden Technologies', 'icon': 'none'}]
+                    },
+                    {
+                        'text': 'US -- Central',
+                        'state': {
+                            'opened': false
                         },
-                        {
-                            'text': 'US -- Central',
-                            'state': {
-                                'opened': false
-                            },
-                            'children': [
-                            {'text': 'Boston', 'icon': 'none'},
-                            {'text': 'Brewster', 'icon': 'none'},
-                            {'text': 'Burlington', 'icon': 'none'},
-                            {'text': 'Cranford', 'icon': 'none'},
-                            {'text': 'Harrison', 'icon': 'none'},
-                            {'text': 'Jacksonville', 'icon': 'none'},
-                            {'text': 'New Rochelle', 'icon': 'none'},
-                            {'text': 'New York', 'icon': 'none'},
-                            {'text': 'Orlando', 'icon': 'none'},
-                            {'text': 'Parsippany', 'icon': 'none'},
-                            {'text': 'Sandy Hook', 'icon': 'none'},
-                            {'text': 'Skillman', 'icon': 'none'},
-                            {'text': 'Yorktown Heights', 'icon': 'none'}]
+                        'children': [
+                        {'text': 'Boston', 'icon': 'none'},
+                        {'text': 'Brewster', 'icon': 'none'},
+                        {'text': 'Burlington', 'icon': 'none'},
+                        {'text': 'Cranford', 'icon': 'none'},
+                        {'text': 'Harrison', 'icon': 'none'},
+                        {'text': 'Jacksonville', 'icon': 'none'},
+                        {'text': 'New Rochelle', 'icon': 'none'},
+                        {'text': 'New York', 'icon': 'none'},
+                        {'text': 'Orlando', 'icon': 'none'},
+                        {'text': 'Parsippany', 'icon': 'none'},
+                        {'text': 'Sandy Hook', 'icon': 'none'},
+                        {'text': 'Skillman', 'icon': 'none'},
+                        {'text': 'Yorktown Heights', 'icon': 'none'}]
+                    },
+                    {
+                        'text': 'US -- East',
+                        'state': {
+                            'opened': false
                         },
-                        {
-                            'text': 'US -- East',
-                            'state': {
-                                'opened': true
-                            },
-                            'children': [
-                            {'text': 'Boston', 'icon': 'none'},
-                            {'text': 'Brewster', 'icon': 'none'},
-                            {'text': 'Burlington', 'icon': 'none'},
-                            {'text': 'Cranford', 'icon': 'none'},
-                            {'text': 'Harrison', 'icon': 'none'},
-                            {'text': 'Jacksonville', 'icon': 'none'},
-                            {'text': 'New Rochelle', 'icon': 'none'},
-                            {'text': 'New York', 'icon': 'none'},
-                            {'text': 'Orlando', 'icon': 'none'},
-                            {'text': 'Parsippany', 'icon': 'none'},
-                            {'text': 'Sandy Hook', 'icon': 'none'},
-                            {'text': 'Skillman', 'icon': 'none'},
-                            {'text': 'Yorktown Heights', 'icon': 'none'}]
+                        'children': [
+                        {'text': 'Boston', 'icon': 'none'},
+                        {'text': 'Brewster', 'icon': 'none'},
+                        {'text': 'Burlington', 'icon': 'none'},
+                        {'text': 'Cranford', 'icon': 'none'},
+                        {'text': 'Harrison', 'icon': 'none'},
+                        {'text': 'Jacksonville', 'icon': 'none'},
+                        {'text': 'New Rochelle', 'icon': 'none'},
+                        {'text': 'New York', 'icon': 'none'},
+                        {'text': 'Orlando', 'icon': 'none'},
+                        {'text': 'Parsippany', 'icon': 'none'},
+                        {'text': 'Sandy Hook', 'icon': 'none'},
+                        {'text': 'Skillman', 'icon': 'none'},
+                        {'text': 'Yorktown Heights', 'icon': 'none'}]
+                    },
+                    {
+                        'text': 'US -- West',
+                        'state': {
+                            'opened': false
                         },
-                        {
-                            'text': 'US -- West',
-                            'state': {
-                                'opened': false
-                            },
-                            'children': [
-                            {'text': 'Boston', 'icon': 'none'},
-                            {'text': 'Brewster', 'icon': 'none'},
-                            {'text': 'Burlington', 'icon': 'none'},
-                            {'text': 'Cranford', 'icon': 'none'},
-                            {'text': 'Harrison', 'icon': 'none'},
-                            {'text': 'Jacksonville', 'icon': 'none'},
-                            {'text': 'New Rochelle', 'icon': 'none'},
-                            {'text': 'New York', 'icon': 'none'},
-                            {'text': 'Orlando', 'icon': 'none'},
-                            {'text': 'Parsippany', 'icon': 'none'},
-                            {'text': 'Sandy Hook', 'icon': 'none'},
-                            {'text': 'Skillman', 'icon': 'none'},
-                            {'text': 'Yorktown Heights', 'icon': 'none'}]
-                        }]
-                    }]
-                }]
+                        'children': [
+                        {'text': 'Boston', 'icon': 'none'},
+                        {'text': 'Brewster', 'icon': 'none'},
+                        {'text': 'Burlington', 'icon': 'none'},
+                        {'text': 'Cranford', 'icon': 'none'},
+                        {'text': 'Harrison', 'icon': 'none'},
+                        {'text': 'Jacksonville', 'icon': 'none'},
+                        {'text': 'New Rochelle', 'icon': 'none'},
+                        {'text': 'New York', 'icon': 'none'},
+                        {'text': 'Orlando', 'icon': 'none'},
+                        {'text': 'Parsippany', 'icon': 'none'},
+                        {'text': 'Sandy Hook', 'icon': 'none'},
+                        {'text': 'Skillman', 'icon': 'none'},
+                        {'text': 'Yorktown Heights', 'icon': 'none'}]
+                    }
+                ]
             }
         }).bind("select_node.jstree", function (e, data) {
             window.location.href= "entityDetail_" + data.node.text+ '.html'});
+
+        $('#using_json_grids').jstree({ 'core' : {
+                'checkbox' : { 'keep_selected_style' : false },
+                'themes' : [{'dots' : false},
+                {'icons' : false}],
+                'data' : [
+                    {
+                        'text': 'Bloomberg',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': []
+                    },
+                    {
+                        'text': 'Due Diligence Grid',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': []
+                    },
+                    {
+                        'text': 'Fund Monitor',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': []
+                    }
+                ]
+            }
+        }).bind("select_node.jstree", function (e, data) {
+            window.location.href= "entityDetail_" + data.node.text+ '.html'});
+
+        $('#using_json_contacts').jstree({ 'core' : {
+                'checkbox' : { 'keep_selected_style' : false },
+                'themes' : [{'dots' : false},
+                {'icons' : false}],
+                'data' : [
+                    {
+                        'text': 'CEO',
+                        'state': {
+                            'opened': true
+                        },
+                        'children': [
+                        {'text': 'Bill Stone', 'icon': 'none', 'link': '123.html'}]
+                    },
+                    {
+                        'text': 'COO',
+                        'state': {
+                            'opened': false
+                        },
+                        'children': [
+                        {'text': 'Norm Boulanger', 'icon': 'none', 'link': '123.html'}]
+                    }
+                ]
+            }
+        }).bind("select_node.jstree", function (e, data) {
+            window.location.href= "entityDetail_" + data.node.text+ '.html'});
+
+        //$('jstree-children').css({'color':'#337ab7'});
 
     });
     </script>
@@ -1323,6 +1470,27 @@
                 }
             });
 
+            slider3 = $("#slider3").slideReveal({
+                width: 300,
+                push: true,
+                position: "left",
+                speed: 1000,
+                trigger: $("#trigger3"),
+                top: 0,
+                // autoEscape: false,
+                show: function(obj){
+                    console.log(obj);
+                },
+                shown: function(obj){
+                    console.log(obj);
+                },
+                hide: function(obj){
+                    console.log(obj);
+                },
+                hidden: function(obj){
+                    console.log(obj);
+                }
+            });
 
             $("#newNoteClose").click(function(){
                 slider2.slideReveal("hide");
