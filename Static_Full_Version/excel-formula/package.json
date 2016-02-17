@@ -1,0 +1,75 @@
+{
+  "author": {
+    "name": "Josh Bennett",
+    "url": "http://joshbennett.me/"
+  },
+  "name": "excel-formula",
+  "description": "Methods to beautify an excel formula and convert it to JavaScript or C#",
+  "version": "1.1.2",
+  "homepage": "http://excelformulabeautifier.com/",
+  "contributors": [
+    {
+      "name": "Josh Bennett",
+      "url": "http://joshbennett.me"
+    },
+    {
+      "name": "Adam Schmideg",
+      "url": "http://adam.schmideg.net"
+    }
+  ],
+  "repository": {
+    "url": "git://github.com/joshatjben/excelFormulaUtilitiesJS.git"
+  },
+  "keyword": [
+    "excel",
+    "formula",
+    "convert"
+  ],
+  "scripts": {
+    "test": "./node_modules/qunit/bin/cli.js -t ./test/ExcelFormulaUtilities.test.js -d ./src/core.js -c ./src/ExcelFormulaUtilities.js"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": "*"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.0.2",
+    "docco": "~0.6.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.1",
+    "qunit": "~0.7.7"
+  },
+  "gitHead": "eea34be0daec6d3dc90a0b6d03a6cf1ff12047a1",
+  "bugs": {
+    "url": "https://github.com/joshatjben/excelFormulaUtilitiesJS/issues"
+  },
+  "_id": "excel-formula@1.1.2",
+  "_shasum": "835522128ca43d8bd6174263cbf6d97bb0b0348a",
+  "_from": "excel-formula@*",
+  "_npmVersion": "2.14.12",
+  "_nodeVersion": "4.3.0",
+  "_npmUser": {
+    "name": "josh3ennett",
+    "email": "josh@j-ben.com"
+  },
+  "dist": {
+    "shasum": "835522128ca43d8bd6174263cbf6d97bb0b0348a",
+    "tarball": "http://registry.npmjs.org/excel-formula/-/excel-formula-1.1.2.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "josh3ennett",
+      "email": "josh@j-ben.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/excel-formula-1.1.2.tgz_1455552322069_0.5419982352759689"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/excel-formula/-/excel-formula-1.1.2.tgz"
+}
