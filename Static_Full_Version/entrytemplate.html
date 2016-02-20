@@ -51,12 +51,7 @@
                 </ul>
 
                 <ul class="nav navbar-top-links navbar-right" style="margin-top:0px">
-                    <li>
-                        <form class="search-container" style="margin-right:-10px">
-                            <input id="search-box" style="background-color:#999; color:white; font-weight:400" type="text" class="search-box" name="q" />
-                            <label for="search-box"><span class="glyphicon glyphicon-search search-icon"></span></label>
-                        </form>
-                    </li>
+                   
                     <li>
                         <a data-toggle="modal" data-target="#newEntity" style="top:2px; min-height:0px; padding:0px 10px; font-size:large; color:white">
                             <i class="fa fa-bank"></i>
@@ -502,14 +497,14 @@
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
                 <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
                 </div>
-                <div class="modal-body" style="padding-top:0px">
+                <div class="modal-body" style="padding-left:0px;padding-right:0px">
 
 
                   <div class="form-group">
 
                       <lable style="width:66px;display: inline-block;" >Entities:</lable>
 
-                      <input type="text" style="width:1130px;padding:2px;2px;3px;3px" placeholder="">
+                      <input type="text" class="autowidth" style="width:1130px;padding:2px;2px;3px;3px" placeholder="">
                   </select>
 
               </div>  
@@ -518,10 +513,10 @@
 
                   <lable style="width:66px;display: inline-block;" >Source:</lable>
                   
-                  <input type="text" style="width:616px;padding:2px;2px;3px;3px" placeholder="">
+                  <input class="autowidth" type="text" style="width:616px;padding:2px;2px;3px;3px" placeholder="">
 
-                  <input type="text" style="width:207px;padding:2px;2px;3px;3px" placeholder="2/20/2016">
-                  <input type="text" style="width:257px;padding:2px;2px;3px;3px" placeholder="Neutral">
+                  <input class="autowidth" type="text" style="width:207px;padding:2px;2px;3px;3px" placeholder="2/20/2016">
+                  <input class="autowidth" type="text" style="width:257px;padding:2px;2px;3px;3px" placeholder="Neutral">
 
                   <input type="text" style="width:50px;padding:2px;2px;3px;3px" placeholder="***">
               </div>  
@@ -529,36 +524,45 @@
               <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >Subject:</lable>
-                <input type="text" style="width:1130px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:1130px;padding:2px;2px;3px;3px" placeholder="">
 
+
+            </div>
+             <div class="form-group">
+
+                <lable style="width:66px;display: inline-block" >Portfolio:</lable>
+                <input class="autowidth" type="text" style="width:532px;padding:2px;2px;3px;3px" placeholder="">
+
+                <lable style="width:66px;display: inline-block" >CEO:</lable>
+                <input class="autowidth" type="text" style="width:532px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
             <div class="form-group">
 
-                <lable style="width:255px;display: inline-block;padding:2px;2px;2px;2px" >Provider</lable>
-                <lable style="width:216px;display: inline-block;padding:2px;2px;2px;2px" >Anaylst Name</lable>
-                <lable style="width:350px;display: inline-block;padding:2px;2px;2px;2px" >Industry</lable>
+                <lable class="autowidth" style="width:255px;display: inline-block;padding:2px;2px;2px;2px" >Provider</lable>
+                <lable class="autowidth" style="width:216px;display: inline-block;padding:2px;2px;2px;2px" >Anaylst Name</lable>
+                <lable class="autowidth" style="width:350px;display: inline-block;padding:2px;2px;2px;2px" >Industry</lable>
 
             </div>
 
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >1:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >2:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -566,10 +570,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >3:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -577,10 +581,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >4:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -588,10 +592,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >5:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -599,10 +603,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >6:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -610,8 +614,8 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >7:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
                 <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
@@ -621,10 +625,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >8:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -632,10 +636,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >9:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -643,10 +647,10 @@
             <div class="form-group">
 
                 <lable style="width:66px;display: inline-block" >10:</lable>
-                <input type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
-                <input type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:189px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:216px;padding:2px;2px;3px;3px" placeholder="">
 
-                <input type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
+                <input class="autowidth" type="text" style="width:350px;padding:2px;2px;3px;3px" placeholder="">
 
             </div>
 
@@ -1232,6 +1236,27 @@
         $("#filterButton").click(function() {
             $(".popover").css("min-width","50%");
         });
+    });
+</script>
+
+<!--Resize the entry template controls width-->
+<script>
+    $(document).ready(function(){
+        console.log($(window).width())
+
+        var per = ($(window).width() / 1196).toFixed(1) - 0.1;
+        console.log(per);
+
+        var minusWidth = $(window).width() > 1196 ? 0: 1196 - $(window).width();
+        console.log(minusWidth);
+ 
+       $(".autowidth").each(function (i, object) {
+         
+            $(this).css("width", Math.floor(parseInt($(this).css("width")) * per));
+               console.log($(this).css("width"));
+
+       });
+        
     });
 </script>
 
