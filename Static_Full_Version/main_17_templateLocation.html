@@ -268,7 +268,7 @@
                     </div>
                 </div>
 
-                <div class="full-height" style="max-height:652px;overflow:auto">
+                <div class="full-height printable" style="max-height:652px;overflow:auto">
                     <div class="full-height-scroll white-bg border-left">
 
                         <div class="element-detail-box">
@@ -281,6 +281,10 @@
                                             <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Add Sidenote"><i class="fa fa-plus"></i></button>
                                             <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Edit Note"><i class="fa fa-pencil-square-o"></i></button>
                                             <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i> </button>
+                                            <a role="button" id="printNote" class="btn btn-white btn-s" data-toggle="tooltip" data-placement="top" title="" data-original-title="Print Note"
+                                                href="javascript:void(0)">
+                                                <i class="fa fa-print"></i>
+                                            </a>
                                             <a role="button" class="btn btn-white btn-s" data-toggle="tooltip" data-placement="top" title="" data-original-title="View in New Tab"
                                                 href="ThreadView_SSNCBuyAdvent.html"
                                                 target="_blank">
@@ -289,6 +293,7 @@
 
                                         </div>
                                     </div>
+                                    <div class="printable">
                                     <div>
                                         <strong>AAPL, MSFT, GOOG</strong>
                                     </div>
@@ -351,143 +356,144 @@
 
                                 </p>
 
-                                <div class="m-t-lg">
-                                    <h2>Attachments:</h2>
-                                    <p>
-                                        <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
-                                        <a href="#">Download all</a>
-                                    </p>
+                                    <div class="m-t-lg">
+                                        <h2>Attachments:</h2>
+                                        <p>
+                                            <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
+                                            <a href="#">Download all</a>
+                                        </p>
 
-                                    <div class="attachment">
-                                        <div class="file-box">
-                                            <div class="file">
-                                                <a href="#" data-toggle="modal" data-target="#viewPDF">
-                                                    <span class="corner"></span>
+                                        <div class="attachment">
+                                            <div class="file-box">
+                                                <div class="file">
+                                                    <a href="#" data-toggle="modal" data-target="#viewPDF">
+                                                        <span class="corner"></span>
 
-                                                    <div class="icon">
-                                                        <i class="fa fa-file-pdf-o"></i>
-                                                    </div>
-                                                    <div class="file-name">
-                                                        Analysis_2015.pdf
-                                                        <br>
-                                                        <small>Added: Sep 28, 2015</small>
-                                                    </div>
-                                                </a>
+                                                        <div class="icon">
+                                                            <i class="fa fa-file-pdf-o"></i>
+                                                        </div>
+                                                        <div class="file-name">
+                                                            Analysis_2015.pdf
+                                                            <br>
+                                                            <small>Added: Sep 28, 2015</small>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
                                             </div>
+                                            <div class="file-box">
+                                                <div class="file">
+                                                    <a href="#">
+                                                        <span class="corner"></span>
 
-                                        </div>
-                                        <div class="file-box">
-                                            <div class="file">
-                                                <a href="#">
-                                                    <span class="corner"></span>
+                                                        <div class="icon">
+                                                            <i class="fa fa-file-excel-o"></i>
+                                                        </div>
+                                                        <div class="file-name">
+                                                            Numbers_2015.xls
+                                                            <br>
+                                                            <small>Added: Sep 28, 2015</small>
+                                                        </div>
+                                                    </a>
+                                                </div>
 
-                                                    <div class="icon">
-                                                        <i class="fa fa-file-excel-o"></i>
-                                                    </div>
-                                                    <div class="file-name">
-                                                        Numbers_2015.xls
-                                                        <br>
-                                                        <small>Added: Sep 28, 2015</small>
-                                                    </div>
-                                                </a>
                                             </div>
-
+                                            <div class="clearfix"></div>
                                         </div>
-                                        <div class="clearfix"></div>
                                     </div>
-                                </div>
 
-                                <div class="article row">
-                                    <div class="col-lg-12">
-                                        <h2>Sidenotes:
-                                            <button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+                                    <div class="article row">
+                                        <div class="col-lg-12">
+                                            <h2>Sidenotes:
+                                                <button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+                                                    <strong>Add Sidenote</strong>
+                                                </button>
+                                            </h2>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Derek.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            Derek Miller
+                                                        </a>
+                                                        <small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Damon.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="profile_DamonWang.html">
+                                                            Damon Wang
+                                                        </a>
+                                                        <small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Alan.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            Alan Yang
+                                                        </a>
+                                                        <small class="text-muted">Today 12:01 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        Any update on those numbers?
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="social-feed-box">
+                                                <div class="social-avatar">
+                                                    <a href="" class="pull-left">
+                                                        <img alt="image" src="img/profile/Matt.png">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">
+                                                            Matt Terrill
+                                                        </a>
+                                                        <small class="text-muted">Today 2:21 pm - 09.27.2015</small>
+                                                    </div>
+                                                </div>
+                                                <div class="social-body">
+                                                    <p>
+                                                        I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+                                                    </p>
+                                                    <br>
+                                                    <img src="img/aapl_forecast.png" style="width: 608px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <br>
+                                    <div class="row" style="padding-bottom:10px">
+                                        <div class="col-lg-12">
+                                            <button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
                                                 <strong>Add Sidenote</strong>
                                             </button>
-                                        </h2>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Derek.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        Derek Miller
-                                                    </a>
-                                                    <small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Damon.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="profile_DamonWang.html">
-                                                        Damon Wang
-                                                    </a>
-                                                    <small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Alan.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        Alan Yang
-                                                    </a>
-                                                    <small class="text-muted">Today 12:01 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    Any update on those numbers?
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Matt.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        Matt Terrill
-                                                    </a>
-                                                    <small class="text-muted">Today 2:21 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
-                                                </p>
-                                                <br>
-                                                <img src="img/aapl_forecast.png" style="width: 608px;">
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <br>
-                                <div class="row" style="padding-bottom:10px">
-                                    <div class="col-lg-12">
-                                        <button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
-                                            <strong>Add Sidenote</strong>
-                                        </button>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -504,7 +510,22 @@
                     <button type="button" id="newNoteClose" class="close">
                         <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
                     </button>
-                    <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
+                    <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400; float:left">New Note</h2>
+
+                    <select id="noteType" name="noteType" type="select" class="form-control required" style="width:100%; float:left;" aria-required="true">
+                        <option>Tamale Note</option>
+                        <option>Report</option>
+                        <option>Call</option>
+                        <option>Clip</option>
+                    </select>
+
+                    <select id="privacy" name="privacy" type="select" class="form-control required" style="width:100%; float:left; margin-left:20px" aria-required="true">
+                        <option>Equities Team</option>
+                        <option>Analysts</option>
+                        <option>Fund Administrators</option>
+                        <option>Myself</option>
+                    </select>
+
                 </div>
                 <div id="noteModalBody" class="modal-body" style="padding-top:0px">
                     <fieldset class="form-horizontal">
@@ -1230,6 +1251,101 @@
                 slider2.slideReveal("hide");
             });
         });
+    </script>
+
+    <!-- Print JS -->
+    // Create a jquery plugin that prints the given element.
+    <script>
+        $(function(){
+            $("#printNote")
+                .attr("href", "javascript:void(0)")
+                .click(
+                    function(){
+                        $(".printable").print();
+                        return(false);
+                    }
+                );
+            }
+        );
+
+    </script>
+    <script>
+        jQuery.fn.print = function(){
+        // NOTE: We are trimming the jQuery collection down to the
+        // first element in the collection.
+        if (this.size() > 1){
+        this.eq( 0 ).print();
+        return;
+        } else if (!this.size()){
+        return;
+        }
+
+        // ASSERT: At this point, we know that the current jQuery
+        // collection (as defined by THIS), contains only one
+        // printable element.
+
+        // Create a random name for the print frame.
+        var strFrameName = ("printer-" + (new Date()).getTime());
+
+        // Create an iFrame with the new name.
+        var jFrame = $( "<iframe name='" + strFrameName + "'>" );
+
+        // Hide the frame (sort of) and attach to the body.
+        jFrame
+        .css( "width", "1px" )
+        .css( "height", "1px" )
+        .css( "position", "absolute" )
+        .css( "left", "-9999px" )
+        .appendTo( $( "body:first" ) )
+        ;
+
+        // Get a FRAMES reference to the new frame.
+        var objFrame = window.frames[ strFrameName ];
+
+        // Get a reference to the DOM in the new frame.
+        var objDoc = objFrame.document;
+
+        // Grab all the style tags and copy to the new
+        // document so that we capture look and feel of
+        // the current document.
+
+        // Create a temp document DIV to hold the style tags.
+        // This is the only way I could find to get the style
+        // tags into IE.
+        var jStyleDiv = $( "<div>" ).append(
+        $( "style" ).clone()
+        );
+
+        // Write the HTML for the document. In this, we will
+        // write out the HTML of the current element.
+        objDoc.open();
+        objDoc.write( "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">" );
+        objDoc.write( "<html>" );
+        objDoc.write( "<body>" );
+        objDoc.write( "<head>" );
+        objDoc.write( "<title>" );
+        objDoc.write( document.title );
+        objDoc.write( "</title>" );
+        objDoc.write( jStyleDiv.html() );
+        objDoc.write( "</head>" );
+        objDoc.write( this.html() );
+        objDoc.write( "</body>" );
+        objDoc.write( "</html>" );
+        objDoc.close();
+
+        // Print the document.
+        objFrame.focus();
+        objFrame.print();
+
+        // Have the frame remove itself in about a minute so that
+        // we don't build up too many of these frames.
+        setTimeout(
+        function(){
+        jFrame.remove();
+        },
+        (60 * 1000)
+        );
+        }
     </script>
 </body>
 
