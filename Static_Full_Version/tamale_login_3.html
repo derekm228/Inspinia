@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Tamale Login</title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="img/tamale_red_pepper.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="img/logo-57-pre.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="img/logo-76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/logo-114-pre.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="img/login/logo-120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/logo-144-pre.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="img/logo-152.png" />
+        <link href="img/apple-touch-startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="img/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="img/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="img/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="img/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+        <link href="img/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link href="img/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+        <link type="text/css" rel="stylesheet" href="css/intlTelInput.css">
+        <link type="text/css" rel="stylesheet" href="css/adv-lgn_tamale_pepper.css" />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <div class="custom-modal">
+                <div class="modal-body">
+                    <p class="i-accept">I acknowledge I have reviewed and accept the following documents:</p>
+                    <div class="tos-text"></div>
+                    <div class="tos-buttons">
+                        <form>
+                            <p class="i-accept">(You must click all links before accepting)</p>
+                            <p class="i-accept-buttons">
+                                <button class="acceptedlegal disabled" disabled="disabled">Accept</button>  <a href="#" class="close-this">Decline</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <div class="custom-outage">
+                <div class="modal-body">
+                    <div class="scrolltainer">
+                        <div class="tos-text"></div>
+                    </div>
+                    <div class="tos-buttons">
+                        <form>
+                            <p class="i-accept"></p>
+                            <p class="i-accept-buttons"><a href="#" class="close-this">OK</a>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        <div id="container" style="margin-top: 170.5px; display: block;">
+            <div class="form-holder" style="right: 134px; width: 300px;">
+                <h1 style="display: block;">Tamale NextGen</h1>
+                <div id="Error" class="error"></div>
+                <form id="FormLogin">
+                    <div style="visibility: hidden">
+                            <input type="password" style="width: 270px;">
+                    </div>
+                    <div id="EmailPanel" class="panel primary custom-events">
+                        <span class="input-holder"><input type="email" name="Email" id="Email" tabindex="1" maxlength="254" autocomplete="off" value="" required="" class="pe-removed filled" style="width: 270px;"><span class="faux-placeholder">EMAIL</span></span>
+                        <span class="input-holder"><input type="password" name="Password" id="Password" tabindex="2" maxlength="127" autocomplete="off" value="" required="" class="pe-removed" style="width: 270px;"><span class="faux-placeholder">PASSWORD</span></span>
+                    </div>
+                    <div id="CopyPanel" class="panel hide custom-events">
+                        <span class="input-holder">
+                            <input type="text" class="firm-copy pe-removed" name="CopyNumber" id="CopyNumber" tabindex="2" maxlength="127" autocomplete="off" pattern="[0-9]*" value="" required="" style="width: 270px;">
+                        <span class="faux-placeholder">FIRM COPY NUMBER</span></span>
+                    </div>
+                    <span class="hiddenfirmcopy" style="display:none;">1</span>
+                    <input type="hidden" id="hiOnLoadJson" value="{&quot;LogoutUrls&quot;:[&quot;https://localhost/login/signout&quot;,&quot;https://localhost/login/signout&quot;,&quot;https://localhost/service/logout&quot;],&quot;ShowLogoutMessage&quot;:false,&quot;LogoutMessage&quot;:&quot;You have successfully logged out.&quot;,&quot;Type&quot;:&quot;Logout&quot;}" style="width: 270px;">
+                    <button id="change_this_action" onclick="window.location.href='main_7.html'" class="ready">Login</button>
+                </form>
+                    <div class="bottom-text forgot-password" style="display: block;"><a href="/Service/ResetPassword">Forgot your password? First time here?</a></div>
+            <div class="must-accept">You must accept the Terms before continuing</div></div>
+        </div>
+
+                <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+        <script>
+            var ADV_IDM = { investorMode: "False" };
+            ADV_IDM.baseUrl = "/";
+        </script>
+        <script src="js/jqueryvalidate.js" type="text/javascript"></script>
+        <script src="js/adv-messages.en.js" type="text/javascript"></script>
+        <script src="js/adv-lgn.js" type="text/javascript"></script>
+
+        <script src="js/additionalmethods.js" type="text/javascript"></script>
+        <script>
+
+        </script>
+
+
+</body>
+
+</html>

@@ -1,21 +1,21 @@
 /*Resets*/
 html { height:100%;overflow:hidden;-webkit-font-smoothing: antialiased;}
-body {background:#000;margin:0;padding:0;font-family: apexRoundedBook, sans-serif;font-size: 18px;color: #fff;height:100%;overflow:hidden;}
-div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,thead,tr,th,td,textarea,form {border:none;margin:0;padding:0;list-style-type:none;outline:none;border-collapse:collapse; font-family: apexRoundedBook, sans-serif;font-size: 13px;color: #fff;-webkit-appearance: none;}
-@font-face {  
-  font-family: apexRoundedBook ; 
-  src: url(../fonts/ApexRounded-Book.eot?) format("embedded-opentype"),  
-  url(../fonts/ApexRounded-Book.ttf) format("truetype");  
-} 
-@font-face {  
-  font-family: apexRoundedMedium ; 
+body {background:#000;margin:0;padding:0;font-family: Source Sans Pro, sans-serif;font-size: 18px;color: #fff;height:100%;overflow:hidden;}
+div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,thead,tr,th,td,textarea,form {border:none;margin:0;padding:0;list-style-type:none;outline:none;border-collapse:collapse; font-family: Source Sans Pro, sans-serif;font-size: 13px;color: #fff;-webkit-appearance: none;}
+@font-face {
+  font-family: apexRoundedBook ;
+  src: url(../fonts/ApexRounded-Book.eot?) format("embedded-opentype"),
+  url(../fonts/ApexRounded-Book.ttf) format("truetype");
+}
+@font-face {
+  font-family: apexRoundedMedium ;
   src: url(../fonts/ApexRounded-Medium.eot?) format("embedded-opentype"),
-  url(../fonts/ApexRounded-Medium.ttf) format("truetype");  
-} 
-@font-face {  
-  font-family: apexRoundedBold ; 
+  url(../fonts/ApexRounded-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: apexRoundedBold ;
   src: url(../fonts/ApexRounded-Bold.eot?) format("embedded-opentype"),
-  url(../fonts/ApexRounded-Bold.ttf) format("truetype");  
+  url(../fonts/ApexRounded-Bold.ttf) format("truetype");
 }
 .current-email {
 	position:absolute;
@@ -26,9 +26,9 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container {
-	margin:0 auto 0 auto;
+	margin:170.5px auto 0 auto;
 	width:568px;
-	height:260px;
+	height:340px;
 	position:relative;
 	display:none;
 }
@@ -182,7 +182,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	font-size:13px;
 	position:absolute;
 	z-index:999;
-	font-family:'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 	width:240px;
 }
 
@@ -197,7 +197,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
     padding-right:0px;
 }
 
-#container .form-holder div.mfa-choice 
+#container .form-holder div.mfa-choice
 {
 	width:300px;
 	height:90px;
@@ -320,8 +320,8 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 #container .rotator.logo4 {
 	background-image:url(../img/logo-5_white_185.png);
 }
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     #container .rotator.logo1{
         background:url(../img/logo-5bg@2x_white_370.png);
         background-size: 190px 196px;
@@ -342,7 +342,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 
 #container .form-holder {
 	width:230px;
-	height:260px;
+	height:340px;
 	position:absolute;
 	right:100px;
 	bottom:0px;
@@ -354,16 +354,16 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 
 #container .form-holder h1 {
 	width:100%;
-	height:29px;
-	background:url(../img/tamale-title.png) no-repeat center;
+	height:107px;
+	background:url(../img/tamale-title-2.png) no-repeat center;
 	position:absolute;
 	top:0px;
 	left:0px;
 	text-indent:-999em;
 	display:none;
 }
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 	#container .form-holder h1 {
 		background-image:url(../img/tamale-titlebg@2x.png);
 		background-size:230px 29px;
@@ -385,7 +385,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	display:block;
 	width:100%;
 	height:45px;
-	position:relative;	
+	position:relative;
 	margin-bottom:17px;
 }
 #container .form-holder form .input-holder .clear-this {
@@ -401,12 +401,12 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 #container .form-holder form .input-holder .faux-placeholder {
 	height:44px;
-    width:100%;
-	line-height:49px;
+   width:100%;
+	line-height:24px;
 	border:none;
-	font-size:24px;
+	font-size:19px;
 	color:#fff;
-	font-family:'apexRoundedMedium';
+	font-family: 'Source Sans Pro', sans-serif;
 	position:absolute;
 	font-weight:normal;
 	left:0px;
@@ -421,7 +421,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	border:none;
 	font-size:18px;
 	color:red;
-	font-family:'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 	position:absolute;
 	font-weight:bold;
 	right:10px;
@@ -441,30 +441,31 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
     display: none;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 	#container .form-holder form .input-holder .clear-this {
 		background-image:url(../img/text-clearbg@2x.png);
 		background-size:30px 44px;
 	}
 }
+
 #container .form-holder form input{
-	width:200px;
-	padding-right:30px;
-	height:44px;
-	line-height:49px;
-	border:none;
-	border-bottom:1px solid #00c7b1;
-	font-size:24px;
-	color:#fff;
-	background-color:#000;
-	font-family:'apexRoundedBook';
-	position:absolute;
-	left:0px;
-	top:0px;
-	border-radius:0;
-	-webkit-transition: border-bottom .25s linear;
-	transition: border-bottom .25s linear;
+   width:200px;
+   padding-right:30px;
+   height:44px;
+   line-height:24px;
+   border:none;
+   border-bottom:1px solid #00c7b1;
+   font-size:19px;
+   color:#fff;
+   background-color:#000;
+   font-family: 'Source Sans Pro', sans-serif;
+   position:absolute;
+   left:0px;
+   top:0px;
+   border-radius:0;
+   -webkit-transition: border-bottom .25s linear;
+   transition: border-bottom .25s linear;
 }
 #container .form-holder form .select-button{
 	width:285px;
@@ -473,7 +474,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	border:none;
 	font-size:18px;
 	color:#000;
-	font-family:'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 	position:absolute;
 	left:0px;
 	top:0px;
@@ -483,8 +484,8 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	background:url(../img/additional/down-arrow.png) #ccc no-repeat right 20px;
 	z-index:999;
 }
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 	#container .form-holder form .select-button{
 		background:url(../img/additional/down-arrowbg@2x.png) #ccc no-repeat right 20px;
 		background-size:27px 8px;
@@ -506,11 +507,11 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	border:none;
 	font-size:18px;
 	color:#000;
-	font-family:'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 	border-radius:0;
 	text-decoration:none;
 	padding-left:15px;
-	background:#ccc;	
+	background:#ccc;
 	cursor:pointer;
 }
 #container .form-holder form .questions li:hover, #container .form-holder form .questions li.selected {
@@ -530,10 +531,10 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 #container .form-holder form input.focused[type=email], #container .form-holder form input.firm-copy.focused {
 	background-image:url(../img/bg-email-focused.png);
-} 
+}
 #container .form-holder form input.error[type=email] {
 	background-image:url(../img/bg-email-error.png);
-} 
+}
 #container .form-holder form input[type=password] {
 	background-image:url(../img/bg-password.png);
 	background-position:right;
@@ -542,10 +543,10 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 #container .form-holder form input.focused[type=password] {
 	background-image:url(../img/bg-password-focused.png);
-} 
+}
 #container .form-holder form input.error[type=password] {
 	background-image:url(../img/bg-password-error.png);
-} 
+}
 #container .form-holder form input.custom-answer {
 	background-image:url(../img/additional/bg-answer.png);
 	background-position:right;
@@ -553,8 +554,8 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
     background-color:#000;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 	#container .form-holder form input[type=email], #container .form-holder form input.firm-copy  {
 		background-image:url(../img/bg-emailbg@2x.png);
 		background-size:25px 44px;
@@ -562,11 +563,11 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	#container .form-holder form input.focused[type=email], #container .form-holder form input.firm-copy.focused {
 		background-image:url(../img/bg-email-focusedbg@2x.png);
 		background-size:25px 44px;
-	} 
+	}
 	#container .form-holder form input.error[type=email] {
 		background-image:url(../img/bg-email-errorbg@2x.png);
 		background-size:25px 44px;
-	} 
+	}
 	#container .form-holder form input[type=password] {
 		background-image:url(../img/bg-passwordbg@2x.png);
 		background-size:25px 44px;
@@ -578,7 +579,7 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 	#container .form-holder form input.error[type=password] {
 		background-image:url(../img/bg-password-errorbg@2x.png);
 		background-size:25px 44px;
-	} 
+	}
 	#container .form-holder form input.custom-answer {
 		background-image:url(../img/additional/bg-answerbg@2x.png);
 		background-size:25px 44px;
@@ -597,7 +598,7 @@ input:-moz-placeholder { color:#fff;}
 	background-color:#00c7b1;
 	font-size:18px;
 	text-transform:uppercase;
-	font-family: 'apexRoundedMedium';
+	font-family: 'Source Sans Pro', sans-serif;
 	display:block;
 }
 
@@ -610,16 +611,16 @@ input:-moz-placeholder { color:#fff;}
 #container .form-holder form button.next, #container .form-holder form button.next:hover {
 	color:#00c7b1;
 	text-align:right;
-	font-family: 'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 	bottom:19px;
 	padding-right:30px;
 	background:url(../img/additional/next-arrow.png) #000 no-repeat right 17px;
 }
 #container .form-holder.single-field form button {
-	bottom:70px;	
+	bottom:70px;
 }
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 	#container .form-holder form button.next, #container .form-holder form button.next:hover {
 		background:url(../img/additional/next-arrowbg@2x.png) #000 no-repeat right 17px;
 		background-size:23px 10px;
@@ -633,7 +634,7 @@ input:-moz-placeholder { color:#fff;}
 	font-size: 18px;
 	line-height:22px;
 	display: none;
-	font-family:'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 }
 #container .form-holder div.error span {
 	color:#f4364c;
@@ -653,7 +654,7 @@ input:-moz-placeholder { color:#fff;}
 	font-size:13px;
 	position:absolute;
 	z-index:999;
-	font-family:'apexRoundedBook';
+	font-family: 'Source Sans Pro', sans-serif;
 	width:240px;
 }
 
@@ -706,12 +707,12 @@ input:-moz-placeholder { color:#fff;}
     display: none;
 }
 #container .form-holder form .input-holder.hidden-holder {
-    display: none;   
+    display: none;
 }
 
 /*
 .modal-dlg .content {
-    display: block;  
+    display: block;
     background: red;
     position: relative;
     margin: -150px auto;
@@ -750,29 +751,29 @@ input:-moz-placeholder { color:#fff;}
     font-size: 14px;
     padding: 0 15px;
     text-transform: uppercase;
-    font-family: 'apexRoundedMedium';
+    font-family: 'Source Sans Pro', sans-serif;
     display: inline-block;
     cursor: pointer;
 }
 
 .modal-dlg button.error {
-    background-color: #f4364c;   
+    background-color: #f4364c;
 }
 
 .modal-dlg button.checkbox {
     position: relative;
     width: 0px;
     border: 1px solid white;
-    background-color: #000;   
+    background-color: #000;
 }
 .modal-dlg button.checkbox.checked {
     background-image: url('../img/check.png');
     background-repeat: no-repeat;
-    background-size: contain;   
+    background-size: contain;
 }
 
 .modal-dlg button:hover {
-    opacity: 0.7;   
+    opacity: 0.7;
 }
 
 .modal-dlg .controls {
@@ -802,7 +803,7 @@ input:-moz-placeholder { color:#fff;}
 }
 
 #cb {
-    margin-left: 10px;   
+    margin-left: 10px;
 }
 
 
@@ -825,7 +826,7 @@ input:-moz-placeholder { color:#fff;}
 }
 .custom-outage .modal-body .scrolltainer {
 	/*height:460px;*/
-	overflow-y:auto;	
+	overflow-y:auto;
 }
 .custom-outage .modal-body .tos-text {
 	padding:0 75px;
@@ -846,25 +847,25 @@ input:-moz-placeholder { color:#fff;}
 	color:#020202;
     font-size:24px;
     font-family: apexRoundedBold;
-    text-decoration:underline;	
+    text-decoration:underline;
     margin-bottom: 12px;
 }
 .custom-outage .modal-body h2 {
 	color:#020202;
 	font-size:20px;
-    text-decoration:underline;	
+    text-decoration:underline;
 	margin-top:13px;
 }
 .custom-outage .modal-body h3 {
 	color:#020202;
 	font-size:15px;
     margin-top:13px;
-    text-decoration:underline;	
+    text-decoration:underline;
 }
 .custom-outage .modal-body p {
     color: #020202;
 	margin-top:15px;
-    
+
 }
 .custom-outage .modal-body .close-this, .custom-outage .modal-body form button {
 	/*position:absolute;
@@ -940,7 +941,7 @@ input:-moz-placeholder { color:#fff;}
 
 .custom-modal .modal-body .scrolltainer {
 	/*height:460px;*/
-	overflow-y:auto;	
+	overflow-y:auto;
 }
 .custom-modal .modal-body .tos-text {
 	padding:0 75px;
@@ -965,7 +966,7 @@ input:-moz-placeholder { color:#fff;}
 .custom-modal .modal-body h1 {
 	color:#020202;
 	font-size:24px;
-	text-decoration:underline;	
+	text-decoration:underline;
     margin-bottom: 12px;
 }
 .custom-modal .modal-body h2 {
@@ -1032,21 +1033,21 @@ input:-moz-placeholder { color:#fff;}
     margin-right: 7px;
 }
 
-.customSelect { 
+.customSelect {
     width: 285px;
     height: 44px;
     line-height: 49px;
     border: none;
     font-size: 18px;
     color: #000;
-    font-family: 'apexRoundedBook';
+    font-family: 'Source Sans Pro', sans-serif;
     border-radius: 0;
     text-decoration: none;
     padding-left: 15px;
     background: url(../img/additional/down-arrow.png) #ccc no-repeat right 20px;
 }
-@media (-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
 	.customSelect {
 		background:url(../img/additional/down-arrowbg@2x.png) #ccc no-repeat right 20px;
 		background-size:27px 8px;
@@ -1072,5 +1073,5 @@ input:-moz-placeholder { color:#fff;}
 .custom-outage .modal-body p.i-accept-buttons {
 	width:10%;
 	margin:8px auto;
-    
+
 }

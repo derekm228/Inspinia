@@ -3,16 +3,16 @@ var ADV_ValidationMessages = ADV_ValidationMessages || {};
 
 ADV_LGN.chooseQuestion = function () {
     $('.select-button').click(function() {
-    	$('.questions').show();
+      $('.questions').show();
     });
     $('.questions li').click(function() {
-    	var theText = $(this).text();
-    	$('.questions li').removeClass('selected');
-    	$(this).addClass('selected');
-    	$('.select-button').text(theText);
-    	$('.questions').hide();
-    	$('.custom-question').hide();
-    	$('.select-button, h1').animate({
+      var theText = $(this).text();
+      $('.questions li').removeClass('selected');
+      $(this).addClass('selected');
+      $('.select-button').text(theText);
+      $('.questions').hide();
+      $('.custom-question').hide();
+      $('.select-button, h1').animate({
                 top: 0
         }, 200);
         $('.questions').animate({
@@ -20,19 +20,19 @@ ADV_LGN.chooseQuestion = function () {
         }, 200);
     });
     $('.questions li.create-own').click(function() {
-    	$('.select-button, h1').animate({
+      $('.select-button, h1').animate({
                 top: -50
         }, 200);
         $('.questions').animate({
                 top: -6
         }, 200);
-    	$('.custom-question').show();
+      $('.custom-question').show();
     });
 }();
 
 ADV_LGN.centerer = function () {
     var windowHeight = $(window).height();
-    var topMargin = (windowHeight / 2) - 225
+    var topMargin = (windowHeight / 2) - 175
     $('#container').css('margin-top', topMargin).fadeIn(600);
 };
 ADV_LGN.centerer();
@@ -48,7 +48,7 @@ ADV_LGN.centerer();
 //ADV_LGN.modalSizer();
 
 ADV_LGN.forgotPassword = function () {
-	setTimeout(function () {
+   setTimeout(function () {
         $('#container .form-holder .forgot-password').fadeIn();
     }, 2000);
 }();
@@ -71,16 +71,16 @@ ADV_LGN.logoRandomizer = function () {
 }();
 
 ADV_LGN.iePlaceholder = function () {
-	$('input[placeholder]').each(function () {
-	    var thePlaceholder = $(this).attr('placeholder');
-	    if ($(this).attr('id') == 'CustomQuestion') {
-			$(this).parent().append('<span class="faux-placeholder hidden">'+thePlaceholder+'</span>');
-			$(this).parent().append('<span class="close-question" title="' + ADV_ValidationMessages.BackToQuestions + '">X</span>');
-		} else {
-			$(this).parent().append('<span class="faux-placeholder">'+thePlaceholder+'</span>');
-		}
-		$(this).removeAttr('placeholder').addClass('pe-removed');
-	});
+   $('input[placeholder]').each(function () {
+       var thePlaceholder = $(this).attr('placeholder');
+       if ($(this).attr('id') == 'CustomQuestion') {
+         $(this).parent().append('<span class="faux-placeholder hidden">'+thePlaceholder+'</span>');
+         $(this).parent().append('<span class="close-question" title="' + ADV_ValidationMessages.BackToQuestions + '">X</span>');
+      } else {
+         $(this).parent().append('<span class="faux-placeholder">'+thePlaceholder+'</span>');
+      }
+      $(this).removeAttr('placeholder').addClass('pe-removed');
+   });
     $(document).on('click touchstart', '.faux-placeholder', function (e) {
         e.stopPropagation();
         e.preventDefault();
@@ -94,24 +94,24 @@ ADV_LGN.iePlaceholder = function () {
         }
     });
     $('input.pe-removed').keyup(function () {
-    	var thisVal = $(this).val();
-    	if (thisVal == '') {
-	    	$(this).parent('span').find('.faux-placeholder').addClass('focused').show();
-    	} else {
-	    	$(this).parent('span').find('.faux-placeholder').removeClass('focused').hide();
-    	}
+      var thisVal = $(this).val();
+      if (thisVal == '') {
+         $(this).parent('span').find('.faux-placeholder').addClass('focused').show();
+      } else {
+         $(this).parent('span').find('.faux-placeholder').removeClass('focused').hide();
+      }
         $(this).addClass('focused').removeClass('filled');
     });
 } ();
 
 ADV_LGN.formAnimations = function () {
-	var $emailField = $('.custom-events input[type=email]');
-	if ($emailField.val() != '') {
-	    $emailField.parent('span').find('.faux-placeholder').removeClass('focused').hide();
-		$('.custom-events input[type=password]').focus();
-	} else {
-	    $emailField.focus();
-	}
+   var $emailField = $('.custom-events input[type=email]');
+   if ($emailField.val() != '') {
+       $emailField.parent('span').find('.faux-placeholder').removeClass('focused').hide();
+      $('.custom-events input[type=password]').focus();
+   } else {
+       $emailField.focus();
+   }
     $('.custom-events input').keyup(function () {
         $(this).addClass('focused').removeClass('filled');
         if (!$('.form-holder').hasClass('swooped')) {
@@ -149,13 +149,13 @@ ADV_LGN.formAnimations = function () {
 
 ADV_LGN.inputClearMobile = function () {
     if (navigator.userAgent.match(/Android/i)
-		 || navigator.userAgent.match(/webOS/i)
-		 || navigator.userAgent.match(/iPhone/i)
-		 || navigator.userAgent.match(/iPad/i)
-		 || navigator.userAgent.match(/iPod/i)
-		 || navigator.userAgent.match(/BlackBerry/i)
-		 || navigator.userAgent.match(/Windows Phone/i)
-	) {
+       || navigator.userAgent.match(/webOS/i)
+       || navigator.userAgent.match(/iPhone/i)
+       || navigator.userAgent.match(/iPad/i)
+       || navigator.userAgent.match(/iPod/i)
+       || navigator.userAgent.match(/BlackBerry/i)
+       || navigator.userAgent.match(/Windows Phone/i)
+   ) {
         $('input[type=email]').addClass('mobile-device');
     } else {
         return;
@@ -229,18 +229,18 @@ $.fn.selectRange = function(start, end) {
 
 // based on firm_copy_number.html
 ADV_LGN.showCopyNumber = function () {
-	var $field = $('.firm-copy'),
+   var $field = $('.firm-copy'),
     oldVal = $field.val();
     $field.focus().val('').val(oldVal);
     if ($('.form-holder form').valid() == true) {
         if (ADV_LGN.showPanel($('#CopyPanel'))) {
-        	var copyNumber = $('.hiddenfirmcopy').text();
-        	$field.val(copyNumber);
-        	$field.focus();
-        	if (copyNumber != '') {
-        	    $field.parent('span').find('.faux-placeholder').removeClass('focused').hide();
-	        	$field.selectRange(copyNumber.length);
-        	}
+         var copyNumber = $('.hiddenfirmcopy').text();
+         $field.val(copyNumber);
+         $field.focus();
+         if (copyNumber != '') {
+             $field.parent('span').find('.faux-placeholder').removeClass('focused').hide();
+            $field.selectRange(copyNumber.length);
+         }
             $('.forgot-password').hide();
             $('.form-holder').addClass('swooped no-error single-field');
             $('#CopyNumber').rules('add', {
@@ -336,9 +336,9 @@ ADV_LGN.showMessageOnLoad = function () {
 
 // User is submitting the login form
 ADV_LGN.OnFormSubmit = function OnFormSubmit() {
-	var varLogin = $('#Email').val();
-	var varPwd = $('#Password').val();
-	var varCopyNumber = $('#CopyNumber').val();
+   var varLogin = $('#Email').val();
+   var varPwd = $('#Password').val();
+   var varCopyNumber = $('#CopyNumber').val();
 
     var paramList = {
         "login": varLogin,
@@ -348,34 +348,34 @@ ADV_LGN.OnFormSubmit = function OnFormSubmit() {
 
     var submitTo = ADV_IDM.baseUrl + 'Home/ValidateLoginWithAdvs/';
 
-	// Execute the AJAX login request
-	$.ajax({
-		type: "POST",
-		url: submitTo,
-		data: JSON.stringify(paramList),
-		contentType: "application/json; charset=utf-8",
-		dataType: "json",
-		async: true,
-		cache: false,
-		success: function (data) {
-		    if (data.Type == "CopyNumberRequired") {
-		        ADV_LGN.showCopyNumber();
-		    }
-		    else if (data.Type == "MFAEnrollmentRequired") {
-		        window.location = ADV_IDM.baseUrl + "mfa/enroll";
-		    }
-		    else if (data.Type == "MFAValidationRequired") {
-		        window.location = ADV_IDM.baseUrl + "mfa/verify";
-		    }
-		    else {
-		        ADV_LGN.ProcessLoginWorkflow(data);
-		    }
-		},
-		error: function (data) {
-		    ADV_LGN.backToMainLoginPanelSetup();
-		    ADV_LGN.showMessage(data);
-		}
-	});
+   // Execute the AJAX login request
+   $.ajax({
+      type: "POST",
+      url: submitTo,
+      data: JSON.stringify(paramList),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      async: true,
+      cache: false,
+      success: function (data) {
+          if (data.Type == "CopyNumberRequired") {
+              ADV_LGN.showCopyNumber();
+          }
+          else if (data.Type == "MFAEnrollmentRequired") {
+              window.location = ADV_IDM.baseUrl + "mfa/enroll";
+          }
+          else if (data.Type == "MFAValidationRequired") {
+              window.location = ADV_IDM.baseUrl + "mfa/verify";
+          }
+          else {
+              ADV_LGN.ProcessLoginWorkflow(data);
+          }
+      },
+      error: function (data) {
+          ADV_LGN.backToMainLoginPanelSetup();
+          ADV_LGN.showMessage(data);
+      }
+   });
 };
 
 // Process the AJAX return values and perform the required action
@@ -383,35 +383,35 @@ ADV_LGN.ProcessLoginWorkflow = function (jsonObj) {
     //console.log(jsonObj);
     if (jsonObj.Type == "Validation") {
         window.location = jsonObj.RedirectUrl;
-	}
-	else if (jsonObj.Type == "LegalDoc") {
-		// Got a LegalDoc data package back
-	    ADV_LGN.ShowLegalDocs(jsonObj);
-	    $('.scrolltainer').scroll();
-	}
-	else if (jsonObj.Type == "OutageResponse") {
-	    // Got a OutageResponse data package back
-	    ADV_LGN.ShowOutageResponse(jsonObj);
-	}
-	else if (jsonObj.Type == "Logout") {
+   }
+   else if (jsonObj.Type == "LegalDoc") {
+      // Got a LegalDoc data package back
+       ADV_LGN.ShowLegalDocs(jsonObj);
+       $('.scrolltainer').scroll();
+   }
+   else if (jsonObj.Type == "OutageResponse") {
+       // Got a OutageResponse data package back
+       ADV_LGN.ShowOutageResponse(jsonObj);
+   }
+   else if (jsonObj.Type == "Logout") {
 
-		// Loop through the array of LogoutUrls and load them in hidden iframes
-		$.each(jsonObj.LogoutUrls, function (index, obj) {
-			$('<iframe />', {
-				style: 'visibility:hidden;display:none;',
-				src: obj
-			}).appendTo('body');
-		});
+      // Loop through the array of LogoutUrls and load them in hidden iframes
+      $.each(jsonObj.LogoutUrls, function (index, obj) {
+         $('<iframe />', {
+            style: 'visibility:hidden;display:none;',
+            src: obj
+         }).appendTo('body');
+      });
 
-		ADV_LGN.backToMainLoginPanelSetup();
+      ADV_LGN.backToMainLoginPanelSetup();
         if(jsonObj.ShowLogoutMessage)
             ADV_LGN.showMessage(jsonObj.LogoutMessage, false);
-	}
-	else if (jsonObj.Type == "Error") {
-	    // Got an error message back
-	    ADV_LGN.backToMainLoginPanelSetup();
-	    ADV_LGN.showMessage(jsonObj);
-	}
+   }
+   else if (jsonObj.Type == "Error") {
+       // Got an error message back
+       ADV_LGN.backToMainLoginPanelSetup();
+       ADV_LGN.showMessage(jsonObj);
+   }
 };
 
 ADV_LGN.redButtonDefaults = function() {
@@ -519,7 +519,7 @@ ADV_LGN.FixupSecurityQuestion = function () {
         ADV_LGN.showMessage(ADV_ValidationMessages.EnterQuestion);
         return false;
     }
-	return true;
+   return true;
 };
 
 ADV_LGN.OnChangeQuestionSubmit = function () {
@@ -556,7 +556,7 @@ ADV_LGN.OnChangeQuestionSubmit = function () {
                 // clear validation messages
                 $("#FormLogin").validate().resetForm();
 
-            	ADV_LGN.showMessage(data);
+               ADV_LGN.showMessage(data);
             },
             error: function (data) {
                 $("#CurPassword").val('');
@@ -629,8 +629,8 @@ ADV_LGN.setupQuestionSelect = function () {
         if (this.selectedIndex == (this.options.length - 1)) {
             $(this).hide();
             $('.customSelect').hide();
-			$('.faux-placeholder.hidden').show();
-			$('.close-question').show();
+         $('.faux-placeholder.hidden').show();
+         $('.close-question').show();
             $cQuestion.val('');
             $cQuestion.show();
 
@@ -655,18 +655,18 @@ ADV_LGN.setupQuestionSelect = function () {
     //}, 300);
 };
 ADV_LGN.goBackToDropdown = function () {
-	$(document).on('click', '.close-question', function () {
-		$('#QuestionsSelect').show().prop('selectedIndex', 0);
-		ADV_LGN.setupQuestionSelect();
-		$('.customSelect').show().removeClass('customSelectChanged');
-		$('.custom-question').hide();
-		$('.faux-placeholder.hidden').hide();
-		$(this).hide();
+   $(document).on('click', '.close-question', function () {
+      $('#QuestionsSelect').show().prop('selectedIndex', 0);
+      ADV_LGN.setupQuestionSelect();
+      $('.customSelect').show().removeClass('customSelectChanged');
+      $('.custom-question').hide();
+      $('.faux-placeholder.hidden').hide();
+      $(this).hide();
     });
 }();
 
 //ADV_LGN.acceptLegal = function () {
-//	$('.scrolltainer').scroll(function() {
+// $('.scrolltainer').scroll(function() {
 //        if (isScrollBottom()) {
 //            $('.acceptedlegal').removeClass('disabled');
 //            $('.acceptedlegal').removeAttr('disabled');
@@ -741,14 +741,14 @@ ADV_LGN.setChangeQuestionSetupDefaults = function () {
         success: "valid"
     });
     jQuery.validator.addMethod("caps", function(value, element) {
-		return this.optional(element) || /[A-Z]/.test(value);
-	});
-	jQuery.validator.addMethod("lowercase", function(value, element) {
-		return this.optional(element) || /[a-z]/.test(value);
-	});
-	jQuery.validator.addMethod("digitz", function(value, element) {
-		return this.optional(element) || /[0-9]/.test(value);
-	});
+      return this.optional(element) || /[A-Z]/.test(value);
+   });
+   jQuery.validator.addMethod("lowercase", function(value, element) {
+      return this.optional(element) || /[a-z]/.test(value);
+   });
+   jQuery.validator.addMethod("digitz", function(value, element) {
+      return this.optional(element) || /[0-9]/.test(value);
+   });
     var form = $('.form-holder form');
     form.validate({
         rules: {
@@ -792,24 +792,24 @@ ADV_LGN.setChangePasswordSetupDefaults = function () {
         success: "valid"
     });
     jQuery.validator.addMethod("caps", function(value, element) {
-		return this.optional(element) || /[A-Z]/.test(value);
-	});
-	jQuery.validator.addMethod("lowercase", function(value, element) {
-		return this.optional(element) || /[a-z]/.test(value);
-	});
-	jQuery.validator.addMethod("digitz", function(value, element) {
-		return this.optional(element) || /[0-9]/.test(value);
-	});
-	jQuery.validator.addMethod("loginpartofpwd", function (value) {
-	    var curlogin = $('#CurrentLogin').val();
-	    var a = curlogin.split(/[^\w]/);
-	    for (var i = 0; i < a.length; i++) {
-	        if (value.toLowerCase().indexOf(a[i].toLowerCase()) >= 0) {
-	            return false;
-	        }
-	    }
-	    return true;
-	});
+      return this.optional(element) || /[A-Z]/.test(value);
+   });
+   jQuery.validator.addMethod("lowercase", function(value, element) {
+      return this.optional(element) || /[a-z]/.test(value);
+   });
+   jQuery.validator.addMethod("digitz", function(value, element) {
+      return this.optional(element) || /[0-9]/.test(value);
+   });
+   jQuery.validator.addMethod("loginpartofpwd", function (value) {
+       var curlogin = $('#CurrentLogin').val();
+       var a = curlogin.split(/[^\w]/);
+       for (var i = 0; i < a.length; i++) {
+           if (value.toLowerCase().indexOf(a[i].toLowerCase()) >= 0) {
+               return false;
+           }
+       }
+       return true;
+   });
 
     var form = $('.form-holder form');
     form.validate({
@@ -859,14 +859,14 @@ ADV_LGN.setUserSetupDefaults = function () {
         success: "valid"
     });
     jQuery.validator.addMethod("caps", function(value, element) {
-		return this.optional(element) || /[A-Z]/.test(value);
-	});
-	jQuery.validator.addMethod("lowercase", function(value, element) {
-		return this.optional(element) || /[a-z]/.test(value);
-	});
-	jQuery.validator.addMethod("digitz", function(value, element) {
-		return this.optional(element) || /[0-9]/.test(value);
-	});
+      return this.optional(element) || /[A-Z]/.test(value);
+   });
+   jQuery.validator.addMethod("lowercase", function(value, element) {
+      return this.optional(element) || /[a-z]/.test(value);
+   });
+   jQuery.validator.addMethod("digitz", function(value, element) {
+      return this.optional(element) || /[0-9]/.test(value);
+   });
     jQuery.validator.addMethod("loginpartofpwd", function(value) {
         var curlogin = $('#CurrentLogin').val();
         var a = curlogin.split(/[^\w]/);
@@ -876,7 +876,7 @@ ADV_LGN.setUserSetupDefaults = function () {
             }
         }
         return true;
-	});
+   });
 
     var form = $('.form-holder form');
     form.validate({
@@ -931,24 +931,24 @@ ADV_LGN.setResetPasswordDefaults = function () {
         success: "valid"
     });
     jQuery.validator.addMethod("caps", function(value, element) {
-		return this.optional(element) || /[A-Z]/.test(value);
-	});
-	jQuery.validator.addMethod("lowercase", function(value, element) {
-		return this.optional(element) || /[a-z]/.test(value);
-	});
-	jQuery.validator.addMethod("digitz", function(value, element) {
-		return this.optional(element) || /[0-9]/.test(value);
-	});
-	jQuery.validator.addMethod("loginpartofpwd", function (value) {
-	    var curlogin = $('#CurrentLogin').val();
-	    var a = curlogin.split(/[^\w]/);
-	    for (var i = 0; i < a.length; i++) {
-	        if (value.toLowerCase().indexOf(a[i].toLowerCase()) >= 0) {
-	            return false;
-	        }
-	    }
-	    return true;
-	});
+      return this.optional(element) || /[A-Z]/.test(value);
+   });
+   jQuery.validator.addMethod("lowercase", function(value, element) {
+      return this.optional(element) || /[a-z]/.test(value);
+   });
+   jQuery.validator.addMethod("digitz", function(value, element) {
+      return this.optional(element) || /[0-9]/.test(value);
+   });
+   jQuery.validator.addMethod("loginpartofpwd", function (value) {
+       var curlogin = $('#CurrentLogin').val();
+       var a = curlogin.split(/[^\w]/);
+       for (var i = 0; i < a.length; i++) {
+           if (value.toLowerCase().indexOf(a[i].toLowerCase()) >= 0) {
+               return false;
+           }
+       }
+       return true;
+   });
 
     var form = $('.form-holder form');
     var mode = $('#hMode').val();
@@ -1283,19 +1283,19 @@ ADV_LGN.SetVerificationCodeRules = function (form) {
 
 ADV_LGN.SetSMSResendTimer = function() {
 
-	// Resend SMS link should show in 30 seconds
-	setTimeout(function () {
-		$('#ResendSMS').fadeIn();
-	}, 30000);
+   // Resend SMS link should show in 30 seconds
+   setTimeout(function () {
+      $('#ResendSMS').fadeIn();
+   }, 30000);
 
 };
 
 ADV_LGN.EnrollCancel = function() {
 
-		var paramList = {
-	  };
+      var paramList = {
+     };
 
-		var submitTo = ADV_IDM.baseUrl + 'MFA/Enroll_Cancel/';
+      var submitTo = ADV_IDM.baseUrl + 'MFA/Enroll_Cancel/';
 
     $.ajax({
         type: "POST",
@@ -1324,12 +1324,12 @@ ADV_LGN.EnrollCancel = function() {
 ADV_LGN.setMFAChoiceDefaults = function () {
 
     $("#mfa-choice-google-auth").click(function () {
-    	ADV_LGN.OnFormMFAChoiceSubmit('GoogleAuthenticator');
-  	});
+      ADV_LGN.OnFormMFAChoiceSubmit('GoogleAuthenticator');
+   });
 
     $("#mfa-choice-sms").click(function () {
-    	ADV_LGN.OnFormMFAChoiceSubmit('SMS');
-  	});
+      ADV_LGN.OnFormMFAChoiceSubmit('SMS');
+   });
 };
 
 ADV_LGN.OnFormMFAChoiceSubmit = function (val) {
@@ -1572,7 +1572,7 @@ ADV_LGN.OnFormEnrollSMSActivateSubmit = function () {
         cache: false,
         success: function (data) {
             if (data.Type == "MFASuccess") {
-            		window.location = data.RedirectUrl;
+                  window.location = data.RedirectUrl;
             } else {
                 return ADV_LGN.VerificationCodeError(data);
             }
@@ -1614,9 +1614,9 @@ ADV_LGN.ResendEnrollSMS = function () {
 // MFA Verify SMS
 
 ADV_LGN.setMFAVerifySMSDefaults = function(sent) {
-	$('#VerifySMSSendButton').focus();
+   $('#VerifySMSSendButton').focus();
 
-		var form = $('#VerifySMSSubmitForm');
+      var form = $('#VerifySMSSubmitForm');
     jQuery.validator.setDefaults({
         success: "valid"
     });
@@ -1647,21 +1647,21 @@ ADV_LGN.VerifySMSDisableSendPanel = function () {
 
 ADV_LGN.OnVerifySMSSendReset = function() {
 
-	$('#VerifySMSSendButton').text('SEND VERIFICATION CODE');
+   $('#VerifySMSSendButton').text('SEND VERIFICATION CODE');
 
-	// Enable the send panel
-	$('#VerifySMSSendPanel').removeClass('disabled');
-	$('#VerifySMSSendButton').prop('disabled', false);
+   // Enable the send panel
+   $('#VerifySMSSendPanel').removeClass('disabled');
+   $('#VerifySMSSendButton').prop('disabled', false);
 };
 
 ADV_LGN.OnVerifySMSSend = function() {
 
-	$('#VerifySMSSendButton').text('SENDING');
+   $('#VerifySMSSendButton').text('SENDING');
 
-	// Disable the send panel
-	ADV_LGN.VerifySMSDisableSendPanel();
+   // Disable the send panel
+   ADV_LGN.VerifySMSDisableSendPanel();
 
-	var paramList = {
+   var paramList = {
   };
 
   var submitTo = ADV_IDM.baseUrl + 'MFA/verify_sms_send/';
@@ -1693,18 +1693,18 @@ ADV_LGN.OnVerifySMSSend = function() {
 };
 
 ADV_LGN.OnVerifySMSSendCompleted = function() {
-	$('#VerifySMSSendButton').text('VERIFICATION CODE SENT');
+   $('#VerifySMSSendButton').text('VERIFICATION CODE SENT');
 
-	ADV_LGN.SetSMSResendTimer();
+   ADV_LGN.SetSMSResendTimer();
 
     // Enable the verification panel
-	$('#VerifySMSSubmitPanel').removeClass('disabled');
-	$('.input-holder').removeClass('disabled');
-	$('#VerificationCode').prop('disabled', false);
-	$('#VerifySMSSubmitButton').prop('disabled', false);
+   $('#VerifySMSSubmitPanel').removeClass('disabled');
+   $('.input-holder').removeClass('disabled');
+   $('#VerificationCode').prop('disabled', false);
+   $('#VerifySMSSubmitButton').prop('disabled', false);
 
-	// Set focus
-	ADV_LGN.VerificationCodeFocus();
+   // Set focus
+   ADV_LGN.VerificationCodeFocus();
 };
 
 ADV_LGN.OnFormVerifySMSChallengeSubmit = function() {
@@ -1738,7 +1738,7 @@ ADV_LGN.OnFormVerifySMSChallengeSubmit = function() {
 
 ADV_LGN.ResendVerifySMS = function () {
 
-	$('#ResendSMS').fadeOut();
+   $('#ResendSMS').fadeOut();
 
   var submitTo = ADV_IDM.baseUrl + 'MFA/verify_sms_resend/';
 

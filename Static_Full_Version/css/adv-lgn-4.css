@@ -1,73 +1,73 @@
 /*Resets*/
 html { height:100%;overflow:hidden;-webkit-font-smoothing: antialiased;}
-body {background:#000;margin:0;padding:0;font-family: apexRoundedBook, sans-serif;font-size: 18px;color: #fff;height:100%;overflow:hidden;}
-div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,thead,tr,th,td,textarea,form {border:none;margin:0;padding:0;list-style-type:none;outline:none;border-collapse:collapse; font-family: apexRoundedBook, sans-serif;font-size: 13px;color: #fff;-webkit-appearance: none;}
+body {background:#000;margin:0;padding:0;font-family: sourceSansProRegular, serif;font-size: 18px;color: #fff;height:100%;overflow:hidden;}
+div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,thead,tr,th,td,textarea,form {border:none;margin:0;padding:0;list-style-type:none;outline:none;border-collapse:collapse; font-family: sourceSansProRegular, serif;font-size: 13px;color: #fff;-webkit-appearance: none;}
 @font-face {
-  font-family: apexRoundedBook ;
-  src: url(../fonts/ApexRounded-Book.eot?) format("embedded-opentype"),
-  url(../fonts/ApexRounded-Book.ttf) format("truetype");
+  font-family: sourceSansProRegular ;
+  src: url(../fonts/SourceSansPro-Regular.otf?) format("embedded-opentype"),
+  url(../fonts/SourceSansPro-Regular.otf) format("truetype");
 }
 @font-face {
-  font-family: apexRoundedMedium ;
-  src: url(../fonts/ApexRounded-Medium.eot?) format("embedded-opentype"),
-  url(../fonts/ApexRounded-Medium.ttf) format("truetype");
+  font-family: sourceSansProRegular ;
+  src: url(../fonts/SourceSansPro-Regular.otf?) format("embedded-opentype"),
+  url(../fonts/SourceSansPro-Regular.otf) format("truetype");
 }
 @font-face {
-  font-family: apexRoundedBold ;
-  src: url(../fonts/ApexRounded-Bold.eot?) format("embedded-opentype"),
-  url(../fonts/ApexRounded-Bold.ttf) format("truetype");
+  font-family: sourceSansProSemiBold ;
+  src: url(../fonts/SourceSansPro-Semibold.otf?) format("embedded-opentype"),
+  url(../fonts/SourceSansPro-Semibold.otf) format("truetype");
 }
 .current-email {
-	position:absolute;
-	top:25px;
-	right:20px;
-	font-size:15px;
-	color:#75787b;
+   position:absolute;
+   top:25px;
+   right:20px;
+   font-size:15px;
+   color:#75787b;
 }
 
 #container {
-	margin: 170.5px auto 0 auto;
-	width:568px;
-	height:260px;
-	position:relative;
-	display:none;
+   margin: 170.5px auto 0 auto;
+   width:568px;
+   height:260px;
+   position:relative;
+   display:none;
 }
 
 #container .form-holder .terms {
-	position:absolute;
-	bottom:-25px;
-	text-align:center;
-	left:0px;
-	width:100%;
-	color:#75787b;
+   position:absolute;
+   bottom:-25px;
+   text-align:center;
+   left:0px;
+   width:100%;
+   color:#75787b;
 }
 #container .form-holder .terms strong {
-	color:red;
-	font-weight:normal;
+   color:red;
+   font-weight:normal;
 }
 #container .form-holder .bottom-text {
-	position:absolute;
-	bottom:-25px;
-	text-align:center;
-	left:0px;
-	width:100%;
-	color:#fff;
+   position:absolute;
+   bottom:-25px;
+   text-align:center;
+   left:0px;
+   width:100%;
+   color:#fff;
 }
 
 #container .form-holder .must-accept {
-	position:absolute;
-	bottom:200px;
-	text-align:center;
-	left:0px;
-	width:100%;
-	color:#f4364c;
-	font-weight:bold;
-	display:none;
+   position:absolute;
+   bottom:200px;
+   text-align:center;
+   left:0px;
+   width:100%;
+   color:#f4364c;
+   font-weight:bold;
+   display:none;
 }
 #container .form-holder .must-accept a {
-	text-decoration:none;
-	color:#00c7b1;
-	font-weight:bold;
+   text-decoration:none;
+   color:#00c7b1;
+   font-weight:bold;
 }
 
 #container .form-holder .bottom-text.forgot-password {
@@ -75,19 +75,19 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder .terms a {
-	color:#00c7b1;
-	text-decoration:none;
+   color:#00c7b1;
+   text-decoration:none;
 }
 #container .form-holder .bottom-text a {
-	color:#fff;
-	text-decoration:none;
+   color:#fff;
+   text-decoration:none;
 }
 #container .rotator {
-	position:absolute;
-	left:0px;
-	bottom:0px;
-	width:200px;
-	height:200px;
+   position:absolute;
+   left:0px;
+   bottom:0px;
+   width:200px;
+   height:200px;
 }
 
 /* Don't display the input X in IE */
@@ -123,14 +123,14 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder.swooped.qrcode-text {
-	width:300px;
-	right:250px;
+   width:300px;
+   right:250px;
 }
 
 #container .form-holder.swooped.qrcode-text h1 {
-	top:-50px;
+   top:-50px;
     left:115px;
-	display:block;
+   display:block;
 }
 
 #container .form-holder.qrcode-text div.error span {
@@ -140,28 +140,28 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder.swooped.qrcode-text.no-error h1 {
-	top:0px;
-	left:115px;
-	display:block;
+   top:0px;
+   left:115px;
+   display:block;
 }
 
 #container .form-holder.swooped.qrcode-text h2 {
-	position:absolute;
-	top:35px;
-	left:115px;
-	display:block;
-	text-align:center;
-	width:100%;
-	font-size:15px;
-	color:#75787b;
+   position:absolute;
+   top:35px;
+   left:115px;
+   display:block;
+   text-align:center;
+   width:100%;
+   font-size:15px;
+   color:#75787b;
 }
 
 #container .qrcode-image-holder {
-	position:absolute;
-	left:360px;
-	bottom:0px;
-	width:180px;
-	height:180px;
+   position:absolute;
+   left:360px;
+   bottom:0px;
+   width:180px;
+   height:180px;
     background-color:#fff;
 }
 
@@ -173,22 +173,22 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder.qrcode-text label.error {
-	position:absolute;
-	top:50px;
+   position:absolute;
+   top:50px;
     bottom:0px;
-	left:0px;
-	white-space: pre-wrap;
-	color:#f4364c;
-	font-size:13px;
-	position:absolute;
-	z-index:999;
-	font-family:'apexRoundedBook';
-	width:240px;
+   left:0px;
+   white-space: pre-wrap;
+   color:#f4364c;
+   font-size:13px;
+   position:absolute;
+   z-index:999;
+   font-family:'apexRoundedBook';
+   width:240px;
 }
 
 #container .form-holder.swooped.sms span.input-holder {
-	width:300px;
-	padding-right:0px;
+   width:300px;
+   padding-right:0px;
 }
 
 #container .form-holder.swooped.sms input
@@ -199,48 +199,48 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 
 #container .form-holder div.mfa-choice
 {
-	width:300px;
-	height:90px;
-	background-color:#00c7b1;
-	margin-bottom:20px;
-	background-repeat:no-repeat;
-	background-position:right center;
-	background-size:70px 70px;
-	cursor:pointer;
+   width:300px;
+   height:90px;
+   background-color:#00c7b1;
+   margin-bottom:20px;
+   background-repeat:no-repeat;
+   background-position:right center;
+   background-size:70px 70px;
+   cursor:pointer;
 }
 
 #container .form-holder div.mfa-choice-google-auth
 {
-	background-image:url(../img/totp.png);
+   background-image:url(../img/totp.png);
 }
 
 #container .form-holder div.mfa-choice-sms
 {
-	background-image:url(../img/sms.png);
+   background-image:url(../img/sms.png);
 }
 
 #container .form-holder div.mfa-choice:hover
 {
-	opacity: 0.7;
+   opacity: 0.7;
 }
 
 #container .form-holder div.mfa-choice h2
 {
-	position: relative;
-	text-align: left;
-	top:10px;
-	left:10px;
-	color:#000;
-	margin-bottom:5px;
+   position: relative;
+   text-align: left;
+   top:10px;
+   left:10px;
+   color:#000;
+   margin-bottom:5px;
 }
 
 #container .form-holder div.mfa-choice p
 {
-	position: relative;
-	text-align: left;
-	color:#000;
-	top:10px;
-	left:20px;
+   position: relative;
+   text-align: left;
+   color:#000;
+   top:10px;
+   left:20px;
 }
 
 .intl-tel-input
@@ -255,70 +255,70 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder form.verify-sms-send {
-	height:120px;
+   height:120px;
 }
 
 #container .form-holder form.verify-sms-verify {
-	height:160px;
-	top:220px;
+   height:160px;
+   top:220px;
 }
 
 #container .form-holder form.verify-sms-send div
 {
-	position:relative;
-	bottom:70px;
+   position:relative;
+   bottom:70px;
 }
 
 #container .form-holder form.verify-sms-send div button {
-	position:relative;
-	top:10px;
+   position:relative;
+   top:10px;
 }
 
 #container .form-holder form.verify-sms-verify div button {
-	position:relative;
-	top:10px;
+   position:relative;
+   top:10px;
 }
 
 /* Verify SMS disabled elements */
 #container .form-holder form div.disabled
 {
-	color:#666;
+   color:#666;
 }
 
 #container .form-holder form button:disabled {
-	background-color:#666;
+   background-color:#666;
 }
 
 #container .form-holder form button:hover:disabled {
-	background-color:#666;
-	cursor: default;
+   background-color:#666;
+   cursor: default;
 }
 
 #container .form-holder form input:disabled {
-	color:#666;
-	border-bottom: 1px solid #666;
+   color:#666;
+   border-bottom: 1px solid #666;
 }
 
 #container .form-holder form .input-holder.disabled .faux-placeholder
 {
-	color:#666;
+   color:#666;
 }
 
 #container .form-holder.verify-sms .bottom-text  {
-	bottom:-160px;
+   bottom:-160px;
 }
 
 #container .rotator.logo1 {
-	background-image:url(../img/logo-5_TA.png);
+   background-image:url(../img/logo-5_TA.png);
 }
 #container .rotator.logo2 {
-	background-image:url(../img/logo-5_TA.png);
+   background-image:url(../img/logo-5_TA.png);
 }
 #container .rotator.logo3 {
-	background-image:url(../img/logo-5_TA.png);
+   background-image:url(../img/logo-5_TA.png);
 }
 #container .rotator.logo4 {
-	background-image:url(../img/logo-5_TA.png);
+   background-image:url(../img/logo-5_TA.png);
 }
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
@@ -341,11 +341,11 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder {
-	width:230px;
-	height:340px;
-	position:absolute;
-	right:100px;
-	bottom:0px;
+   width:230px;
+   height:340px;
+   position:absolute;
+   right:100px;
+   bottom:0px;
 }
 
 #container .form-holder.three-fields {
@@ -353,28 +353,28 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder h1 {
-	width:100%;
-	height:107px;
-	background:url(../img/tamale-title-2.png) no-repeat center;
-	position:absolute;
-	top:0px;
-	left:0px;
-	text-indent:-999em;
-	display:none;
+   width:100%;
+   height:107px;
+   background:url(../img/tamale-title-3.png) no-repeat center;
+   position:absolute;
+   top:0px;
+   left:0px;
+   text-indent:-999em;
+   display:none;
 }
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	#container .form-holder h1 {
-		background-image:url(../img/tamale-titlebg@2x.png);
-		background-size:230px 29px;
-	}
+   #container .form-holder h1 {
+      background-image:url(../img/tamale-titlebg@2x.png);
+      background-size:230px 29px;
+   }
 }
 #container .form-holder form {
-	position:absolute;
-	width:100%;
-	bottom:0px;
-	left:0px;
-	height:194px;
+   position:absolute;
+   width:100%;
+   bottom:0px;
+   left:0px;
+   height:194px;
 }
 
 #container .form-holder.three-fields form {
@@ -382,57 +382,59 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 }
 
 #container .form-holder form .input-holder {
-	display:block;
-	width:100%;
-	height:45px;
-	position:relative;
-	margin-bottom:17px;
+   display:block;
+   width:100%;
+   height:45px;
+   position:relative;
+   margin-bottom:17px;
 }
 #container .form-holder form .input-holder .clear-this {
-	position:absolute;
-	right:0px;
-	top:0px;
-	width:30px;
-	height:40px;
-	display:block;
-	background-image:url(../img/text-clear.png);
-	text-indent:-999em;
-	background-color:#000;
+   position:absolute;
+   right:0px;
+   top:0px;
+   width:30px;
+   height:40px;
+   display:block;
+   background-image:url(../img/text-clear.png);
+   text-indent:-999em;
+   background-color:#000;
 }
 #container .form-holder form .input-holder .faux-placeholder {
-	height:44px;
+   height:44px;
     width:100%;
-	line-height:49px;
-	border:none;
-	font-size:24px;
-	color:#fff;
-	font-family:'apexRoundedMedium';
-	position:absolute;
-	font-weight:normal;
-	left:0px;
-	top:0px;
+   line-height:24px;
+   border:none;
+   font-size:19px;
+   color:white;
+   font-family:'Source Sans Pro', serif;
+   position:absolute;
+   font-weight:normal;
+   left:0px;
+   top:10px;
+
+
 }
 #container .form-holder form .input-holder .faux-placeholder.focused {
-	color:#666;
+   color:#666;
 }
 #container .form-holder form .input-holder .close-question {
-	height:44px;
-	line-height:49px;
-	border:none;
-	font-size:18px;
-	color:red;
-	font-family:'apexRoundedBook';
-	position:absolute;
-	font-weight:bold;
-	right:10px;
-	top:0px;
-	width:20px;
-	text-align:right;
-	cursor:pointer;
-	display:none;
+   height:44px;
+   line-height:49px;
+   border:none;
+   font-size:18px;
+   color:red;
+   font-family:'apexRoundedBook';
+   position:absolute;
+   font-weight:bold;
+   right:10px;
+   top:0px;
+   width:20px;
+   text-align:right;
+   cursor:pointer;
+   display:none;
 }
 #container .form-holder form .input-holder .faux-placeholder.hidden {
-	display:none;
+   display:none;
 }
 
 /* .panel is not meant to have any styling, it's just a colection of elements. */
@@ -443,218 +445,218 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	#container .form-holder form .input-holder .clear-this {
-		background-image:url(../img/text-clearbg@2x.png);
-		background-size:30px 44px;
-	}
+   #container .form-holder form .input-holder .clear-this {
+      background-image:url(../img/text-clearbg@2x.png);
+      background-size:30px 44px;
+   }
 }
 #container .form-holder form input{
-	width:200px;
-	padding-right:30px;
-	height:44px;
-	line-height:24px;
-	border:none;
-	border-bottom:1px solid #00c7b1;
-	font-size:19px;
-	color:#fff;
-	background-color:#000;
+   width:200px;
+   padding-right:30px;
+   height:44px;
+   line-height:24px;
+   border:none;
+   border-bottom:1px solid hsl(194, 62%, 45%);
+   font-size:19px;
+   color:white;
+   background-color:#000;
    font-family: 'Source Sans Pro', sans-serif;
-	position:absolute;
-	left:0px;
-	top:0px;
-	border-radius:0;
-	-webkit-transition: border-bottom .25s linear;
-	transition: border-bottom .25s linear;
+   position:absolute;
+   left:0px;
+   top:0px;
+   border-radius:0;
+   -webkit-transition: border-bottom .25s linear;
+   transition: border-bottom .25s linear;
 }
 #container .form-holder form .select-button{
-	width:285px;
-	height:44px;
-	line-height:49px;
-	border:none;
-	font-size:18px;
-	color:#000;
-	font-family:'apexRoundedBook';
-	position:absolute;
-	left:0px;
-	top:0px;
-	border-radius:0;
-	text-decoration:none;
-	padding-left:15px;
-	background:url(../img/additional/down-arrow.png) #ccc no-repeat right 20px;
-	z-index:999;
+   width:285px;
+   height:44px;
+   line-height:49px;
+   border:none;
+   font-size:18px;
+   color:#000;
+   font-family:'apexRoundedBook';
+   position:absolute;
+   left:0px;
+   top:0px;
+   border-radius:0;
+   text-decoration:none;
+   padding-left:15px;
+   background:url(../img/additional/down-arrow.png) #ccc no-repeat right 20px;
+   z-index:999;
 }
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	#container .form-holder form .select-button{
-		background:url(../img/additional/down-arrowbg@2x.png) #ccc no-repeat right 20px;
-		background-size:27px 8px;
-	}
+   #container .form-holder form .select-button{
+      background:url(../img/additional/down-arrowbg@2x.png) #ccc no-repeat right 20px;
+      background-size:27px 8px;
+   }
 }
 #container .form-holder form .questions {
-	position:absolute;
-	top:44px;
-	z-index:999;
-	display:none;
+   position:absolute;
+   top:44px;
+   z-index:999;
+   display:none;
 }
 #container .form-holder form .custom-question {
-	display:none;
+   display:none;
 }
 #container .form-holder form .questions li {
-	min-width:285px;
-	height:44px;
-	line-height:49px;
-	border:none;
-	font-size:18px;
-	color:#000;
-	font-family:'apexRoundedBook';
-	border-radius:0;
-	text-decoration:none;
-	padding-left:15px;
-	background:#ccc;
-	cursor:pointer;
+   min-width:285px;
+   height:44px;
+   line-height:49px;
+   border:none;
+   font-size:18px;
+   color:#000;
+   font-family:'apexRoundedBook';
+   border-radius:0;
+   text-decoration:none;
+   padding-left:15px;
+   background:#ccc;
+   cursor:pointer;
 }
 #container .form-holder form .questions li:hover, #container .form-holder form .questions li.selected {
-	background:#666;
-	color:#fff;
+   background:#666;
+   color:#fff;
 }
 #container .form-holder form input.focused {
-	border-bottom:1px solid #bbbbcb;
-	-webkit-transition: border-bottom .25s linear;
-	transition: border-bottom .25s linear;
+   border-bottom:1px solid #bbbbcb;
+   -webkit-transition: border-bottom .25s linear;
+   transition: border-bottom .25s linear;
 }
 #container .form-holder form input[type=email], #container .form-holder form input.firm-copy {
-	background-image:url(../img/bg-email.png);
-	background-position:right;
-	background-repeat:no-repeat;
+   background-image:url(../img/bg-email.png);
+   background-position:right;
+   background-repeat:no-repeat;
     background-color:#000;
 }
 #container .form-holder form input.focused[type=email], #container .form-holder form input.firm-copy.focused {
-	background-image:url(../img/bg-email-focused.png);
+   background-image:url(../img/bg-email-focused.png);
 }
 #container .form-holder form input.error[type=email] {
-	background-image:url(../img/bg-email-error.png);
+   background-image:url(../img/bg-email-error.png);
 }
 #container .form-holder form input[type=password] {
-	background-image:url(../img/bg-password.png);
-	background-position:right;
-	background-repeat:no-repeat;
+   background-image:url(../img/bg-password.png);
+   background-position:right;
+   background-repeat:no-repeat;
     background-color:#000;
 }
 #container .form-holder form input.focused[type=password] {
-	background-image:url(../img/bg-password-focused.png);
+   background-image:url(../img/bg-password-focused.png);
 }
 #container .form-holder form input.error[type=password] {
-	background-image:url(../img/bg-password-error.png);
+   background-image:url(../img/bg-password-error.png);
 }
 #container .form-holder form input.custom-answer {
-	background-image:url(../img/additional/bg-answer.png);
-	background-position:right;
-	background-repeat:no-repeat;
+   background-image:url(../img/additional/bg-answer.png);
+   background-position:right;
+   background-repeat:no-repeat;
     background-color:#000;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	#container .form-holder form input[type=email], #container .form-holder form input.firm-copy  {
-		background-image:url(../img/bg-emailbg@2x.png);
-		background-size:25px 44px;
-	}
-	#container .form-holder form input.focused[type=email], #container .form-holder form input.firm-copy.focused {
-		background-image:url(../img/bg-email-focusedbg@2x.png);
-		background-size:25px 44px;
-	}
-	#container .form-holder form input.error[type=email] {
-		background-image:url(../img/bg-email-errorbg@2x.png);
-		background-size:25px 44px;
-	}
-	#container .form-holder form input[type=password] {
-		background-image:url(../img/bg-passwordbg@2x.png);
-		background-size:25px 44px;
-	}
-	#container .form-holder form input.focused[type=password] {
-		background-image:url(../img/bg-password-focusedbg@2x.png);
-		background-size:25px 44px;
-	}
-	#container .form-holder form input.error[type=password] {
-		background-image:url(../img/bg-password-errorbg@2x.png);
-		background-size:25px 44px;
-	}
-	#container .form-holder form input.custom-answer {
-		background-image:url(../img/additional/bg-answerbg@2x.png);
-		background-size:25px 44px;
-	}
+   #container .form-holder form input[type=email], #container .form-holder form input.firm-copy  {
+      background-image:url(../img/bg-emailbg@2x.png);
+      background-size:25px 44px;
+   }
+   #container .form-holder form input.focused[type=email], #container .form-holder form input.firm-copy.focused {
+      background-image:url(../img/bg-email-focusedbg@2x.png);
+      background-size:25px 44px;
+   }
+   #container .form-holder form input.error[type=email] {
+      background-image:url(../img/bg-email-errorbg@2x.png);
+      background-size:25px 44px;
+   }
+   #container .form-holder form input[type=password] {
+      background-image:url(../img/bg-passwordbg@2x.png);
+      background-size:25px 44px;
+   }
+   #container .form-holder form input.focused[type=password] {
+      background-image:url(../img/bg-password-focusedbg@2x.png);
+      background-size:25px 44px;
+   }
+   #container .form-holder form input.error[type=password] {
+      background-image:url(../img/bg-password-errorbg@2x.png);
+      background-size:25px 44px;
+   }
+   #container .form-holder form input.custom-answer {
+      background-image:url(../img/additional/bg-answerbg@2x.png);
+      background-size:25px 44px;
+   }
 }
 ::-webkit-input-placeholder { color:#fff;}
 ::-moz-placeholder { color:#fff;}
 :-ms-input-placeholder { color:#fff;}
 input:-moz-placeholder { color:#fff;}
 #container .form-holder form button {
-	position:absolute;
-	bottom:9px;
-	width:100%;
-	height:48px;
-	color:#000;
-	background-color:#00c7b1;
-	font-size:18px;
-	text-transform:uppercase;
-	font-family: 'apexRoundedMedium';
-	display:block;
+   position:absolute;
+   bottom:9px;
+   width:100%;
+   height:48px;
+   color:white;
+   background-color: hsl(194, 62%, 45%);
+   font-size:18px;
+   text-transform:uppercase;
+   font-family: 'Source Sans Pro', serif;
+   display:block;
 }
 
 #container .form-holder form button:hover {
-	background-color: #006459;
-	-webkit-transition: background-color .25s linear;
-	transition: background-color .25s linear;
-	cursor: pointer;
+   background-color: #205799;
+   -webkit-transition: background-color .25s linear;
+   transition: background-color .25s linear;
+   cursor: pointer;
 }
 #container .form-holder form button.next, #container .form-holder form button.next:hover {
-	color:#00c7b1;
-	text-align:right;
-	font-family: 'apexRoundedBook';
-	bottom:19px;
-	padding-right:30px;
-	background:url(../img/additional/next-arrow.png) #000 no-repeat right 17px;
+   color: hsl(194, 62%, 45%);
+   text-align:right;
+   font-family: 'sourceSansProRegular';
+   bottom:19px;
+   padding-right:30px;
+   background:url(../img/additional/next-arrow.png) #000 no-repeat right 17px;
 }
 #container .form-holder.single-field form button {
-	bottom:70px;
+   bottom:70px;
 }
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	#container .form-holder form button.next, #container .form-holder form button.next:hover {
-		background:url(../img/additional/next-arrowbg@2x.png) #000 no-repeat right 17px;
-		background-size:23px 10px;
-	}
+   #container .form-holder form button.next, #container .form-holder form button.next:hover {
+      background:url(../img/additional/next-arrowbg@2x.png) #000 no-repeat right 17px;
+      background-size:23px 10px;
+   }
 }
 
 #container .form-holder div.error {
-	text-align:center;
-	padding:0 10px;
-	color:#fff;
-	font-size: 18px;
-	line-height:22px;
-	display: none;
-	font-family:'apexRoundedBook';
+   text-align:center;
+   padding:0 10px;
+   color:#fff;
+   font-size: 18px;
+   line-height:22px;
+   display: none;
+   font-family:'apexRoundedBook';
 }
 #container .form-holder div.error span {
-	color:#f4364c;
+   color:#f4364c;
 }
 #container .form-holder div.error a {
-	color:#f4364c;
-	text-decoration:none;
-	font-family:'apexRoundedBold';
-	font-size:18px;
+   color:#f4364c;
+   text-decoration:none;
+   font-family:'apexRoundedBold';
+   font-size:18px;
 }
 #container .form-holder label.error {
-	position:absolute;
-	top:16px;
-	left:310px;
-	white-space: pre-wrap;
+   position:absolute;
+   top:16px;
+   left:310px;
+   white-space: pre-wrap;
     color:#f4364c;
-	font-size:13px;
-	position:absolute;
-	z-index:999;
-	font-family:'apexRoundedBook';
-	width:240px;
+   font-size:13px;
+   position:absolute;
+   z-index:999;
+   font-family:'apexRoundedBook';
+   width:240px;
 }
 
 #container .form-holder div.error.true {
@@ -662,45 +664,45 @@ input:-moz-placeholder { color:#fff;}
 }
 
 #container .form-holder.swooped {
-	width:300px;
-	right:134px;
+   width:300px;
+   right:134px;
 }
 
 #container .form-holder.swooped h1 {
-	top:-50px;
-	display:block;
+   top:-50px;
+   display:block;
 }
 #container .form-holder.swooped.no-error h1 {
-	top:0px;
-	display:block;
+   top:0px;
+   display:block;
 }
 #container .form-holder.swooped.no-error.single-field h1 {
-	top:-20px;
-	display:block;
+   top:-20px;
+   display:block;
 }
 
 #container .form-holder.swooped h2 {
-	position:absolute;
-	top:35px;
-	display:block;
-	text-align:center;
-	width:100%;
-	font-size:15px;
-	color:#75787b;
+   position:absolute;
+   top:35px;
+   display:block;
+   text-align:center;
+   width:100%;
+   font-size:15px;
+   color:#75787b;
 }
 
 #container .form-holder.swooped input {
-	width:270px;
+   width:270px;
 }
 #container .form-holder.swooped button {
-	width:300px;
+   width:300px;
 }
 #container .form-holder button.error, #container .form-holder button.error:hover  {
-	width:300px;
-	background-color:#f4364c;
+   width:300px;
+   background-color:#f4364c;
 }
 #container .form-holder input.error {
-	border-color:#f4364c !important;
+   border-color:#f4364c !important;
 }
 .aspNetHidden {
     display: none;
@@ -792,7 +794,7 @@ input:-moz-placeholder { color:#fff;}
     margin-left: 10px;
 }
 .custom-modal .modal-body a {
-	color:#000;
+   color:#000;
 }
 
 #ok {
@@ -807,70 +809,70 @@ input:-moz-placeholder { color:#fff;}
 
 
 .custom-outage {
-	position:absolute;
-	top:120px;
-	left:0px;
-	right:0px;
-	bottom:0px;
-	z-index:9999999;
-	display:none;
+   position:absolute;
+   top:120px;
+   left:0px;
+   right:0px;
+   bottom:0px;
+   z-index:9999999;
+   display:none;
 }
 .custom-outage .modal-body {
-	width:784px;
-	padding:55px 0;
-	margin:20px auto;
-	background:#fff;
-	color:#020202;
+   width:784px;
+   padding:55px 0;
+   margin:20px auto;
+   background:#fff;
+   color:#020202;
     position:relative;
 }
 .custom-outage .modal-body .scrolltainer {
-	/*height:460px;*/
-	overflow-y:auto;
+   /*height:460px;*/
+   overflow-y:auto;
 }
 .custom-outage .modal-body .tos-text {
-	padding:0 75px;
+   padding:0 75px;
 }
 .custom-outage .modal-body .tos-text p.printable {
-	position:absolute;
-	top:0px;
-	right:30px;
-	display:block;
+   position:absolute;
+   top:0px;
+   right:30px;
+   display:block;
 }
 .custom-outage .modal-body .tos-text p.printable a {
-	display:block;
-	padding-left:20px;
-	background: url(../img/common/printer.png) no-repeat 0px 1px;
-	text-decoration:none;
+   display:block;
+   padding-left:20px;
+   background: url(../img/common/printer.png) no-repeat 0px 1px;
+   text-decoration:none;
 }
 .custom-outage .modal-body h1 {
-	color:#020202;
+   color:#020202;
     font-size:24px;
     font-family: apexRoundedBold;
     text-decoration:underline;
     margin-bottom: 12px;
 }
 .custom-outage .modal-body h2 {
-	color:#020202;
-	font-size:20px;
+   color:#020202;
+   font-size:20px;
     text-decoration:underline;
-	margin-top:13px;
+   margin-top:13px;
 }
 .custom-outage .modal-body h3 {
-	color:#020202;
-	font-size:15px;
+   color:#020202;
+   font-size:15px;
     margin-top:13px;
     text-decoration:underline;
 }
 .custom-outage .modal-body p {
     color: #020202;
-	margin-top:15px;
+   margin-top:15px;
 
 }
 .custom-outage .modal-body .close-this, .custom-outage .modal-body form button {
-	/*position:absolute;
-	top:20px;
-	right:20px;*/
-	color:#fff;
+   /*position:absolute;
+   top:20px;
+   right:20px;*/
+   color:#fff;
     float: right;
     display:block;
     padding:8px;
@@ -884,13 +886,13 @@ input:-moz-placeholder { color:#fff;}
     background:#ccc;
 }
 .custom-outage .modal-body .close-this {
-	float: left;
-	background:#fff;
-	color:#000;
+   float: left;
+   background:#fff;
+   color:#000;
 }
 .custom-outage .modal-body form button.disabled {
-	color:#999;
-	border:1px solid #999;
+   color:#999;
+   border:1px solid #999;
 }
 
 .custom-outage .modal-body label {
@@ -914,83 +916,83 @@ input:-moz-placeholder { color:#fff;}
 
 
 .custom-modal {
-	position:absolute;
-	top:0px;
-	left:0px;
-	right:0px;
-	bottom:0px;
+   position:absolute;
+   top:0px;
+   left:0px;
+   right:0px;
+   bottom:0px;
     width:100%;
     height:100%;
-	z-index:9999999;
-	display:none;
+   z-index:9999999;
+   display:none;
 }
 
 .custom-modal .modal-body {
     margin-top:150px;
     margin-left: auto;
     margin-right: auto;
-	width:500px;
-	height:auto;
-	position:relative;
-	padding-top:25px;
+   width:500px;
+   height:auto;
+   position:relative;
+   padding-top:25px;
     padding-bottom: 50px;
-	background:#fff;
-	color:#020202;
+   background:#fff;
+   color:#020202;
 }
 
 .custom-modal .modal-body .scrolltainer {
-	/*height:460px;*/
-	overflow-y:auto;
+   /*height:460px;*/
+   overflow-y:auto;
 }
 .custom-modal .modal-body .tos-text {
-	padding:0 75px;
+   padding:0 75px;
 }
 
 .custom-modal .modal-body .tos-buttons {
-	padding-top:1px;
+   padding-top:1px;
 }
 
 .custom-modal .modal-body .tos-text p.printable {
-	position:absolute;
-	top:0px;
-	right:30px;
-	display:block;
+   position:absolute;
+   top:0px;
+   right:30px;
+   display:block;
 }
 .custom-modal .modal-body .tos-text p.printable a {
-	display:block;
-	padding-left:20px;
-	background: url(../img/common/printer.png) no-repeat 0px 1px;
-	text-decoration:none;
+   display:block;
+   padding-left:20px;
+   background: url(../img/common/printer.png) no-repeat 0px 1px;
+   text-decoration:none;
 }
 .custom-modal .modal-body h1 {
-	color:#020202;
-	font-size:24px;
-	text-decoration:underline;
+   color:#020202;
+   font-size:24px;
+   text-decoration:underline;
     margin-bottom: 12px;
 }
 .custom-modal .modal-body h2 {
-	color:#020202;
-	font-size:20px;
-	margin-top:13px;
+   color:#020202;
+   font-size:20px;
+   margin-top:13px;
 }
 .custom-modal .modal-body h3 {
-	color:#020202;
-	font-size:15px;
-	margin-top:13px;
+   color:#020202;
+   font-size:15px;
+   margin-top:13px;
 }
 .custom-modal .modal-body p {
-	color:#020202;
-	margin-top:21px;
+   color:#020202;
+   margin-top:21px;
     margin-bottom:21px;
 }
 .custom-modal .modal-body strong {
-	font-family:apexRoundedBold;
+   font-family:apexRoundedBold;
 }
 .custom-modal .modal-body .close-this, .custom-modal .modal-body form button {
-	/*position:absolute;
-	top:20px;
-	right:20px;*/
-	color:#fff;
+   /*position:absolute;
+   top:20px;
+   right:20px;*/
+   color:#fff;
     float: right;
     display:block;
     padding:8px;
@@ -1004,13 +1006,13 @@ input:-moz-placeholder { color:#fff;}
     background:#ccc;
 }
 .custom-modal .modal-body .close-this {
-	float: left;
-	background:#fff;
-	color:#000;
+   float: left;
+   background:#fff;
+   color:#000;
 }
 .custom-modal .modal-body form button.disabled {
-	color:#999;
-	border:1px solid #999;
+   color:#999;
+   border:1px solid #999;
 }
 
 .custom-modal .modal-body label {
@@ -1047,10 +1049,10 @@ input:-moz-placeholder { color:#fff;}
 }
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-	.customSelect {
-		background:url(../img/additional/down-arrowbg@2x.png) #ccc no-repeat right 20px;
-		background-size:27px 8px;
-	}
+   .customSelect {
+      background:url(../img/additional/down-arrowbg@2x.png) #ccc no-repeat right 20px;
+      background-size:27px 8px;
+   }
 }
 .customSelectInner {
     max-width: 240px;
@@ -1059,18 +1061,18 @@ input:-moz-placeholder { color:#fff;}
     white-space: nowrap;
 }
 .custom-modal .modal-body p.i-accept {
-	text-align:center;
+   text-align:center;
 }
 .custom-modal .modal-body p.i-accept-buttons {
-	width:40%;
-	margin:8px auto;
+   width:40%;
+   margin:8px auto;
 }
 .custom-outage .modal-body p.i-accept {
-	text-align:center;
-	margin-bottom:3px;
+   text-align:center;
+   margin-bottom:3px;
 }
 .custom-outage .modal-body p.i-accept-buttons {
-	width:10%;
-	margin:8px auto;
+   width:10%;
+   margin:8px auto;
 
 }

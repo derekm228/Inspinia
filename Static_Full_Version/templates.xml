@@ -1,0 +1,17 @@
+if(or(isblank(A1),isblank(B1),isblank(C1)),"",1+if(A1=A1,1,0)*if(B1=B1,1,0)*if(C1<C1,1,0)+if(A1=A2,1,0)*if(B1=B2,1,0)*if(C1<C2,1,0)+if(A1=A3,1,0)*if(B1=B3,1,0)*if(C1<C3,1,0)+if(A1=A4,1,0)*if(B1=B4,1,0)*if(C1<C4,1,0)+if(A1=A5,1,0)*if(B1=B5,1,0)*if(C1<C5,1,0)+if(A1=A6,1,0)*if(B1=B6,1,0)*if(C1<C6,1,0)+if(A1=A7,1,0)*if(B1=B7,1,)*if(C1<C7,1,0)+if(A1=A8,1,0)*if(B1=B8,1,0)*if(C1<C8,1,0)+if(A1=A9,1,0)*if(B1=B9,1,0)*if(C1<C9,1,0)+if(A1=A10,1,0)*if(B1=B10,1,0)*if(C1<C10,1,0))
+
+    &lt;FormulaWithLabels&gt;if ( or( isblank( [//Industry 1:] ), isblank([//Region 1:]) , isblank([//Points 1:] )),"",
+1+
+if ( [//Industry 1:]= [//Industry 1:] , 1,0) * if( [//Region 1:] = [//Region 1:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 1:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 2:] , 1,0) * if( [//Region 1:] = [//Region 2:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 2:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 3:] , 1,0) * if( [//Region 1:] = [//Region 3:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 3:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 4:] , 1,0) * if( [//Region 1:] = [//Region 4:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 4:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 5:] , 1,0) * if( [//Region 1:] = [//Region 5:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 5:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 6:] , 1,0) * if( [//Region 1:] = [//Region 6:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 6:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 7:] , 1,0) * if( [//Region 1:] = [//Region 7:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 7:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 8:] , 1,0) * if( [//Region 1:] = [//Region 8:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 8:] , 1,0) +
+if ( [//Industry 1:]= [//Industry 9:] , 1,0) * if( [//Region 1:] = [//Region 9:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 9:] , 1,0)+
+if ( [//Industry 1:]= [//Industry 10:] , 1,0) * if( [//Region 1:] = [//Region 10:] ,1,0) *  if ( [//Points 1:]  &amp;lt;  [//Points 10:] , 1,0)
+
+
+)

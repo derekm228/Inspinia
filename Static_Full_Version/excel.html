@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html>
 
-
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamale RMS</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
-<h5>2.0</h5>
-<button style="width:400px; height:400px">
-   <input type="file" accept="audio/*|video/*|image/*|multipart/*">
-</button>
 
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="IgniteUI_v15-2_Trial/"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <script src="js/plugins/summernote/summernote.min.js"></script>
+
+    <!-- Keyword Search Animation -->
+    <style>
+        .search-box2 {
+            height: 28px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding-left: 5px;
+            padding-right: 20px;
+            cursor: text;
+            width: 180px;
+            border-radius: auto;
+            background: white;
+            color: black;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            //$(".search-container2").hide();
+            //$("#keywordButton").click(function() {
+                //$(".search-container2").show(500);
+                //$("#keywordButton").css("background-color","white");
+                $("#keywordButton").css("padding","0");
+                $("#keywordButton i").css("padding","8");
+            //});
+            $("#keywordButton").css("padding","0");
+        });
+    </script>
 
 </body>
 
 </html>
-
-
