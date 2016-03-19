@@ -362,13 +362,13 @@ div,a,ul,ol,p,li,h1,h2,h3,h4,button,fieldset,hr,input,table,caption,tbody,tfoot,
    text-indent:-999em;
    display:none;
 }
-@media (-webkit-min-device-pixel-ratio: 2),
+/*@media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
    #container .form-holder h1 {
       background-image:url(../img/tamale-titlebg@2x.png);
       background-size:230px 29px;
    }
-}
+}*/
 #container .form-holder form {
    position:absolute;
    width:100%;
