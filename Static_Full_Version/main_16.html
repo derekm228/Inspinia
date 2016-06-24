@@ -97,416 +97,435 @@
         <div id="page-wrapper" class="gray-bg" style="margin-left:0px">
             <div class="row">
                 <div class="fh-breadcrumb" style="margin:10px">
-                <div class="fh-column" id="leftPanel" style="min-height:652px; width:250px; margin-right:10px;">
+                    <div class="fh-column" id="leftPanel" style="min-height:652px; width:250px; margin-right:10px;">
 
-                    <div class="panel panel-default" style="background-color:white; margin-top:5px; margin-bottom: 3px; border:none;">
-                        <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
-                            <p style="margin-top:3px; font-size:16px">
-                            <input type="text" placeholder="Type an entity..." name="finder" value="Derek Miller" id="finder" 
-                                style="background-color:white;border:none; width:100%">
+                        <div class="panel panel-default" style="background-color:white; margin-top:5px; margin-bottom: 3px; border:none;">
+                            <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
+                                <p style="margin-top:3px; font-size:16px">
+                                    <input type="text" placeholder="Type an entity..." name="finder" value="Derek Miller" id="finder" 
+                                    style="background-color:white;border:none; width:100%">
+                                </div>
+                                <div class="panel-body">
+                                    <div id="using_json" style="background-color:white"></div>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="panel-body">
-                            <div id="using_json" style="background-color:white"></div>
-                        </div>
-                    </div>
 
-                </div>
+                        <div class="fh-column" style="border-left:1px solid #e7eaec; min-height:652px; width:350px; margin-right:10px">
 
-                <div class="fh-column" style="border-left:1px solid #e7eaec; min-height:652px; width:350px; margin-right:10px">
-
-                    <div class="panel panel-default" style="background-color:white; margin-top:5px;margin-bottom:3px; border:none;">
-                        <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
-                            <button type="button" id="sortButton" class="pull-left btn btn-sm btn-primary btn-outline filter" style="margin-top:-1px; margin-right:5px" title="Sort By"
-                                data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" data-content=
+                            <div class="panel panel-default" style="background-color:white; margin-top:5px;margin-bottom:3px; border:none;">
+                                <div class="panel-heading" style="background-color:white; padding-right:5px; padding-left:5px; height:40px; padding-top:3px">
+                                    <button type="button" id="sortButton" class="pull-left btn btn-sm btn-primary btn-outline filter" style="margin-top:-1px; margin-right:5px" title="Sort By"
+                                    data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" data-content=
                                     "<select id='sort' name='sort' type='select' class='form-control required' style='width:100%' aria-required='true'>
-                                        <option>Display Date</option>
-                                        <option>Submitted Date</option>
-                                        <option>Last Modified Date</option>
-                                     </select>">
+                                    <option>Display Date</option>
+                                    <option>Submitted Date</option>
+                                    <option>Last Modified Date</option>
+                                </select>">
                                 <i class="fa fa-sort-amount-asc"></i>
                             </button>
 
                             <button type="button" id="filterButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px;" title="Filtering Options"
-                                data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" rel="popover" data-content=
-                                    '<select id="entities" name="entities" data-placeholder=" " class="form-control required" multiple style="width:100%;" aria-required="true">
-                                        <option value=""></option>
-                                        <option value="United States">United States</option>
-                                        <option value="United Kingdom">United Kingdom</option>
-                                        <option value="Afghanistan">Afghanistan</option>
-                                        <option value="Aland Islands">Aland Islands</option>
-                                    </select>'>
-                                <i class="fa fa-filter"></i>
-                            </button>
+                            data-container="body" data-html="true" data-toggle="popover" data-placement="bottom" rel="popover" data-content=
+                            '<select id="entities" name="entities" data-placeholder=" " class="form-control required" multiple style="width:100%;" aria-required="true">
+                            <option value=""></option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Afghanistan">Afghanistan</option>
+                            <option value="Aland Islands">Aland Islands</option>
+                        </select>'>
+                        <i class="fa fa-filter"></i>
+                    </button>
 
-                            <button type="button" id="keywordButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px; padding-top:5px"><i class="fa fa-search"></i>
-                                <form class="pull-left search-container2">
-                                    <input id="search-box2" type="text" class="search-box2" name="q">
-                                </form>
-                            </button>
-                        </div>
-                    </div>
+                    <button type="button" id="keywordButton" class="pull-left btn btn-sm btn-primary btn-outline" style="margin-right:5px; margin-top:-1px; padding-top:5px"><i class="fa fa-search"></i>
+                        <form class="pull-left search-container2">
+                            <input id="search-box2" type="text" class="search-box2" name="q">
+                        </form>
+                    </button>
+                </div>
+            </div>
 
-                    <div class="panel panel-default" style="background-color:white;margin-bottom:0px; border:none;">
-                        <div class="panel-heading" style="background-color:white; padding-right:5px; padding-bottom:17px; padding-left:5px; height:15px; padding-top:0px">
-                            <small><em>1354 items</em></small>
-                        </div>
-                    </div>
+            <div class="panel panel-default" style="background-color:white;margin-bottom:0px; border:none;">
+                <div class="panel-heading" style="background-color:white; padding-right:5px; padding-bottom:17px; padding-left:5px; height:15px; padding-top:0px">
+                    <small><em>1354 items</em></small>
+                </div>
+            </div>
 
-                    <div class="full-height-scroll border-left" style="border-left:1px solid #e7eaec">
-                        <ul class="list-group elements-list" style="margin-bottom:0px">
-                            <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #ed5565" >
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <strong>AAPL Recommendation</strong>
-                                      <small class="pull-right text"><i class="fa fa-comment"> 10 | </i> <i class="fa fa-file-pdf-o"></i></small>
-                                    </div>
-                                    <div>
-                                        <small class="pull-right text">Vinh Hong</small>
-                                        <small class="text">AAPL, MSFT, GOOG, ...</small>
-                                    </div>
-                                    <div>
-                                        <small class="text">TamaleNote</small>
-                                        
-                                          <small class="pull-right text"> 10:32 am</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item" ondblclick="openThread()" style="padding:10px;>
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <strong>AAPL Recommendation</strong>
-                                                              <small class="pull-right text"><i class="fa fa-comment"> 7 </i></small>
-                                 
-                                    </div>
-                                    <div>
-                                        <small class="pull-right text">Vinh Hong</small>
-                                        <small class="text">AAPL</small>
-                                    </div>
-                                    <div>
-                                        <small class="text">TamaleNote</small>
-                         <small class="pull-right text"> 09.28.2015</small>
-                                    </div>
-                                </a>
-                            </li>
-                             <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <strong>SSNC Recommendation</strong>
-                                    <small class="pull-right text"><i class="fa fa-comment"> 2 | </i> <i class="fa fa-files-o"></i></small>
-                                    </div>
-                                    <div>
-                                        <small class="pull-right text">Derek Miller</small>
-                                        <small class="text">SSNC, ADVS</small>
-                                    </div>
-                                    <div>
-                                        <small class="text">TamaleNote</small>
-                                        
-                                            <small class="pull-right text"> 09.28.2015</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <strong>Fund on board status Update</strong>
+            <div class="full-height-scroll border-left" style="border-left:1px solid #e7eaec">
+                <ul class="list-group elements-list" style="margin-bottom:0px">
+                    <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #ed5565" >
+                        <a data-toggle="tab" href="#tab-1">
+                            <div>
+                                <strong>AAPL Recommendation</strong>
+                                <small class="pull-right text"><i class="fa fa-comment"> 10 | </i> <i class="fa fa-file-pdf-o"></i> |
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                </small>
+                            </div>
+                            <div>
+                                <small class="pull-right text">Vinh Hong</small>
+                                <small class="text">AAPL, MSFT, GOOG, ...</small>
+                            </div>
+                            <div>
+                                <small class="text">TamaleNote</small>
+
+                                <small class="pull-right text" style="padding-left:5px"> 10:32 am </small>
+
+                            </div>
+
+
+                        </a>
+                    </li>
+                    <li class="list-group-item" ondblclick="openThread()" style="padding:10px;>
+                        <a data-toggle="tab" href="#tab-1">
+                            <div>
+                                <strong>AAPL Recommendation</strong>
+                                <small class="pull-right text"><i class="fa fa-comment"> 7 </i></small>
+
+                            </div>
+                            <div>
+                                <small class="pull-right text">Vinh Hong</small>
+                                <small class="text">AAPL</small>
+                            </div>
+                            <div>
+                                <small class="text">TamaleNote</small>
+                                <small class="pull-right text"> 09.28.2015</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
+                        <a data-toggle="tab" href="#tab-1">
+                            <div>
+                                <strong>SSNC Recommendation</strong>
+                                <small class="pull-right text"><i class="fa fa-comment"> 2 | </i> <i class="fa fa-files-o"></i></small>
+                            </div>
+                            <div>
+                                <small class="pull-right text">Derek Miller</small>
+                                <small class="text">SSNC, ADVS</small>
+                            </div>
+                            <div>
+                                <small class="text">TamaleNote</small>
+                                         <small class="pull-right text" style="color:black;padding-left:5px" >
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                </small>
+                                <small class="pull-right text"> 09.28.2015</small>
+
+                            </div>
+                        </a>
+                    </li>
+                    <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #1ab394" >
+                        <a data-toggle="tab" href="#tab-1">
+                            <div>
+                                <strong>Fund on board status Update</strong>
                                 <small class="pull-right text"><i class="fa fa-files-o"></i></small>
+                                    <small class="pull-right text" style="color:black;padding-right:5px" >
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                </small>
+                            </div>
+                            <div>
+                                <small class="pull-right text">Derek Miller</small>
+                                <small class="text">Fund A, Portfolio Manager A</small>
+                            </div>
+                            <div>
+                                <small class="text">TamaleNote</small>
+
+                                <small class="pull-right text"> 09.28.2015</small>
+                            </div>
+                        </a>
+                    </li>
+                </li>
+                           <li class="list-group-item" ondblclick="openThread()" style="padding:10px; border-left: 5px solid #ed5565" >
+                        <a data-toggle="tab" href="#tab-1">
+                            <div>
+                                <strong>AAPL Recommendation</strong>
+                                 <small class="pull-right text" style="padding-left:5px"> 10:32 am </small>
+                            </div>
+                            <div>
+                                <small class="pull-right text">Vinh Hong</small>
+                                <small class="text">AAPL, MSFT, GOOG, ...</small>
+                            </div>
+                            <div>
+                                <small class="text">TamaleNote</small>
+                                <small class="pull-right text"><i class="fa fa-comment"> 10 | </i> <i class="fa fa-file-pdf-o"></i> |
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                                </small>
+
+                               
+
+                            </div>
+
+
+                        </a>
+                    </li>
+                <li class="list-group-item" style="padding:10px">
+                    <a data-toggle="tab" href="#tab-1">
+                        <div>
+                            <small class="pull-right text-muted"> 09.28.2015</small>
+                            <strong>AAPL, MSFT, GOOG, ...</strong>
+                        </div>
+                        <div>
+                            <small class="pull-right text-muted">Vinh Hong</small>
+                            <small class="text-muted"><em>TamaleNote</em></small>
+                        </div>
+                        <div>
+                            <small class="text-muted">AAPL Recommendation</small>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-group-item" style="padding:10px">
+                    <a data-toggle="tab" href="#tab-1">
+                        <div>
+                            <small class="pull-right text-muted"> 09.28.2015</small>
+                            <strong>AAPL, MSFT, GOOG, ...</strong>
+                        </div>
+                        <div>
+                            <small class="pull-right text-muted">Vinh Hong</small>
+                            <small class="text-muted"><em>TamaleNote</em></small>
+                        </div>
+                        <div>
+                            <small class="text-muted">AAPL Recommendation</small>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="full-height" style="max-height:652px;overflow:auto">
+        <div class="full-height-scroll white-bg border-left">
+
+            <div class="element-detail-box">
+
+                <div class="tab-content">
+
+                    <div id="tab-1" class="tab-pane active">
+                        <div class="pull-right">
+                            <div class="tooltip-demo">
+                                <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Add Sidenote"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Edit Note"><i class="fa fa-pencil-square-o"></i></button>
+                                <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i> </button>
+                                <a role="button" class="btn btn-white btn-s" data-toggle="tooltip" data-placement="top" title="" data-original-title="View in New Tab" 
+                                href="ThreadView_SSNCBuyAdvent.html"
+                                target="_blank">
+                                <i class="fa fa-expand"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div>
+                        <strong>AAPL, MSFT, GOOG</strong>
+                    </div>
+                    <div class="small text-muted">
+                        <i class="fa fa-clock-o"></i> Monday, 28 Sep 2015, 10:32 am
+                    </div>
+                    <div class="small text-muted">
+                        <i class="fa fa-user"></i> Vinh Hong
+                    </div>
+                    <div class="small text-muted">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+                    </div>
+
+                    <h1>
+                        AAPL Recommendation
+                    </h1>
+
+                    <div>
+
+                        <br>
+                        <table class="small m-b-xs">
+                            <tbody>
+                                <tr>
+                                    <td style="padding-right:10px"><strong>Target Price:</strong></td>
+                                    <td>$150</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-right:10px"><strong>Current Price:</strong></td>
+                                    <td>$115.05</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-right:10px"><strong>Recommendation Type:</strong></td>
+                                    <td>Buy</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-right:10px"><strong>Trigger Price</strong></td>
+                                    <td>$120.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-right:10px"><strong>EPS</strong></td>
+                                    <td>26.9</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-right:10px"><strong>Implied PE:</strong></td>
+                                    <td>15.1x</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br>
+
+                    <p><u>Company Description</u></p>
+                    <p>
+                        Apple Inc. (Apple) designs, manufactures and markets mobile communication and media devices, personal computers, and portable digital music players, and a variety of related software, services, peripherals, networking solutions, and third-party digital content and applications. The Company's products and services include iPhone, iPad, Mac, iPod, Apple TV, a portfolio of consumer and professional software applications, the iOS and OS X operating systems, iCloud, and a variety of accessory, service and support offerings. The Company also delivers digital content and applications through the iTunes Store, App StoreSM, iBookstoreSM, and Mac App Store. The Company distributes its products worldwide through its retail stores, online stores, and direct sales force, as well as through third-party cellular network carriers, wholesalers, retailers, and value-added resellers. In February 2012, the Company acquired app-search engine Chomp.
+                    </p>
+                    <p><u>Recommendation</u></p>
+                    <p>
+                        "We rate APPLE INC (AAPL) a BUY. This is based on the convergence of positive investment measures, which should help this stock outperform the majority of stocks that we rate. The company's strengths can be seen in multiple areas, such as its solid stock price performance, impressive record of earnings per share growth, compelling growth in net income, revenue growth and notable return on equity. Although no company is perfect, currently we do not see any significant weaknesses which are likely to detract from the generally positive outlook."
+                    </p>
+
+                </p>
+
+                <div class="m-t-lg">
+                    <h2>Attachments:</h2>
+                    <p>
+                        <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
+                        <a href="#">Download all</a>
+                    </p>
+
+                    <div class="attachment">
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="#" data-toggle="modal" data-target="#viewPDF">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-file-pdf-o"></i>
                                     </div>
-                                    <div>
-                                        <small class="pull-right text">Derek Miller</small>
-                                        <small class="text">Fund A, Portfolio Manager A</small>
-                                    </div>
-                                    <div>
-                                        <small class="text">TamaleNote</small>
-                                    
-                                                    <small class="pull-right text"> 09.28.2015</small>
+                                    <div class="file-name">
+                                        Analysis_2015.pdf
+                                        <br>
+                                        <small>Added: Sep 28, 2015</small>
                                     </div>
                                 </a>
-                            </li>
-                            </li>
-                            <li class="list-group-item" style="padding:10px">
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <small class="pull-right text-muted"> 09.28.2015</small>
-                                        <strong>AAPL, MSFT, GOOG, ...</strong>
+                            </div>
+
+                        </div>
+                        <div class="file-box">
+                            <div class="file">
+                                <a href="#">
+                                    <span class="corner"></span>
+
+                                    <div class="icon">
+                                        <i class="fa fa-file-excel-o"></i>
                                     </div>
-                                    <div>
-                                        <small class="pull-right text-muted">Vinh Hong</small>
-                                        <small class="text-muted"><em>TamaleNote</em></small>
-                                    </div>
-                                    <div>
-                                        <small class="text-muted">AAPL Recommendation</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="list-group-item" style="padding:10px">
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <small class="pull-right text-muted"> 09.28.2015</small>
-                                        <strong>AAPL, MSFT, GOOG, ...</strong>
-                                    </div>
-                                    <div>
-                                        <small class="pull-right text-muted">Vinh Hong</small>
-                                        <small class="text-muted"><em>TamaleNote</em></small>
-                                    </div>
-                                    <div>
-                                        <small class="text-muted">AAPL Recommendation</small>
+                                    <div class="file-name">
+                                        Numbers_2015.xls
+                                        <br>
+                                        <small>Added: Sep 28, 2015</small>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="list-group-item" style="padding:10px">
-                                <a data-toggle="tab" href="#tab-1">
-                                    <div>
-                                        <small class="pull-right text-muted"> 09.28.2015</small>
-                                        <strong>AAPL, MSFT, GOOG, ...</strong>
-                                    </div>
-                                    <div>
-                                        <small class="pull-right text-muted">Vinh Hong</small>
-                                        <small class="text-muted"><em>TamaleNote</em></small>
-                                    </div>
-                                    <div>
-                                        <small class="text-muted">AAPL Recommendation</small>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                            </div>
+
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
                 </div>
 
-                <div class="full-height" style="max-height:652px;overflow:auto">
-                    <div class="full-height-scroll white-bg border-left">
-
-                        <div class="element-detail-box">
-
-                            <div class="tab-content">
-
-                                <div id="tab-1" class="tab-pane active">
-                                    <div class="pull-right">
-                                        <div class="tooltip-demo">
-                                            <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Add Sidenote"><i class="fa fa-plus"></i></button>
-                                            <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Edit Note"><i class="fa fa-pencil-square-o"></i></button>
-                                            <button class="btn btn-white" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash-o"></i> </button>
-                                            <a role="button" class="btn btn-white btn-s" data-toggle="tooltip" data-placement="top" title="" data-original-title="View in New Tab" 
-                                                href="ThreadView_SSNCBuyAdvent.html"
-                                                target="_blank">
-                                                <i class="fa fa-expand"></i>
-                                            </a>
-
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <strong>AAPL, MSFT, GOOG</strong>
-                                    </div>
-                                    <div class="small text-muted">
-                                        <i class="fa fa-clock-o"></i> Monday, 28 Sep 2015, 10:32 am
-                                    </div>
-                                    <div class="small text-muted">
-                                        <i class="fa fa-user"></i> Vinh Hong
-                                    </div>
-                                    <div class="small text-muted">
-                                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-                                    </div>
-
-                                    <h1>
-                                        AAPL Recommendation
-                                    </h1>
-
-                                    <div>
-
-                                        <br>
-                                        <table class="small m-b-xs">
-                                            <tbody>
-                                                <tr>
-                                                    <td style="padding-right:10px"><strong>Target Price:</strong></td>
-                                                    <td>$150</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-right:10px"><strong>Current Price:</strong></td>
-                                                    <td>$115.05</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-right:10px"><strong>Recommendation Type:</strong></td>
-                                                    <td>Buy</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-right:10px"><strong>Trigger Price</strong></td>
-                                                    <td>$120.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-right:10px"><strong>EPS</strong></td>
-                                                    <td>26.9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding-right:10px"><strong>Implied PE:</strong></td>
-                                                    <td>15.1x</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <br>
-
-                                    <p><u>Company Description</u></p>
-                                    <p>
-                                        Apple Inc. (Apple) designs, manufactures and markets mobile communication and media devices, personal computers, and portable digital music players, and a variety of related software, services, peripherals, networking solutions, and third-party digital content and applications. The Company's products and services include iPhone, iPad, Mac, iPod, Apple TV, a portfolio of consumer and professional software applications, the iOS and OS X operating systems, iCloud, and a variety of accessory, service and support offerings. The Company also delivers digital content and applications through the iTunes Store, App StoreSM, iBookstoreSM, and Mac App Store. The Company distributes its products worldwide through its retail stores, online stores, and direct sales force, as well as through third-party cellular network carriers, wholesalers, retailers, and value-added resellers. In February 2012, the Company acquired app-search engine Chomp.
-                                    </p>
-                                    <p><u>Recommendation</u></p>
-                                    <p>
-                                        "We rate APPLE INC (AAPL) a BUY. This is based on the convergence of positive investment measures, which should help this stock outperform the majority of stocks that we rate. The company's strengths can be seen in multiple areas, such as its solid stock price performance, impressive record of earnings per share growth, compelling growth in net income, revenue growth and notable return on equity. Although no company is perfect, currently we do not see any significant weaknesses which are likely to detract from the generally positive outlook."
-                                    </p>
-
+                <div class="article row">
+                    <div class="col-lg-12">
+                        <h2>Sidenotes:
+                            <button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
+                                <strong>Add Sidenote</strong>
+                            </button>
+                        </h2>
+                        <div class="social-feed-box">
+                            <div class="social-avatar">
+                                <a href="" class="pull-left">
+                                    <img alt="image" src="img/profile/Derek.png">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Derek Miller
+                                    </a>
+                                    <small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
+                                </div>
+                            </div>
+                            <div class="social-body">
+                                <p>
+                                    Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
                                 </p>
-
-                                <div class="m-t-lg">
-                                    <h2>Attachments:</h2>
-                                    <p>
-                                        <span><i class="fa fa-paperclip"></i> 2 attachments - </span>
-                                        <a href="#">Download all</a>
-                                    </p>
-
-                                    <div class="attachment">
-                                        <div class="file-box">
-                                            <div class="file">
-                                                <a href="#" data-toggle="modal" data-target="#viewPDF">
-                                                    <span class="corner"></span>
-
-                                                    <div class="icon">
-                                                        <i class="fa fa-file-pdf-o"></i>
-                                                    </div>
-                                                    <div class="file-name">
-                                                        Analysis_2015.pdf
-                                                        <br>
-                                                        <small>Added: Sep 28, 2015</small>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="file-box">
-                                            <div class="file">
-                                                <a href="#">
-                                                    <span class="corner"></span>
-
-                                                    <div class="icon">
-                                                        <i class="fa fa-file-excel-o"></i>
-                                                    </div>
-                                                    <div class="file-name">
-                                                        Numbers_2015.xls
-                                                        <br>
-                                                        <small>Added: Sep 28, 2015</small>
-                                                    </div>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="social-feed-box">
+                            <div class="social-avatar">
+                                <a href="" class="pull-left">
+                                    <img alt="image" src="img/profile/Damon.png">
+                                </a>
+                                <div class="media-body">
+                                    <a href="profile_DamonWang.html">
+                                        Damon Wang
+                                    </a>
+                                    <small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
                                 </div>
-
-                                <div class="article row">
-                                    <div class="col-lg-12">
-                                        <h2>Sidenotes:
-                                            <button class="btn btn-sm btn-primary m-t-n-xs" data-toggle="modal" data-target="#newNote">
-                                                <strong>Add Sidenote</strong>
-                                            </button>
-                                        </h2>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Derek.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        Derek Miller
-                                                    </a>
-                                                    <small class="text-muted">Yesterday 4:21 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    Great piece Vinh. I'd like to see what the numbers are predicting for 2016.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Damon.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="profile_DamonWang.html">
-                                                        Damon Wang
-                                                    </a>
-                                                    <small class="text-muted">Yesterday 6:49 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Alan.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        Alan Yang
-                                                    </a>
-                                                    <small class="text-muted">Today 12:01 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    Any update on those numbers?
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="social-feed-box">
-                                            <div class="social-avatar">
-                                                <a href="" class="pull-left">
-                                                    <img alt="image" src="img/profile/Matt.png">
-                                                </a>
-                                                <div class="media-body">
-                                                    <a href="#">
-                                                        Matt Terrill
-                                                    </a>
-                                                    <small class="text-muted">Today 2:21 pm - 09.27.2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="social-body">
-                                                <p>
-                                                    I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
-                                                </p>
-                                                <br>
-                                                <img src="img/aapl_forecast.png" style="width: 608px;">
-                                            </div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="social-body">
+                                <p>
+                                    I agree with <a href="/profile_DerekMiller.html">Derek</a>. Let's see what we can forecast.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="social-feed-box">
+                            <div class="social-avatar">
+                                <a href="" class="pull-left">
+                                    <img alt="image" src="img/profile/Alan.png">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Alan Yang
+                                    </a>
+                                    <small class="text-muted">Today 12:01 pm - 09.27.2015</small>
                                 </div>
+                            </div>
+                            <div class="social-body">
+                                <p>
+                                    Any update on those numbers?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="social-feed-box">
+                            <div class="social-avatar">
+                                <a href="" class="pull-left">
+                                    <img alt="image" src="img/profile/Matt.png">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Matt Terrill
+                                    </a>
+                                    <small class="text-muted">Today 2:21 pm - 09.27.2015</small>
+                                </div>
+                            </div>
+                            <div class="social-body">
+                                <p>
+                                    I took a look at the numbers myself and they look pretty good. Take a peek at the chart below.
+                                </p>
                                 <br>
-                                <div class="row" style="padding-bottom:10px">
-                                    <div class="col-lg-12">
-                                        <button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
-                                            <strong>Add Sidenote</strong>
-                                        </button>
-                                    </div>
-                                </div>
+                                <img src="img/aapl_forecast.png" style="width: 608px;">
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+                <br>
+                <div class="row" style="padding-bottom:10px">
+                    <div class="col-lg-12">
+                        <button class="btn btn-sm btn-primary m-t-n-xs pull-right" data-toggle="modal" data-target="#newNote">
+                            <strong>Add Sidenote</strong>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
-        <div style="width:800px" class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header" style="padding-top:15px; padding-bottom:15px">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal inmodal fade" id="newNote" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:800px" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="padding-top:15px; padding-bottom:15px">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h2 style="text-align:left; margin-top:0px; margin-bottom:0px; font-weight:400">New Note</h5>
                 </div>
                 <div class="modal-body" style="padding-top:0px">
                     <fieldset class="form-horizontal">
@@ -783,52 +802,52 @@
         <div style="width:80%" class="modal-dialog modal-lg">
             <div class="modal-content">
                 <iframe
-                    width="100%"
-                    height="600px"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
-                    &q=783+Dorchester+Avenue+Apt+2+Boston,MA" allowfullscreen>
-                </iframe>
-            </div>
+                width="100%"
+                height="600px"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
+                &q=783+Dorchester+Avenue+Apt+2+Boston,MA" allowfullscreen>
+            </iframe>
         </div>
     </div>
+</div>
 
-    <div class="modal inmodal fade" id="viewOffice" tabindex="-1" role="dialog" aria-hidden="true">
-        <div style="width:80%" class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <iframe
-                    width="100%"
-                    height="600px"
-                    frameborder="0" style="border:0"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
-                    &q=40+Broad+Street+Floor+6+Boston,MA" allowfullscreen>
-                </iframe>
-            </div>
-        </div>
+<div class="modal inmodal fade" id="viewOffice" tabindex="-1" role="dialog" aria-hidden="true">
+    <div style="width:80%" class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <iframe
+            width="100%"
+            height="600px"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPrxhHML8CYWNDEjiuP3LabgQGh1zhzM8
+            &q=40+Broad+Street+Floor+6+Boston,MA" allowfullscreen>
+        </iframe>
     </div>
+</div>
+</div>
 
-    <!-- Mainly scripts -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
-    <!-- Custom and plugin javascript -->
-    <script src="js/inspinia.js"></script>
-    <script src="js/plugins/pace/pace.min.js"></script>
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
 
-    <script src="js/plugins/summernote/summernote.min.js"></script>
+<script src="js/plugins/summernote/summernote.min.js"></script>
 
-    <script>
-        $(document).ready(function(){
+<script>
+    $(document).ready(function(){
 
-            $('.summernote').summernote();
+        $('.summernote').summernote();
 
-        });
-        var edit = function() {
-            $('.click2edit').summernote({focus: true});
-        };
-        var save = function() {
+    });
+    var edit = function() {
+        $('.click2edit').summernote({focus: true});
+    };
+    var save = function() {
             var aHTML = $('.click2edit').code(); //save HTML If you need(aHTML: array).
             $('.click2edit').destroy();
         };
@@ -846,8 +865,8 @@
 //                    simpleLoad($(this), false)
 //                });
 
-            simpleLoad(btn, false)
-        });
+simpleLoad(btn, false)
+});
         });
 
         function simpleLoad(btn, state) {
@@ -1025,92 +1044,92 @@
             window.location.href= "entityDetail_" + data.node.text+ '.html'});
 
     });
-    </script>
+</script>
 
-    <!-- MULTI SELECT BOX -->
-    <script src="js/plugins/chosen/chosen.jquery.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#entities').chosen({width:'600px'});
-            $('#noteType').chosen({width:'275px'});
-            $('#source').chosen({width:'200px'});
-            $('#sentiment').chosen({width:'125px'});
-            $('#privacy').chosen({width:'216px'});
-            $(".chosen-single span").css({'margin-right':'0px'});
-            $(".chosen-single b").css({'margin-top':'4px'});
-            $(".chosen-container").css({'padding-right':'10px'});
-            $(".entities_chosen").css({'width':'590px'});
-            $(".chosen-select").prepend("<option></option>");
-            var config = {
-                    '.chosen-select'           : {},
-                    '.chosen-select-deselect'  : {allow_single_deselect:true},
-                    '.chosen-select-no-single' : {disable_search_threshold:10},
-                    '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
-                    }
-                for (var selector in config) {
-                    $(selector).chosen(config[selector]);
-                }
-            });
-    </script>
+<!-- MULTI SELECT BOX -->
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#entities').chosen({width:'600px'});
+        $('#noteType').chosen({width:'275px'});
+        $('#source').chosen({width:'200px'});
+        $('#sentiment').chosen({width:'125px'});
+        $('#privacy').chosen({width:'216px'});
+        $(".chosen-single span").css({'margin-right':'0px'});
+        $(".chosen-single b").css({'margin-top':'4px'});
+        $(".chosen-container").css({'padding-right':'10px'});
+        $(".entities_chosen").css({'width':'590px'});
+        $(".chosen-select").prepend("<option></option>");
+        var config = {
+            '.chosen-select'           : {},
+            '.chosen-select-deselect'  : {allow_single_deselect:true},
+            '.chosen-select-no-single' : {disable_search_threshold:10},
+            '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
+        }
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+    });
+</script>
 
-    <!-- DATE PICKER -->
-    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#date_1 .input-group .date').datepicker({
-                todayBtn: "linked",
-                keyboardNavigation: false,
-                forceParse: false,
-                calendarWeeks: true,
-                autoclose: true
-            });
+<!-- DATE PICKER -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#date_1 .input-group .date').datepicker({
+            todayBtn: "linked",
+            keyboardNavigation: false,
+            forceParse: false,
+            calendarWeeks: true,
+            autoclose: true
         });
-    </script>
+    });
+</script>
 
-    <!-- PRIORITY SETTER -->
-    <script src="js/plugins/star_rater/jquery.raty.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('#priority').raty({ 
-                number: 3 ,
-                cancel: true
-            });
+<!-- PRIORITY SETTER -->
+<script src="js/plugins/star_rater/jquery.raty.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#priority').raty({ 
+            number: 3 ,
+            cancel: true
         });
-    </script>
+    });
+</script>
 
-    <!-- CKEDITOR -->
-    <script src="ckeditor/ckeditor.js"></script>
-    <script>
-        $(document).ready(function(){
-            CKEDITOR.replace('editor1');
+<!-- CKEDITOR -->
+<script src="ckeditor/ckeditor.js"></script>
+<script>
+    $(document).ready(function(){
+        CKEDITOR.replace('editor1');
 
-            $.fn.modal.Constructor.prototype.enforceFocus = function () {
-                var $modalElement = this.$element;
-                $(document).on('focusin.modal', function (e) {
-                    var $parent = $(e.target.parentNode);
-                    if ($modalElement[0] !== e.target && !$modalElement.has(e.target).length
+        $.fn.modal.Constructor.prototype.enforceFocus = function () {
+            var $modalElement = this.$element;
+            $(document).on('focusin.modal', function (e) {
+                var $parent = $(e.target.parentNode);
+                if ($modalElement[0] !== e.target && !$modalElement.has(e.target).length
                     // add whatever conditions you need here:
                     &&
                     !$parent.hasClass('cke_dialog_ui_input_select') && !$parent.hasClass('cke_dialog_ui_input_text')) {
-                        $modalElement.focus()
-                    }
-                })
-            };
-        });
-    </script>
+                    $modalElement.focus()
+            }
+        })
+        };
+    });
+</script>
 
 
-    <!-- FILE UPLOAD -->
-    <script src="js/plugins/dropzone/dropzone.js"></script>
-    <script>
-        $(document).ready(function(){
+<!-- FILE UPLOAD -->
+<script src="js/plugins/dropzone/dropzone.js"></script>
+<script>
+    $(document).ready(function(){
 
-            Dropzone.options.myAwesomeDropzone = {
+        Dropzone.options.myAwesomeDropzone = {
 
-                autoProcessQueue: false,
-                uploadMultiple: true,
-                parallelUploads: 100,
-                maxFiles: 100,
+            autoProcessQueue: false,
+            uploadMultiple: true,
+            parallelUploads: 100,
+            maxFiles: 100,
 
                 // Dropzone settings
                 init: function() {
@@ -1131,7 +1150,7 @@
 
             }
 
-       });
+        });
     </script>
 
 
@@ -1151,7 +1170,7 @@
                 $(this).find('.dropdown-menu').stop(true, true).delay(0).hide();
                 $(this).css({'background-color':'black'});
             }
-        );
+            );
 
         $('.dropdown-menu').hover(
             function() {
@@ -1160,20 +1179,20 @@
             function() {
                 $(this).stop(true, true).delay(50).hide();
             }
-        );
-    </script>
+            );
+        </script>
 
-    <!-- Popover CSS and JS-->
-    
-    <script>
-        $(document).ready(function(){
+        <!-- Popover CSS and JS-->
 
-            $("#filterButton").click(function() {
-                $(".popover").css("min-width","50%");
+        <script>
+            $(document).ready(function(){
+
+                $("#filterButton").click(function() {
+                    $(".popover").css("min-width","50%");
+                });
             });
-        });
-    </script>
+        </script>
 
-</body>
+    </body>
 
-</html>
+    </html>
