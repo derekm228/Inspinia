@@ -1,0 +1,38 @@
+<html>
+<head>
+</head>
+<body>
+
+<a href="#" id="a" onclick="ChangeHref()">On non-iOS devices, Google will load</a>
+
+<script>
+
+   function ChangeHref(){
+      if(iOS()) {
+         window.location = "https://www.google.com";
+      }
+   }
+
+   function iOS() {
+
+     var iDevices = [
+       'iPad Simulator',
+       'iPhone Simulator',
+       'iPod Simulator',
+       'iPad',
+       'iPhone',
+       'iPod'
+     ];
+
+     if (!!navigator.platform) {
+       while (iDevices.length) {
+         if (navigator.platform === iDevices.pop()){ return true; }
+       }
+     }
+
+     return false;
+   }
+
+</script>
+</body>
+</html>
