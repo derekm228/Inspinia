@@ -3,13 +3,50 @@
 </head>
 <body>
 
-<a href="#" id="a" onclick="ChangeHref()">On iOS devices, Google will load</a>
+<!--<a href="#" id="a" onclick="ChangeHref()">On iOS devices, Google will load</a>-->
+
+<a class="desktopLink" href="http://www.google.com">Desktop Link</a>
+<a class="mobileLink" href="instagram://camera">Mobile Link</a>
+
+<style>
+
+  @media only screen and (max-device-width: 700px) and (orientation: portrait) {
+
+    .desktopLink {
+      display: none;
+    }
+
+    .mobileLink {
+      display: inline;
+      font-size: 24px;
+    }
+  }
+
+  @media only screen and (max-device-width: 700px) and (orientation: landscape) {
+
+    .desktopLink {
+      display: inline;
+      font-size: 24px;
+    }
+
+    .mobileLink {
+      display: none;
+    }
+  }
+
+</style>
 
 <script>
-
+/*
    function ChangeHref(){
       if(iOS()) {
-         window.location = "https://www.google.com";
+        document.getElementById('a').setAttribute("onclick", "location.href='instagram://camera'");
+        document.getElementById('a').click();
+      }
+
+      if(!iOS()) {
+        document.getElementById('a').setAttribute("onclick", "location.href='www.google.com'");
+        document.getElementById('a').click();
       }
    }
 
@@ -32,7 +69,7 @@
 
      return false;
    }
-
+*/
 </script>
 </body>
 </html>
